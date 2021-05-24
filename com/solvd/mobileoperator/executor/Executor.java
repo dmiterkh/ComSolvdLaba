@@ -5,21 +5,24 @@ import com.solvd.mobileoperator.point.Market;         // Extension:   Class Mark
 import com.solvd.mobileoperator.point.Office;         // Set, Get
 import com.solvd.mobileoperator.point.MarketPlace;    // Extension:   Class MarketPlace extends Class Office;	
 
-//import com.solvd.mobileoperator.staff.Trainee;    // Initial Interface
-//import com.solvd.mobileoperator.staff.Staff;      // Extension:         Interface Staff extends Interface Trainee;
-import com.solvd.mobileoperator.staff.Employee;     // Implementation:    Class Employee implements Interface Staff, 
-import com.solvd.mobileoperator.staff.Boss;         // Extension:         Class Boss extends Class Employee;
-//import com.solvd.mobileoperator.staff.BadTrainee; // Initial Interface
-import com.solvd.mobileoperator.staff.BadEmployee;  // Multi Implement:   Class Employee implements Interfaces Staff and BadTrainee
+//import com.solvd.mobileoperator.staff.Trainee;    		 // Initial Interface   Interface Trainee
+//import com.solvd.mobileoperator.staff.Staff;      		 // Extension:          Interface Staff extends Interface Trainee;
+import com.solvd.mobileoperator.staff.Employee;     		 // Implementation:     Class Employee implements Interface Staff, 
+import com.solvd.mobileoperator.staff.Boss;         		 // Extension:          Class Boss extends Class Employee;
+//import com.solvd.mobileoperator.staff.BadTrainee;          // Initial Interface   Interface BadTrainee
+import com.solvd.mobileoperator.staff.BadEmployee;           // Multi Implement:    Class Employee implements Interfaces Staff and BadTrainee
+//import com.solvd.mobileoperator.staff.Unemployed;          // Abstraction:        Abstract Class Unemployed;
+import com.solvd.mobileoperator.staff.ExpiriencedApplicant;  // Combination:        Class ExpiriencedApplicant extends Abstract Class Unemployed
+															 //					    and implements Interface Staff
 
-//import com.solvd.mobileoperator.user.BadUser;          // Abstraction: Abstract Class BadUser; (Super)
-import com.solvd.mobileoperator.user.NoMoneyUser;        // Extension:   Class NoMoneyUser extends Abstract Class BadUser; (Super)
-import com.solvd.mobileoperator.user.NoConnectionUser;   // Extension:   Class NoConnectionUser extends Class NoMoneyUser; (Super)
-//import com.solvd.mobileoperator.user.GoodUser;         // Abstraction: Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.MobilePhoneUser;    // Extension:   Class MobilePhoneUser extends Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.MobileInternetUser; // Extension:   Class MobileInternetUser extends Class MobilePhoneUser;
-//import com.solvd.mobileoperator.user.HomeUser;         // Abstraction: Abstract Class HomeUser extends Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction: Class HomeInternetUser extends Abstract Class HomeUser, 
+//import com.solvd.mobileoperator.user.BadUser;          // Abstraction:   Abstract Class BadUser; (Super)
+import com.solvd.mobileoperator.user.NoMoneyUser;        // Extension:     Class NoMoneyUser extends Abstract Class BadUser; (Super)
+import com.solvd.mobileoperator.user.NoConnectionUser;   // Extension:     Class NoConnectionUser extends Class NoMoneyUser; (Super)
+//import com.solvd.mobileoperator.user.GoodUser;         // Abstraction:   Abstract Class GoodUser;
+import com.solvd.mobileoperator.user.MobilePhoneUser;    // Extension:     Class MobilePhoneUser extends Abstract Class GoodUser;
+import com.solvd.mobileoperator.user.MobileInternetUser; // Extension:     Class MobileInternetUser extends Class MobilePhoneUser;
+//import com.solvd.mobileoperator.user.HomeUser;         // Abstraction:   Abstract Class HomeUser extends Abstract Class GoodUser;
+import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction:   Class HomeInternetUser extends Abstract Class HomeUser, 
 
 
 
@@ -279,12 +282,44 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(boss2.showAgeAgain(22));
 		System.out.println(boss2.showSexAgain("FF"));
-		System.out.println(em2.setApi(9));			  //???
-		System.out.println(em2.setPi(9.14));		  //???		
+		System.out.println(boss2.setApi(9));			  //???
+		System.out.println(boss2.setPi(9.14));		  //???		
 		System.out.println("======");
 		boss2.work();
 		boss2.hirePeople();
 		boss2.firePeople();
+		System.out.println("========================");
+		
+		
+		
+		
+    	System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Class Of Expirienced Applicant");
+		System.out.println("========================");
+		
+		ExpiriencedApplicant ea1 = new ExpiriencedApplicant(76, "F"); 
+		ea1.printInfo();
+		ea1.lookForJob();
+		System.out.println(ea1.api);
+		System.out.println(ea1.pi);
+		System.out.println("========================");
+		
+		ExpiriencedApplicant ea2 = new ExpiriencedApplicant(77, "M"); 
+		ea2.aquire();
+		ea2.lookForJob();
+		System.out.println("======");
+		System.out.println(ea2.showAge());
+		System.out.println(ea2.showSex());
+		System.out.println("======");
+		boss2.printInfoAgain(21,"MM");   
+		System.out.println("======");
+		System.out.println(ea2.showAgeAgain(22));
+		System.out.println(ea2.showSexAgain("FF"));
+		System.out.println(ea2.setApi(10));			  //???
+		System.out.println(ea2.setPi(10.14));		  //???		
+		System.out.println("======");
+		ea2.work();
 		System.out.println("========================");
 		
 		
