@@ -413,11 +413,13 @@ public class Executor {
 		HomeInternetUser hiu1 = new HomeInternetUser(1234567, "BelarusCom", true, 10000);
 		hiu1.printInfo();
 		System.out.println("======");		
+		hiu1.printInfoNew();
+		System.out.println("======");	
 		System.out.println(hiu1.showNumber());                    
 		System.out.println(hiu1.showOperator());                  
 		System.out.println(hiu1.showStatus());                    
 		System.out.println("======");		
-		hiu1.printInfoAgain(12345,"ZayacCom",false);
+		hiu1.printInfoAgain(12345,"BobrCom",false);
 		hiu1.showHomeBonus();
 		System.out.println("======");
 		System.out.println(hiu1.showNumberAgain(1234));            

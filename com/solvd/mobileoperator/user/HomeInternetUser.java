@@ -19,8 +19,7 @@ public class HomeInternetUser extends HomePhoneUser {
 		return this.homeBonus;
 	}
 	
-	@Override
-	public void printInfo() {
+	public void printInfoNew() {
 		System.out.println("HomeInternetUser number: " +  this.number);
 		System.out.println("HomeInternetUser operator: " + this.operator);
 		System.out.println("HomeInternetUser isActive: " + this.isActive);
