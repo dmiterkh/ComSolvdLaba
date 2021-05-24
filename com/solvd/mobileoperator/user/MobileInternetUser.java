@@ -35,4 +35,5 @@ public class MobileInternetUser extends MobilePhoneUser {
 		System.out.println("Again MobileInternetUser operator: " + operator);
 		System.out.println("Again MobileInternetUser isActive: " + isActive);
 	}
+	
 }

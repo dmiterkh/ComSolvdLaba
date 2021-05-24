@@ -53,4 +53,5 @@ public class NoMoneyUser extends BadUser {
 	public boolean showStatusAgain(boolean isActive) {
 		return isActive;
 	}
+	
 }

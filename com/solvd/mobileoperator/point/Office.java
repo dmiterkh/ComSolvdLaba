@@ -93,6 +93,6 @@ public class Office {
 	public int getNumber() {
 		return this.number;
 	}
-
+	
 }
 

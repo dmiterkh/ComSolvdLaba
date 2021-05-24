@@ -66,4 +66,5 @@ public class MobilePhoneUser extends GoodUser {
 		this.isActive = isActive;
 		return this.isActive;
 	}
+	
 }

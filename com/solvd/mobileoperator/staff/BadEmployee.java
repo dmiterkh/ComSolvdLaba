@@ -2,12 +2,11 @@ package com.solvd.mobileoperator.staff;
 
 public class BadEmployee implements Staff , BadTrainee {
 
+	public int API = 6;
+	public double PI = 6.14;
 	private int age; 
 	private String sex; 
 	private String status = "bad_employee"; 
-		
-	public int api = 6;
-	public double pi = 6.14;
 	
 	public BadEmployee() {
 		
@@ -51,14 +50,14 @@ public class BadEmployee implements Staff , BadTrainee {
 		
 	@Override
 	public int setApi(int number) {
-		this.api = number; 
-		return this.api;
+		this.API = number; 
+		return this.API;
 	} 
 		
 	@Override	
 	public double setPi(double number) {
-		this.pi = number; 
-		return this.pi;
+		this.PI = number; 
+		return this.PI;
 	} 
 	
 	@Override
@@ -78,6 +77,6 @@ public class BadEmployee implements Staff , BadTrainee {
 	@Override
 	public void drink() {
 		System.out.println("I can drink coffee or whiskey 8 hours every day at working place!");
-	}
+	}	
 	
 }

@@ -28,6 +28,7 @@ public class MarketPlace extends Office {
 		} else { 
 			this.number = number;
 		}	
+		
 		this.sales = sales;			
 	}		
 					
@@ -70,6 +71,6 @@ public class MarketPlace extends Office {
 				
 	public boolean getSales() {
 		return this.sales;
-	}
-		
+	}	
+	
 }

@@ -2,20 +2,19 @@ package com.solvd.mobileoperator.staff;
 
 public class Employee implements Staff {
 
+	public int API = 5;
+	public double PI = 5.14;
 	protected int age; 
 	protected String sex; 
-	protected String status = "employee"; 
-	
-	public int api = 5;
-	public double pi = 5.14;
-	
+	private String status = "employee"; 
+		
 	public Employee() {
 		
 	} 
 	
 	public Employee(int age, String sex) {
-			this.age = age;
-			this.sex = sex;
+		this.age = age;
+		this.sex = sex;
 	} 
 	
 	@Override
@@ -55,14 +54,14 @@ public class Employee implements Staff {
 	
 	@Override
 	public int setApi(int number) {
-		this.api = number; 
-		return this.api;
+		this.API = number; 
+		return this.API;
 	} 
 		
 	@Override	
 	public double setPi(double number) {
-		this.pi = number; 
-		return this.pi;
+		this.PI = number; 
+		return this.PI;
 	} 
 	
 	@Override
@@ -77,7 +76,6 @@ public class Employee implements Staff {
 		System.out.println("My sex is_ " + this.sex);		
 		System.out.println("I can work 8 hours every day!");
 		System.out.println("I can aquire new skills!");
-	}
-	
+	}	
 	
 }

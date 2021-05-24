@@ -28,7 +28,6 @@ public class InternetMarket {
 		
 	public boolean getSales() {
 		return this.sales;
-	}
-	
+	}	
 	
 }

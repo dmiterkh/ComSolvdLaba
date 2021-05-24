@@ -26,6 +26,7 @@ import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction:   Class
 
 
 
+
 public class Executor {
 
 	public static void main(String[] args) {
@@ -148,6 +149,7 @@ public class Executor {
 		
 		
 		
+		
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("Class Of Office");
@@ -194,7 +196,7 @@ public class Executor {
 		Office of6 = new Office("", "", -100);
 		of6.printInfo();
 		System.out.println("============");
-	
+		
 		
 		
 		
@@ -205,8 +207,8 @@ public class Executor {
 		
 		Employee em1 = new Employee(25, "F"); 
 		em1.printInfo();
-		System.out.println(em1.api);
-		System.out.println(em1.pi);
+		System.out.println(em1.API);
+		System.out.println(em1.PI);
 		System.out.println("========================");
 		
 		Employee em2 = new Employee(20, "M"); 
@@ -214,8 +216,8 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(em2.showAge());
 		System.out.println(em2.showSex());
-		System.out.println(em2.api);
-		System.out.println(em2.pi);		
+		System.out.println(em2.API);
+		System.out.println(em2.PI);		
 		System.out.println("======");
 		em2.printInfoAgain(21,"MM");
 		System.out.println("======");
@@ -237,8 +239,8 @@ public class Executor {
 		
 		BadEmployee bem1 = new BadEmployee(35, "F"); 
 		bem1.printInfo();
-		System.out.println(bem1.api);
-		System.out.println(bem1.pi);
+		System.out.println(bem1.API);
+		System.out.println(bem1.PI);
 		System.out.println("========================");
 		
 		BadEmployee bem2 = new BadEmployee(45, "M"); 
@@ -246,6 +248,8 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(bem2.showAge());
 		System.out.println(bem2.showSex());
+		System.out.println(bem2.API);
+		System.out.println(bem2.PI);	
 		System.out.println("======");
 		bem2.printInfoAgain(21,"MM");
 		System.out.println("======");
@@ -268,8 +272,8 @@ public class Executor {
 		
 		Boss boss1 = new Boss(76, "F"); 
 		boss1.printInfo();
-		System.out.println(boss1.api);
-		System.out.println(boss1.pi);
+		System.out.println(boss1.API);
+		System.out.println(boss1.PI);
 		System.out.println("========================");
 		
 		Boss boss2 = new Boss(77, "M"); 
@@ -277,13 +281,15 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(boss2.showAge());
 		System.out.println(boss2.showSex());
+		System.out.println(boss2.API);
+		System.out.println(boss2.PI);	
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
 		System.out.println(boss2.showAgeAgain(22));
 		System.out.println(boss2.showSexAgain("FF"));
-		System.out.println(boss2.setApi(9));			  //???
-		System.out.println(boss2.setPi(9.14));		  //???		
+		System.out.println(boss2.setApi(9));	     //???
+		System.out.println(boss2.setPi(9.14));		 //???		
 		System.out.println("======");
 		boss2.work();
 		boss2.hirePeople();
@@ -301,8 +307,8 @@ public class Executor {
 		ExpiriencedApplicant ea1 = new ExpiriencedApplicant(76, "F"); 
 		ea1.printInfo();
 		ea1.lookForJob();
-		System.out.println(ea1.api);
-		System.out.println(ea1.pi);
+		System.out.println(ea1.API);
+		System.out.println(ea1.PI);
 		System.out.println("========================");
 		
 		ExpiriencedApplicant ea2 = new ExpiriencedApplicant(77, "M"); 
@@ -311,13 +317,15 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(ea2.showAge());
 		System.out.println(ea2.showSex());
+		System.out.println(ea2.API);
+		System.out.println(ea2.PI);
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
 		System.out.println(ea2.showAgeAgain(22));
 		System.out.println(ea2.showSexAgain("FF"));
-		System.out.println(ea2.setApi(10));			  //???
-		System.out.println(ea2.setPi(10.14));		  //???		
+		System.out.println(ea2.setApi(10));		   //???
+		System.out.println(ea2.setPi(10.14));	   //???		
 		System.out.println("======");
 		ea2.work();
 		System.out.println("========================");
@@ -468,7 +476,6 @@ public class Executor {
 		System.out.println(hiu2.getStatus());
 		System.out.println(hiu2.getHomeBonus());		
 		System.out.println("========================");
-	}
-	
+	}	
 }
 

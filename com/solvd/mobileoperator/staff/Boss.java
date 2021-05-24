@@ -2,8 +2,7 @@ package com.solvd.mobileoperator.staff;
 
 public class Boss extends Employee {
 
-	String status = "boss";
-	//new method
+	private String status = "boss";
 	private String power = "power";
 	
 	public Boss() {
@@ -47,4 +46,5 @@ public class Boss extends Employee {
 	public void firePeople() {
 		System.out.println("I can fire out people!");
 	}
+	
 }

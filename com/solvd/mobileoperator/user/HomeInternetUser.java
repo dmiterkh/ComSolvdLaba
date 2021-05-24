@@ -67,4 +67,5 @@ public class HomeInternetUser extends HomePhoneUser {
 	public boolean showStatusAgain(boolean isActive) {
 		return isActive;
 	}
+	
 }

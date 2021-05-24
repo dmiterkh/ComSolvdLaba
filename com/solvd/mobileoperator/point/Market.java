@@ -16,6 +16,7 @@ public class Market extends InternetMarket {
 		} else { 
 			this.adress = adress;
 		}		
+
 		this.sales = sales;		
 	}	
 	
@@ -25,6 +26,7 @@ public class Market extends InternetMarket {
 		} else { 
 			this.adress = adress;
 		}				
+
 		this.sales = sales;		
 	}
 
@@ -44,4 +46,5 @@ public class Market extends InternetMarket {
 	public String getAdress(){
 		return this.adress;
 	} 
+	
 }

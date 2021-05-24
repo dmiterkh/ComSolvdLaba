@@ -2,9 +2,8 @@ package com.solvd.mobileoperator.staff;
 
 public interface Trainee {
 
-	public int api = 3;
-	
-	public double pi = 3.14;
+	public int API = 3;
+	public double PI = 3.14;
 
 	public void aquire();	
 	
@@ -21,4 +20,5 @@ public interface Trainee {
 	public int setApi(int number);
 		
 	public double setPi(double number);
+	
 }
