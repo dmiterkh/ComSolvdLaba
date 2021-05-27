@@ -11,11 +11,11 @@ public interface Trainee {
 	
 	public String showSex();
 	
-	public void printInfoAgain(int number, String operator);
+	public void printInfoAgain(int number, String sex);
 	
 	public int showAgeAgain(int number);
 	
-	public String showSexAgain(String operator);
+	public String showSexAgain(String sex);
 	
 	public int setApi(int number);
 		

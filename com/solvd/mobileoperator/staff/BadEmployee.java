@@ -24,12 +24,12 @@ public class BadEmployee implements Staff , BadTrainee {
 	
 	@Override
 	public int showAge() {
-		return 10;
+		return this.age;
 	}
 	
 	@Override
 	public String showSex() {
-		return "bla-bla-bla";
+		return this.sex;
 	}
 	
 	@Override
@@ -40,12 +40,14 @@ public class BadEmployee implements Staff , BadTrainee {
 	
 	@Override
 	public int showAgeAgain(int number) {
-		return 10;
+		this.age = number;
+		return this.age;
 	}
 	
 	@Override
-	public String showSexAgain(String operator) {
-		return "bla-bla-bla";		
+	public String showSexAgain(String sex) {
+		this.sex = sex;
+		return sex;		
 	}
 		
 	@Override

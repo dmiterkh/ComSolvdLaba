@@ -36,14 +36,14 @@ public class Executor {
 		System.out.println("Class Of Internet Market");		
 		System.out.println("========================");
 		
-		InternetMarket im1 = new InternetMarket();
-		im1.setSales(true);
-		System.out.println(im1.getSales());
+		InternetMarket internetMarket1 = new InternetMarket();
+		internetMarket1.setSales(true);
+		System.out.println(internetMarket1.getSales());
 		System.out.println("============");
 		
-		InternetMarket im2 = new InternetMarket();
-		im2.setInfo(true);
-		im2.printInfo();
+		InternetMarket internetMarket2 = new InternetMarket();
+		internetMarket2.setInfo(true);
+		internetMarket2.printInfo();
 		System.out.println("============");
 
 		
@@ -54,39 +54,39 @@ public class Executor {
 		System.out.println("Class Of Market");
 		System.out.println("========================");
 		
-		Market m1 = new Market();
-		m1.setInfo("", true);
-		m1.printInfo();
+		Market market1 = new Market();
+		market1.setInfo("", true);
+		market1.printInfo();
 		System.out.println("============");
 		
-		Market m2 = new Market("", true);
-		m2.printInfo();
+		Market market2 = new Market("", true);
+		market2.printInfo();
 		System.out.println("============");
 		
-		Market m3 = new Market();
-		m3.setAdress("");
-		System.out.println(m3.getAdress());
+		Market market3 = new Market();
+		market3.setAdress("");
+		System.out.println(market3.getAdress());
 		System.out.println("======");
-		m3.setSales(true);
-		System.out.println(m3.getSales());
+		market3.setSales(true);
+		System.out.println(market3.getSales());
 		System.out.println("======");
-		m3.printInfo();
+		market3.printInfo();
 		System.out.println("============");
 		
-		Market m4 = new Market("Brovki", true);
-		m4.printInfo();
+		Market market4 = new Market("Brovki", true);
+		market4.printInfo();
 		System.out.println("============");
 		
-		Market m5 = new Market();
-		m5.setInfo("Pobedy", true);
-		m5.printInfo();
+		Market market5 = new Market();
+		market5.setInfo("Pobedy", true);
+		market5.printInfo();
 		System.out.println("============");
 		
-		Market m6 = new Market();
-		m6.setAdress("Lenina");
-		m6.setSales(true);
-		System.out.println(m6.getAdress());
-		System.out.println(m6.getSales());		
+		Market market6 = new Market();
+		market6.setAdress("Lenina");
+		market6.setSales(true);
+		System.out.println(market6.getAdress());
+		System.out.println(market6.getSales());		
 		System.out.println("============");
 		
 		
@@ -97,54 +97,54 @@ public class Executor {
 		System.out.println("Class Of MarketPlace");
 		System.out.println("========================");
 		
-		MarketPlace mp1 = new MarketPlace();
-		mp1.setInfo("Pritickogo", "Head", 1, false);
-		mp1.printInfo();
+		MarketPlace marketPlace1 = new MarketPlace();
+		marketPlace1.setInfo("Pritickogo", "Head", 1, false);
+		marketPlace1.printInfo();
 		System.out.println("============");
 		
-		MarketPlace mp2 = new MarketPlace();
-		mp2.setAdress("Melezha");
-		System.out.println(mp2.getAdress());
+		MarketPlace marketPlace2 = new MarketPlace();
+		marketPlace2.setAdress("Melezha");
+		System.out.println(marketPlace2.getAdress());
 		System.out.println("======");
-		mp2.setPriority("regional");
-		System.out.println(mp2.getPriority());
+		marketPlace2.setPriority("regional");
+		System.out.println(marketPlace2.getPriority());
 		System.out.println("======");
-		mp2.setNumber(3);
-		System.out.println(mp2.getNumber());
+		marketPlace2.setNumber(3);
+		System.out.println(marketPlace2.getNumber());
 		System.out.println("======");
-		mp2.setSales(true);
-		System.out.println(mp2.getSales());
+		marketPlace2.setSales(true);
+		System.out.println(marketPlace2.getSales());
 		System.out.println("============");
-		mp2.printInfo();
-		System.out.println("============");
-		
-		MarketPlace mp3 = new MarketPlace("Kedishko", "regional", 1, false);
-		mp3.printInfo();
+		marketPlace2.printInfo();
 		System.out.println("============");
 		
-		MarketPlace mp4 = new MarketPlace();
-		mp4.setInfo("", "", -100, false);
-		mp4.printInfo();
+		MarketPlace marketPlace3 = new MarketPlace("Kedishko", "regional", 1, false);
+		marketPlace3.printInfo();
+		System.out.println("============");
+		
+		MarketPlace marketPlace4 = new MarketPlace();
+		marketPlace4.setInfo("", "", -100, false);
+		marketPlace4.printInfo();
 		System.out.println("============");
 						
-		MarketPlace mp5 = new MarketPlace();
-		mp5.setAdress("");
-		System.out.println(mp5.getAdress());
+		MarketPlace marketPlace5 = new MarketPlace();
+		marketPlace5.setAdress("");
+		System.out.println(marketPlace5.getAdress());
 		System.out.println("======");
-		mp5.setPriority("");
-		System.out.println(mp5.getPriority());
+		marketPlace5.setPriority("");
+		System.out.println(marketPlace5.getPriority());
 		System.out.println("======");
-		mp5.setNumber(-30);
-		System.out.println(mp5.getNumber());
+		marketPlace5.setNumber(-30);
+		System.out.println(marketPlace5.getNumber());
 		System.out.println("======");
-		mp5.setSales(true);
-		System.out.println(mp5.getSales());
+		marketPlace5.setSales(true);
+		System.out.println(marketPlace5.getSales());
 		System.out.println("============");
-		mp5.printInfo();
+		marketPlace5.printInfo();
 		System.out.println("============");
 				
-		MarketPlace mp6 = new MarketPlace("", "", -100, false);
-		mp6.printInfo();
+		MarketPlace marketPlace6 = new MarketPlace("", "", -100, false);
+		marketPlace6.printInfo();
 		System.out.println("============");
 		
 		
@@ -155,46 +155,46 @@ public class Executor {
 		System.out.println("Class Of Office");
 		System.out.println("========================");
 		
-		Office of1 = new Office();
-		of1.setInfo("Pritickogo", "Head", 1);
-		of1.printInfo();
+		Office office1 = new Office();
+		office1.setInfo("Pritickogo", "Head", 1);
+		office1.printInfo();
 		System.out.println("============");
 		
-		Office of2 = new Office();
-		of2.setAdress("Kolasa");
-		System.out.println(of2.getAdress());
+		Office office2 = new Office();
+		office2.setAdress("Kolasa");
+		System.out.println(office2.getAdress());
 		System.out.println("======");
-		of2.setPriority("Regional");
-		System.out.println(of2.getPriority());
+		office2.setPriority("Regional");
+		System.out.println(office2.getPriority());
 		System.out.println("======");
-		of2.setNumber(2);
-		System.out.println(of2.getNumber());
+		office2.setNumber(2);
+		System.out.println(office2.getNumber());
 		System.out.println("============");
-		of2.printInfo();
+		office2.printInfo();
 		System.out.println("============");
 		
-		Office of3 = new Office("Partizanski", "regional", 12);
-		of3.printInfo();
+		Office office3 = new Office("Partizanski", "regional", 12);
+		office3.printInfo();
 		System.out.println("============");
 
-		Office of4 = new Office();
-		of4.setInfo("", "", -100);
-		of4.printInfo();
+		Office office4 = new Office();
+		office4.setInfo("", "", -100);
+		office4.printInfo();
 		System.out.println("============");
 						
-		Office of5 = new Office();
-		of5.setAdress("");
-		System.out.println(of5.getAdress());
+		Office office5 = new Office();
+		office5.setAdress("");
+		System.out.println(office5.getAdress());
 		System.out.println("======");
-		of5.setPriority("");
-		System.out.println(of5.getPriority());
+		office5.setPriority("");
+		System.out.println(office5.getPriority());
 		System.out.println("======");
-		of5.setNumber(-30);
-		System.out.println(of5.getNumber());
+		office5.setNumber(-30);
+		System.out.println(office5.getNumber());
 		System.out.println("============");
 				
-		Office of6 = new Office("", "", -100);
-		of6.printInfo();
+		Office office6 = new Office("", "", -100);
+		office6.printInfo();
 		System.out.println("============");
 		
 		
@@ -205,28 +205,28 @@ public class Executor {
 		System.out.println("Class Of Employee");
 		System.out.println("========================");
 		
-		Employee em1 = new Employee(25, "F"); 
-		em1.printInfo();
-		System.out.println(em1.API);
-		System.out.println(em1.PI);
+		Employee employee1 = new Employee(25, "F"); 
+		employee1.printInfo();
+		System.out.println(employee1.API);
+		System.out.println(employee1.PI);
 		System.out.println("========================");
 		
-		Employee em2 = new Employee(20, "M"); 
-		em2.aquire();
+		Employee employee2 = new Employee(20, "M"); 
+		employee2.aquire();
 		System.out.println("======");
-		System.out.println(em2.showAge());
-		System.out.println(em2.showSex());
-		System.out.println(em2.API);
-		System.out.println(em2.PI);		
+		System.out.println(employee2.showAge());
+		System.out.println(employee2.showSex());
+		System.out.println(employee2.API);
+		System.out.println(employee2.PI);		
 		System.out.println("======");
-		em2.printInfoAgain(21,"MM");
+		employee2.printInfoAgain(21,"MM");
 		System.out.println("======");
-		System.out.println(em2.showAgeAgain(22));
-		System.out.println(em2.showSexAgain("FF"));
-		System.out.println(em2.setApi(7));			  //???
-		System.out.println(em2.setPi(7.14));		  //???
+		System.out.println(employee2.showAgeAgain(22));
+		System.out.println(employee2.showSexAgain("FF"));
+		System.out.println(employee2.setApi(7));			  //???
+		System.out.println(employee2.setPi(7.14));		  //???
 		System.out.println("======");
-		em2.work();
+		employee2.work();
 		System.out.println("========================");
 		
 		
@@ -237,29 +237,29 @@ public class Executor {
 		System.out.println("Class Of Bad Employee");
 		System.out.println("========================");
 		
-		BadEmployee bem1 = new BadEmployee(35, "F"); 
-		bem1.printInfo();
-		System.out.println(bem1.API);
-		System.out.println(bem1.PI);
+		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+		badEmployee1.printInfo();
+		System.out.println(badEmployee1.API);
+		System.out.println(badEmployee1.PI);
 		System.out.println("========================");
 		
-		BadEmployee bem2 = new BadEmployee(45, "M"); 
-		bem2.aquire();
+		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 
+		badEmployee2.aquire();
 		System.out.println("======");
-		System.out.println(bem2.showAge());
-		System.out.println(bem2.showSex());
-		System.out.println(bem2.API);
-		System.out.println(bem2.PI);	
+		System.out.println(badEmployee2.showAge());
+		System.out.println(badEmployee2.showSex());
+		System.out.println(badEmployee2.API);
+		System.out.println(badEmployee2.PI);	
 		System.out.println("======");
-		bem2.printInfoAgain(21,"MM");
+		badEmployee2.printInfoAgain(21,"MM");
 		System.out.println("======");
-		System.out.println(bem2.showAgeAgain(27));
-		System.out.println(bem2.showSexAgain("FFMM"));
-		System.out.println(em2.setApi(8));			  //???
-		System.out.println(em2.setPi(8.14));		  //???
+		System.out.println(badEmployee2.showAgeAgain(27));
+		System.out.println(badEmployee2.showSexAgain("FFMM"));
+		System.out.println(badEmployee2.setApi(8));			  //???
+		System.out.println(badEmployee2.setPi(8.14));		  //???
 		System.out.println("======");
-		bem2.work();
-		bem2.drink();        
+		badEmployee2.work();
+		badEmployee2.drink();        
 		System.out.println("========================");
 		
 		
@@ -304,30 +304,30 @@ public class Executor {
 		System.out.println("Class Of Expirienced Applicant");
 		System.out.println("========================");
 		
-		ExpiriencedApplicant ea1 = new ExpiriencedApplicant(76, "F"); 
-		ea1.printInfo();
-		ea1.lookForJob();
-		System.out.println(ea1.API);
-		System.out.println(ea1.PI);
+		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(76, "F"); 
+		expiriencedApplicant1.printInfo();
+		expiriencedApplicant1.lookForJob();
+		System.out.println(expiriencedApplicant1.API);
+		System.out.println(expiriencedApplicant1.PI);
 		System.out.println("========================");
 		
-		ExpiriencedApplicant ea2 = new ExpiriencedApplicant(77, "M"); 
-		ea2.aquire();
-		ea2.lookForJob();
+		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M"); 
+		expiriencedApplicant2.aquire();
+		expiriencedApplicant2.lookForJob();
 		System.out.println("======");
-		System.out.println(ea2.showAge());
-		System.out.println(ea2.showSex());
-		System.out.println(ea2.API);
-		System.out.println(ea2.PI);
+		System.out.println(expiriencedApplicant2.showAge());
+		System.out.println(expiriencedApplicant2.showSex());
+		System.out.println(expiriencedApplicant2.API);
+		System.out.println(expiriencedApplicant2.PI);
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
-		System.out.println(ea2.showAgeAgain(22));
-		System.out.println(ea2.showSexAgain("FF"));
-		System.out.println(ea2.setApi(10));		   //???
-		System.out.println(ea2.setPi(10.14));	   //???		
+		System.out.println(expiriencedApplicant2.showAgeAgain(22));
+		System.out.println(expiriencedApplicant2.showSexAgain("FF"));
+		System.out.println(expiriencedApplicant2.setApi(10));		   //???
+		System.out.println(expiriencedApplicant2.setPi(10.14));	   //???		
 		System.out.println("======");
-		ea2.work();
+		expiriencedApplicant2.work();
 		System.out.println("========================");
 		
 		
@@ -338,24 +338,24 @@ public class Executor {
 		System.out.println("Class Of NoMoneyUser");
 		System.out.println("========================");
 		
-	    NoMoneyUser nmu1 = new NoMoneyUser(1234567, "BelCom", true);
-		nmu1.printInfo();
+	    NoMoneyUser noMoneyUser1 = new NoMoneyUser(1234567, "BelCom", true);
+		noMoneyUser1.printInfo();
 		System.out.println("======");
-		System.out.println(nmu1.showNumber());                 
-		System.out.println(nmu1.showOperator());                
-		System.out.println(nmu1.showStatus());                  
+		System.out.println(noMoneyUser1.showNumber());                 
+		System.out.println(noMoneyUser1.showOperator());                
+		System.out.println(noMoneyUser1.showStatus());                  
 		System.out.println("======");	
-		nmu1.printInfoAgain(123,"BalkanCom",false);
+		noMoneyUser1.printInfoAgain(123,"BalkanCom",false);
 		System.out.println("======");
-		System.out.println(nmu1.showNumberAgain(1234));         
-		System.out.println(nmu1.showOperatorAgain("UkrCom"));   
-		System.out.println(nmu1.showStatusAgain(true));		    
+		System.out.println(noMoneyUser1.showNumberAgain(1234));         
+		System.out.println(noMoneyUser1.showOperatorAgain("UkrCom"));   
+		System.out.println(noMoneyUser1.showStatusAgain(true));		    
 		System.out.println("========================");
 				
-		NoMoneyUser nmu2 = new NoMoneyUser(12345678, "BelCom", true);
-		System.out.println(nmu2.getNumber());
-		System.out.println(nmu2.getOperator());
-		System.out.println(nmu2.getStatus());
+		NoMoneyUser noMoneyUser2 = new NoMoneyUser(12345678, "BelCom", true);
+		System.out.println(noMoneyUser2.getNumber());
+		System.out.println(noMoneyUser2.getOperator());
+		System.out.println(noMoneyUser2.getStatus());
 		System.out.println("========================");
 			
 		
@@ -366,24 +366,24 @@ public class Executor {
 		System.out.println("Class Of NoConnectionUser");
 		System.out.println("========================");
 		
-		NoConnectionUser ncu1 = new NoConnectionUser(567, "UserCom", true);
-		ncu1.printInfo();
+		NoConnectionUser noConnectionUser1 = new NoConnectionUser(567, "UserCom", true);
+		noConnectionUser1.printInfo();
 		System.out.println("======");		
-		System.out.println(ncu1.showNumber());                    
-		System.out.println(ncu1.showOperator());                  
-		System.out.println(ncu1.showStatus());                     
+		System.out.println(noConnectionUser1.showNumber());                    
+		System.out.println(noConnectionUser1.showOperator());                  
+		System.out.println(noConnectionUser1.showStatus());                     
 		System.out.println("======");		
-		ncu1.printInfoAgain(12345,"BelkaCom",false);
+		noConnectionUser1.printInfoAgain(12345,"BelkaCom",false);
 		System.out.println("======");
-		System.out.println(ncu1.showNumberAgain(1234));              
-		System.out.println(ncu1.showOperatorAgain("PolskaCom"));   
-		System.out.println(ncu1.showStatusAgain(true));		       
+		System.out.println(noConnectionUser1.showNumberAgain(1234));              
+		System.out.println(noConnectionUser1.showOperatorAgain("PolskaCom"));   
+		System.out.println(noConnectionUser1.showStatusAgain(true));		       
 		System.out.println("========================");
 				
-		NoConnectionUser ncu2 = new NoConnectionUser(678, "BulbaCom", true);
-		System.out.println(ncu2.getNumber());
-		System.out.println(ncu2.getOperator());
-		System.out.println(ncu2.getStatus());
+		NoConnectionUser noConnectionUser2 = new NoConnectionUser(678, "BulbaCom", true);
+		System.out.println(noConnectionUser2.getNumber());
+		System.out.println(noConnectionUser2.getOperator());
+		System.out.println(noConnectionUser2.getStatus());
 		System.out.println("========================");
 		
 		
@@ -394,25 +394,25 @@ public class Executor {
 		System.out.println("Class Of MobilePhoneUser");
 		System.out.println("========================");
 		
-		MobilePhoneUser mpu1 = new MobilePhoneUser(1234567, "BelCom", true, 100);
-		mpu1.printInfo();
+		MobilePhoneUser mobilePhoneUser1 = new MobilePhoneUser(1234567, "BelCom", true, 100);
+		mobilePhoneUser1.printInfo();
 		System.out.println("======");		
-		System.out.println(mpu1.showNumber());                    
-		System.out.println(mpu1.showOperator());                  
-		System.out.println(mpu1.showStatus());                   
+		System.out.println(mobilePhoneUser1.showNumber());                    
+		System.out.println(mobilePhoneUser1.showOperator());                  
+		System.out.println(mobilePhoneUser1.showStatus());                   
 		System.out.println("======");		
-		mpu1.printInfoAgain(12345,"BelkaCom",false);
+		mobilePhoneUser1.printInfoAgain(12345,"BelkaCom",false);
 		System.out.println("======");
-		System.out.println(mpu1.showNumberAgain(1234));            
-		System.out.println(mpu1.showOperatorAgain("PolskaCom"));    
-		System.out.println(mpu1.showStatusAgain(true));            
+		System.out.println(mobilePhoneUser1.showNumberAgain(1234));            
+		System.out.println(mobilePhoneUser1.showOperatorAgain("PolskaCom"));    
+		System.out.println(mobilePhoneUser1.showStatusAgain(true));            
 		System.out.println("========================");
 	
-		MobilePhoneUser mpu2 = new MobilePhoneUser(1234567, "BelCom", true, 100);
-		System.out.println(mpu2.getNumber());
-		System.out.println(mpu2.getOperator());
-		System.out.println(mpu2.getStatus());
-		System.out.println(mpu2.getMinutes());
+		MobilePhoneUser mobilePhoneUser2 = new MobilePhoneUser(1234567, "BelCom", true, 100);
+		System.out.println(mobilePhoneUser2.getNumber());
+		System.out.println(mobilePhoneUser2.getOperator());
+		System.out.println(mobilePhoneUser2.getStatus());
+		System.out.println(mobilePhoneUser2.getMinutes());
 		System.out.println("========================");
 		
 		
@@ -423,26 +423,26 @@ public class Executor {
 		System.out.println("Class Of MobileInternetUser");
 		System.out.println("========================");
 	    
-	    MobileInternetUser miu1 = new MobileInternetUser(1234567, "BelarusCom", true, 1200, 2500);
-		miu1.printInfo();
+	    MobileInternetUser mobileInternetUser1 = new MobileInternetUser(1234567, "BelarusCom", true, 1200, 2500);
+		mobileInternetUser1.printInfo();
 		System.out.println("======");		
-		System.out.println(miu1.showNumber());                    
-		System.out.println(miu1.showOperator());                  
-		System.out.println(miu1.showStatus());                    
+		System.out.println(mobileInternetUser1.showNumber());                    
+		System.out.println(mobileInternetUser1.showOperator());                  
+		System.out.println(mobileInternetUser1.showStatus());                    
 		System.out.println("======");		
-		miu1.printInfoAgain(12345,"ZubrCom",false);
+		mobileInternetUser1.printInfoAgain(12345,"ZubrCom",false);
 		System.out.println("======");
-		System.out.println(miu1.showNumberAgain(1234));            
-		System.out.println(miu1.showOperatorAgain("PolskaCom"));    
-		System.out.println(miu1.showStatusAgain(true));            
+		System.out.println(mobileInternetUser1.showNumberAgain(1234));            
+		System.out.println(mobileInternetUser1.showOperatorAgain("PolskaCom"));    
+		System.out.println(mobileInternetUser1.showStatusAgain(true));            
 		System.out.println("========================");		
 	
-		MobileInternetUser miu2 = new MobileInternetUser(1234567, "MedvedCom", true, 1000, 1500);
-		System.out.println(miu2.getNumber());
-		System.out.println(miu2.getOperator());
-		System.out.println(miu2.getStatus());
-		System.out.println(miu2.getMinutes());
-		System.out.println(miu2.getBytes());		
+		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(1234567, "MedvedCom", true, 1000, 1500);
+		System.out.println(mobileInternetUser2.getNumber());
+		System.out.println(mobileInternetUser2.getOperator());
+		System.out.println(mobileInternetUser2.getStatus());
+		System.out.println(mobileInternetUser2.getMinutes());
+		System.out.println(mobileInternetUser2.getBytes());		
 		System.out.println("========================");
 		
 		
@@ -453,28 +453,28 @@ public class Executor {
 		System.out.println("Class Of HomeInternetUser");
 		System.out.println("========================");
 				
-		HomeInternetUser hiu1 = new HomeInternetUser(1234567, "BelarusCom", true, 10000);
-		hiu1.printInfo();
+		HomeInternetUser homeInternetUser1 = new HomeInternetUser(1234567, "BelarusCom", true, 10000);
+		homeInternetUser1.printInfo();
 		System.out.println("======");		
-		hiu1.printInfoNew();
+		homeInternetUser1.printInfoNew();
 		System.out.println("======");	
-		System.out.println(hiu1.showNumber());                    
-		System.out.println(hiu1.showOperator());                  
-		System.out.println(hiu1.showStatus());                    
+		System.out.println(homeInternetUser1.showNumber());                    
+		System.out.println(homeInternetUser1.showOperator());                  
+		System.out.println(homeInternetUser1.showStatus());                    
 		System.out.println("======");		
-		hiu1.printInfoAgain(12345,"BobrCom",false);
-		hiu1.showHomeBonus();
+		homeInternetUser1.printInfoAgain(12345,"BobrCom",false);
+		homeInternetUser1.showHomeBonus();
 		System.out.println("======");
-		System.out.println(hiu1.showNumberAgain(1234));            
-		System.out.println(hiu1.showOperatorAgain("PolskaCom"));    
-		System.out.println(hiu1.showStatusAgain(true));            
+		System.out.println(homeInternetUser1.showNumberAgain(1234));            
+		System.out.println(homeInternetUser1.showOperatorAgain("PolskaCom"));    
+		System.out.println(homeInternetUser1.showStatusAgain(true));            
 		System.out.println("========================");	
 		
-		HomeInternetUser hiu2 = new HomeInternetUser(1234567, "MedvedCom", true, 15000);
-		System.out.println(hiu2.getNumber());
-		System.out.println(hiu2.getOperator());
-		System.out.println(hiu2.getStatus());
-		System.out.println(hiu2.getHomeBonus());		
+		HomeInternetUser homeInternetUser2 = new HomeInternetUser(1234567, "MedvedCom", true, 15000);
+		System.out.println(homeInternetUser2.getNumber());
+		System.out.println(homeInternetUser2.getOperator());
+		System.out.println(homeInternetUser2.getStatus());
+		System.out.println(homeInternetUser2.getHomeBonus());		
 		System.out.println("========================");
 	}	
 }
