@@ -21,7 +21,7 @@ import com.solvd.mobileoperator.user.NoConnectionUser;   // Extension:     Class
 //import com.solvd.mobileoperator.user.GoodUser;         // Abstraction:   Abstract Class GoodUser;
 import com.solvd.mobileoperator.user.MobilePhoneUser;    // Extension:     Class MobilePhoneUser extends Abstract Class GoodUser;
 import com.solvd.mobileoperator.user.MobileInternetUser; // Extension:     Class MobileInternetUser extends Class MobilePhoneUser;
-//import com.solvd.mobileoperator.user.HomeUser;         // Abstraction:   Abstract Class HomeUser extends Abstract Class GoodUser;
+//import com.solvd.mobileoperator.user.HomePhoneUser;         // Abstraction:   Abstract Class HomeUser extends Abstract Class GoodUser;
 import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction:   Class HomeInternetUser extends Abstract Class HomeUser, 
 
 
