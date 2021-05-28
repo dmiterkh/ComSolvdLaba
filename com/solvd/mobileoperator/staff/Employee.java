@@ -2,8 +2,6 @@ package com.solvd.mobileoperator.staff;
 
 public class Employee implements Staff {
 
-	public int API = 21;
-	public double PI = 21.14;
 	protected int age; 
 	protected String sex; 
 	private String status = "employee"; 
@@ -51,18 +49,6 @@ public class Employee implements Staff {
 		this.sex = sex; 
 		return this.sex;
 	}
-	
-	@Override
-	public int setApi(int number) {
-		API = number; 
-		return API;
-	} 
-		
-	@Override	
-	public double setPi(double number) {
-		PI = number; 
-		return PI;
-	} 
 	
 	@Override
 	public void work() {

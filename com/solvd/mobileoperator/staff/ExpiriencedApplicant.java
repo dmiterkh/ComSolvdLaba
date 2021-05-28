@@ -2,8 +2,6 @@ package com.solvd.mobileoperator.staff;
 
 public class ExpiriencedApplicant extends Unemployed implements Staff {
 	
-	public int API = 5;
-	public double PI = 5.14;
 	protected int age; 
 	protected String sex; 
 	private String status = "Expirienced Applicant"; 
@@ -56,18 +54,6 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		this.sex = sex; 
 		return this.sex;
 	}
-	
-	@Override
-	public int setApi(int number) {
-		this.API = number; 
-		return this.API;
-	} 
-		
-	@Override	
-	public double setPi(double number) {
-		this.PI = number; 
-		return this.PI;
-	} 
 	
 	@Override
 	public void work() {

@@ -207,24 +207,18 @@ public class Executor {
 		
 		Employee employee1 = new Employee(25, "F"); 
 		employee1.printInfo();
-		System.out.println(employee1.API);
-		System.out.println(employee1.PI);
+
 		System.out.println("========================");
-		
 		Employee employee2 = new Employee(20, "M"); 
 		employee2.aquire();
 		System.out.println("======");
 		System.out.println(employee2.showAge());
-		System.out.println(employee2.showSex());
-		System.out.println(employee2.API);
-		System.out.println(employee2.PI);		
+		System.out.println(employee2.showSex());		
 		System.out.println("======");
 		employee2.printInfoAgain(21,"MM");
 		System.out.println("======");
 		System.out.println(employee2.showAgeAgain(22));
 		System.out.println(employee2.showSexAgain("FF"));
-		System.out.println(employee2.setApi(17));			  //???
-		System.out.println(employee2.setPi(17.14));		  //???
 		System.out.println("======");
 		employee2.work();
 		System.out.println("========================");
@@ -239,24 +233,18 @@ public class Executor {
 		
 		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
 		badEmployee1.printInfo();
-		System.out.println(badEmployee1.API);
-		System.out.println(badEmployee1.PI);
 		System.out.println("========================");
 		
 		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 
 		badEmployee2.aquire();
 		System.out.println("======");
 		System.out.println(badEmployee2.showAge());
-		System.out.println(badEmployee2.showSex());
-		System.out.println(badEmployee2.API);
-		System.out.println(badEmployee2.PI);	
+		System.out.println(badEmployee2.showSex());	
 		System.out.println("======");
 		badEmployee2.printInfoAgain(21,"MM");
 		System.out.println("======");
 		System.out.println(badEmployee2.showAgeAgain(27));
 		System.out.println(badEmployee2.showSexAgain("FFMM"));
-		System.out.println(badEmployee2.setApi(8));			  //???
-		System.out.println(badEmployee2.setPi(8.14));		  //???
 		System.out.println("======");
 		badEmployee2.work();
 		badEmployee2.drink();        
@@ -272,24 +260,18 @@ public class Executor {
 		
 		Boss boss1 = new Boss(76, "F"); 
 		boss1.printInfo();
-		System.out.println(boss1.API);
-		System.out.println(boss1.PI);
 		System.out.println("========================");
 		
 		Boss boss2 = new Boss(77, "M"); 
 		boss2.aquire();
 		System.out.println("======");
 		System.out.println(boss2.showAge());
-		System.out.println(boss2.showSex());
-		System.out.println(boss2.API);
-		System.out.println(boss2.PI);	
+		System.out.println(boss2.showSex());	
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
 		System.out.println(boss2.showAgeAgain(22));
-		System.out.println(boss2.showSexAgain("FF"));
-		System.out.println(boss2.setApi(9));	     //???
-		System.out.println(boss2.setPi(9.14));		 //???		
+		System.out.println(boss2.showSexAgain("FF"));		
 		System.out.println("======");
 		boss2.work();
 		boss2.hirePeople();
@@ -307,8 +289,6 @@ public class Executor {
 		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(76, "F"); 
 		expiriencedApplicant1.printInfo();
 		expiriencedApplicant1.lookForJob();
-		System.out.println(expiriencedApplicant1.API);
-		System.out.println(expiriencedApplicant1.PI);
 		System.out.println("========================");
 		
 		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M"); 
@@ -317,15 +297,11 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(expiriencedApplicant2.showAge());
 		System.out.println(expiriencedApplicant2.showSex());
-		System.out.println(expiriencedApplicant2.API);
-		System.out.println(expiriencedApplicant2.PI);
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
 		System.out.println(expiriencedApplicant2.showAgeAgain(22));
-		System.out.println(expiriencedApplicant2.showSexAgain("FF"));
-		System.out.println(expiriencedApplicant2.setApi(10));		   //???
-		System.out.println(expiriencedApplicant2.setPi(10.14));	   //???		
+		System.out.println(expiriencedApplicant2.showSexAgain("FF"));		
 		System.out.println("======");
 		expiriencedApplicant2.work();
 		System.out.println("========================");
