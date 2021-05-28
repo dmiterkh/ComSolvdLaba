@@ -1,2 +1,2 @@
 # ignore of module-info.java file
-module-info.java
+*.java
