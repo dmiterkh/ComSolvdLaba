@@ -223,8 +223,8 @@ public class Executor {
 		System.out.println("======");
 		System.out.println(employee2.showAgeAgain(22));
 		System.out.println(employee2.showSexAgain("FF"));
-		System.out.println(employee2.setApi(7));			  //???
-		System.out.println(employee2.setPi(7.14));		  //???
+		System.out.println(employee2.setApi(17));			  //???
+		System.out.println(employee2.setPi(17.14));		  //???
 		System.out.println("======");
 		employee2.work();
 		System.out.println("========================");

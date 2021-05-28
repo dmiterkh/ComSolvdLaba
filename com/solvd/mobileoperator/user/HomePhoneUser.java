@@ -16,9 +16,9 @@ public abstract class HomePhoneUser extends GoodUser {
 	
 	@Override
 	public void printInfo() {
-		System.out.println("HomeInternetUser number: " +  this.number);
-		System.out.println("HomeInternetUser operator: " + this.operator);
-		System.out.println("HomeInternetUser isActive: " + this.isActive);
+		System.out.println("HomeInternetUser number:  " +  this.number);
+		System.out.println("HomeInternetUser operator:  " + this.operator);
+		System.out.println("HomeInternetUser isActive:  " + this.isActive);
 	}
 	
 }

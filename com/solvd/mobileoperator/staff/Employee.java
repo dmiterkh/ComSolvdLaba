@@ -2,8 +2,8 @@ package com.solvd.mobileoperator.staff;
 
 public class Employee implements Staff {
 
-	public int API = 1;
-	public double PI = 1.14;
+	public int API = 21;
+	public double PI = 21.14;
 	protected int age; 
 	protected String sex; 
 	private String status = "employee"; 

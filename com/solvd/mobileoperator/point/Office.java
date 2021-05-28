@@ -14,19 +14,19 @@ public class Office {
 	
 	public Office(String adress, String priority, int number) {
 		if (adress.isEmpty()){
-			System.out.println("Error in field 'adress' ");
+			System.out.println("Error in field 'adress'  ");
 		} else { 
 			this.adress = adress;
 		}	
 		
 		if (priority.isEmpty()){
-			System.out.println("Error in field 'priority' ");
+			System.out.println("Error in field 'priority'  ");
 		} else { 
 			this.priority = priority;
 		}
 		
 		if (number <= 0){
-			System.out.println("Error in field number");
+			System.out.println("Error in field number ");
 		} else { 
 			this.number = number;
 		}
