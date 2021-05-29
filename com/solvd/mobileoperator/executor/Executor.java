@@ -456,111 +456,282 @@ public class Executor {
 		System.out.println("========================");
 		
 		
+// STORAGE!!! STORAGE!!! STORAGE!!!
 		
 		
         System.out.println(" ");
+		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("Class (Storage) Of Colleague");
 		System.out.println("========================");
 		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Set 1 OverRiding");
+		System.out.println("========================");
 		
 		Colleague colleague1 = new Colleague();
+
 		colleague1.setStaff(employee1);
-		System.out.println(colleague1.getStaff().showStatus());
+		colleague1.getStaff().printInfo();
 		System.out.println(colleague1.getStaff().showAge());
 		System.out.println(colleague1.getStaff().showSex());
-		System.out.println("======");
-		colleague1.setStaff(badEmployee1);
 		System.out.println(colleague1.getStaff().showStatus());
-		System.out.println(colleague1.getStaff().showAge());
-		System.out.println(colleague1.getStaff().showSex());
+		colleague1.getStaff().aquire();
+		colleague1.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(42));
+		System.out.println(colleague1.getStaff().showSexAgain("ff"));
 		System.out.println("======");
-		colleague1.setStaff(boss1);
-		System.out.println(colleague1.getStaff().showStatus());
-		System.out.println(colleague1.getStaff().showAge());
-		System.out.println(colleague1.getStaff().showSex());
-		System.out.println("======");
-		colleague1.setStaff(expiriencedApplicant1);
-		System.out.println(colleague1.getStaff().showStatus());
-		System.out.println(colleague1.getStaff().showAge());
-		System.out.println(colleague1.getStaff().showSex());
-		System.out.println("======");
-		System.out.println(" ");
 		
-		Colleague colleague2 = new Colleague();
-		colleague2.setStaff(employee2);
-		System.out.println(colleague2.getStaff().showStatus());
-		System.out.println(colleague2.getStaff().showAge());
-		System.out.println(colleague2.getStaff().showSex());
+		colleague1.setStaff(badEmployee1);
+		colleague1.getStaff().printInfo();
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println(colleague1.getStaff().showStatus());
+		colleague1.getStaff().aquire();
+		colleague1.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(52));
+		System.out.println(colleague1.getStaff().showSexAgain("mm"));
 		System.out.println("======");
-		colleague2.setStaff(badEmployee2);
-		System.out.println(colleague2.getStaff().showStatus());
-		System.out.println(colleague2.getStaff().showAge());
-		System.out.println(colleague2.getStaff().showSex());
+		
+		colleague1.setStaff(boss1);
+		colleague1.getStaff().printInfo();
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println(colleague1.getStaff().showStatus());
+		colleague1.getStaff().aquire();
+		colleague1.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(62));
+		System.out.println(colleague1.getStaff().showSexAgain("mmff"));
 		System.out.println("======");
-		colleague2.setStaff(boss2);
-		System.out.println(colleague2.getStaff().showStatus());
-		System.out.println(colleague2.getStaff().showAge());
-		System.out.println(colleague2.getStaff().showSex());
-		System.out.println("======");
-		colleague2.setStaff(expiriencedApplicant2);
-		System.out.println(colleague2.getStaff().showStatus());
-		System.out.println(colleague2.getStaff().showAge());
-		System.out.println(colleague2.getStaff().showSex());
+		
+		colleague1.setStaff(expiriencedApplicant1);
+		colleague1.getStaff().printInfo();
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println(colleague1.getStaff().showStatus());
+		colleague1.getStaff().aquire();
+		colleague1.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(22));
+		System.out.println(colleague1.getStaff().showSexAgain("TransSexual"));
 		System.out.println("========================");
+		
 		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Set 1 OverLoading");
+		System.out.println("========================");
+		
+		colleague1.setStaff(employee1);
+		colleague1.getStaff().setInfoAgain(26, "ff", 2000, "employee");
+		System.out.println(colleague1.getStaff().showSalaryMaximum(26, 2000, "employee"));
+		colleague1.getStaff().printInfoAgain(36, "FF");
+		colleague1.getStaff().showStatusAgain("status14");
+		System.out.println("======");
+		
+		colleague1.setStaff(badEmployee1);
+		colleague1.getStaff().setInfoAgain(36, "MM", 700, "bad employee");
+		System.out.println(colleague1.getStaff().showSalaryMaximum(36, 700, "bad employee"));		
+		colleague1.getStaff().printInfoAgain(46, "mm");
+		colleague1.getStaff().showStatusAgain("status14");
+		System.out.println("======");
+		
+		colleague1.setStaff(boss1);
+		colleague1.getStaff().setInfoAgain(46, "FF", 3000, "boss" /*, "god power"*/);
+		System.out.println(colleague1.getStaff().showSalaryMaximum(46, 3000, "boss" /*, "god power"*/));		
+		colleague1.getStaff().printInfoAgain(56, "ff");
+		colleague1.getStaff().showStatusAgain("status14");
+		System.out.println("======");
+		
+		colleague1.setStaff(expiriencedApplicant1);
+		colleague1.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
+		System.out.println(colleague1.getStaff().showSalaryMaximum(16, 1500, "expirienced applicant"));	
+		colleague1.getStaff().printInfoAgain(26, "TransGender");
+		colleague1.getStaff().showStatusAgain("status14");
+		System.out.println("========================");
+		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Set 2 OverRiding");
+		System.out.println("========================");
 
 		
+		Colleague colleague2 = new Colleague();
+
+		colleague2.setStaff(employee2);
+		colleague2.getStaff().printInfo();
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println(colleague2.getStaff().showStatus());
+		colleague2.getStaff().aquire();
+		colleague2.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(52));
+		System.out.println(colleague1.getStaff().showSexAgain("ff"));
+		System.out.println("======");
+
+		colleague2.setStaff(badEmployee2);
+		colleague2.getStaff().printInfo();
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println(colleague2.getStaff().showStatus());
+		colleague2.getStaff().aquire();
+		colleague2.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(62));
+		System.out.println(colleague1.getStaff().showSexAgain("mm"));
+		System.out.println("======");
+
+		colleague2.setStaff(boss2);
+		colleague2.getStaff().printInfo();
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println(colleague2.getStaff().showStatus());
+		colleague2.getStaff().aquire();
+		colleague2.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(72));
+		System.out.println(colleague1.getStaff().showSexAgain("mmff"));
+		System.out.println("======");
+
+		colleague2.setStaff(expiriencedApplicant2);
+		colleague2.getStaff().printInfo();
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println(colleague2.getStaff().showStatus());
+		colleague2.getStaff().aquire();
+		colleague2.getStaff().work();
+		System.out.println(colleague1.getStaff().showAgeAgain(32));
+		System.out.println(colleague1.getStaff().showSexAgain("TransSexual"));
+		System.out.println("========================");
 		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Set 2 OverLoading");
+		System.out.println("========================");
+
 		
+		colleague2.setStaff(employee2);
+		colleague2.getStaff().setInfoAgain(39, "ff", 2600, "employee");
+		colleague2.getStaff().printInfoAgain(49, "ff");
+		colleague2.getStaff().showStatusAgain("status1");
+		System.out.println("======");
+		
+		colleague2.setStaff(badEmployee2);
+		colleague2.getStaff().setInfoAgain(49, "ff", 1200, "bad employee");
+		colleague2.getStaff().printInfoAgain(59, "mm");
+		colleague2.getStaff().showStatusAgain("status2");
+		System.out.println("======");
+		
+		colleague2.setStaff(boss2);
+		colleague2.getStaff().setInfoAgain(59, "mm", 4000, "boss");
+		colleague2.getStaff().printInfoAgain(69, "ff");
+		colleague2.getStaff().showStatusAgain("status3");
+		System.out.println("======");
+		
+		colleague2.setStaff(expiriencedApplicant2);
+		colleague2.getStaff().setInfoAgain(19, "TransGender", 2500, "expirienced applicant");
+		colleague2.getStaff().printInfoAgain(29, "TransGender");
+		colleague2.getStaff().showStatusAgain("status4");
+		System.out.println("========================");
+		System.out.println(" ");
 		
         System.out.println(" ");
+		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("Class (Storage) Of ActiveUser");
 		System.out.println("========================");
 		System.out.println(" ");
 		
 		ActiveUser activeUser1 = new ActiveUser();
+		
 		activeUser1.setGoodUser(mobilePhoneUser1);
+		activeUser1.getGoodUser().printInfo();
+		System.out.println(activeUser1.getGoodUser().showNumber());		
+		System.out.println(activeUser1.getGoodUser().showOperator());		
+		System.out.println(activeUser1.getGoodUser().showStatus());		
+		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
 		System.out.println("======");
+		
 		activeUser1.setGoodUser(mobileInternetUser1);
+		activeUser1.getGoodUser().printInfo();
+		System.out.println(activeUser1.getGoodUser().showNumber());		
+		System.out.println(activeUser1.getGoodUser().showOperator());		
+		System.out.println(activeUser1.getGoodUser().showStatus());		
+		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
 		System.out.println("======");
+		
 		activeUser1.setGoodUser(homeInternetUser1);
+		activeUser1.getGoodUser().printInfo();
+		System.out.println(activeUser1.getGoodUser().showNumber());		
+		System.out.println(activeUser1.getGoodUser().showOperator());		
+		System.out.println(activeUser1.getGoodUser().showStatus());		
+		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
 		System.out.println("======");
+		
 		System.out.println(" ");
 		
 		ActiveUser activeUser2 = new ActiveUser();
 		activeUser2.setGoodUser(mobilePhoneUser2);
+		activeUser2.getGoodUser().printInfo();
+		System.out.println(activeUser2.getGoodUser().showNumber());		
+		System.out.println(activeUser2.getGoodUser().showOperator());		
+		System.out.println(activeUser2.getGoodUser().showStatus());		
+		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumberAgain(678345));
+		System.out.println(activeUser2.getGoodUser().showOperatorAgain("LogoiskCom"));
+		System.out.println(activeUser2.getGoodUser().showStatusAgain(true));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
 		System.out.println("======");
+		
 		activeUser2.setGoodUser(mobileInternetUser2);
+		activeUser2.getGoodUser().printInfo();
+		System.out.println(activeUser2.getGoodUser().showNumber());		
+		System.out.println(activeUser2.getGoodUser().showOperator());		
+		System.out.println(activeUser2.getGoodUser().showStatus());		
+		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumberAgain(5678345));
+		System.out.println(activeUser2.getGoodUser().showOperatorAgain("DzerjinskCom"));
+		System.out.println(activeUser2.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
 		System.out.println("======");
+		
 		activeUser2.setGoodUser(homeInternetUser2);
+		activeUser2.getGoodUser().printInfo();
+		System.out.println(activeUser2.getGoodUser().showNumber());		
+		System.out.println(activeUser2.getGoodUser().showOperator());		
+		System.out.println(activeUser2.getGoodUser().showStatus());		
+		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumberAgain(5668345));
+		System.out.println(activeUser2.getGoodUser().showOperatorAgain("LitvaCom"));
+		System.out.println(activeUser2.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
 		System.out.println("========================");
 		System.out.println(" ");		
 		
-		
-		
-		
-		
 	}	
-	
 }
 

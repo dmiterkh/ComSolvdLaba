@@ -29,11 +29,15 @@ public class MobileInternetUser extends MobilePhoneUser {
 		System.out.println("MobileInternetUser bytes: " + getBytes());
 	}
 	
+	// OverLoading ???
 	@Override
-	public void printInfoAgain(int number, String operator, boolean isActive) {
+	public void printInfoAgain(int number, String operator, boolean isActive/*, int minutes, int bytes*/) {
 		System.out.println("Again MobileInternetUser number: " + number);
 		System.out.println("Again MobileInternetUser operator: " + operator);
 		System.out.println("Again MobileInternetUser isActive: " + isActive);
+//		System.out.println("Again MobileInternetUser minutes: " + minutes);		
+//		System.out.println("Again MobileInternetUser bytes: " + bytes);		
+
 	}
 	
 }
