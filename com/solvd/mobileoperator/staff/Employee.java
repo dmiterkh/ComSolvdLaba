@@ -21,7 +21,7 @@ public class Employee implements Staff {
 		System.out.println("I can aquire new skills!");
 	}
 	
-	// Overloading ???
+	
 	@Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);
@@ -31,6 +31,20 @@ public class Employee implements Staff {
 		System.out.println("I can work 8 hours every day!");
 		System.out.println("I can aquire new skills!");
 	}	
+	
+	// Overload ???
+	public void printInfo(int age, String sex, int salary, String status) {
+		this.age = age;
+		this.sex = sex;
+		this.salary = salary;
+		this.status = status;
+		System.out.println("I am a(an)_ "  + this.status);
+		System.out.println("I am_  " + this.age + "  _years old");
+		System.out.println("My sex is_ " + this.sex);		
+		System.out.println("My salary is_ " + this.salary);		
+		System.out.println("I can work 8 hours every day!");
+		System.out.println("I can aquire new skills!");
+	}
 	
 	@Override
 	public int showAge() {

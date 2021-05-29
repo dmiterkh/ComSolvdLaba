@@ -33,6 +33,20 @@ public class BadEmployee implements Staff , BadTrainee {
 		System.out.println("I can drink coffee or whiskey 8 hours every day at working place!");
 	}
 	
+	// Overload ???
+	public void printInfo(int age, String sex, int salary, String status) {
+		this.age = age;
+		this.sex = sex;
+		this.salary = salary;
+		this.status = status;
+		System.out.println("I am a(an)_ "  + this.status);
+		System.out.println("I am_  " + this.age + "  _years old");
+		System.out.println("My sex is_ " + this.sex);		
+		System.out.println("My salary is_ " + this.salary);		
+		System.out.println("I can work 8 hours every day!");
+		System.out.println("I can aquire new skills!");
+	}
+	
 	@Override
 	public int showAge() {
 		return this.age;
