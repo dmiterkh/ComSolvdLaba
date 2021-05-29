@@ -25,6 +25,12 @@ public class Boss extends Employee {
 		System.out.println("I can aquire a lot of new skills!");
 	}
 
+	
+	@Override
+	public String showStatus() {
+			return this.status;
+	}
+	
 	@Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);

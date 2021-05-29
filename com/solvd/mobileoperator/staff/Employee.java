@@ -23,13 +23,16 @@ public class Employee implements Staff {
 	@Override
 	public int showAge() {
 		return this.age;
-
 	}
 	
 	@Override
 	public String showSex() {
 		return this.sex;
-
+	}
+	
+	@Override
+	public String showStatus() {
+			return this.status;
 	}
 	
 	@Override

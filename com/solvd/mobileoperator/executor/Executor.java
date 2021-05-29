@@ -24,6 +24,8 @@ import com.solvd.mobileoperator.user.MobileInternetUser; // Extension:     Class
 //import com.solvd.mobileoperator.user.HomePhoneUser;         // Abstraction:   Abstract Class HomeUser extends Abstract Class GoodUser;
 import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction:   Class HomeInternetUser extends Abstract Class HomeUser, 
 
+import com.solvd.mobileoperator.storage.Colleague;       // Polymorphizm: Interface Staff 
+import com.solvd.mobileoperator.storage.ActiveUser;      // Polymorphizm: Abstract Class GoodUser
 
 
 
@@ -270,8 +272,8 @@ public class Executor {
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
-		System.out.println(boss2.showAgeAgain(22));
-		System.out.println(boss2.showSexAgain("FF"));		
+		System.out.println(boss2.showAgeAgain(42));
+		System.out.println(boss2.showSexAgain("FN"));		
 		System.out.println("======");
 		boss2.work();
 		boss2.hirePeople();
@@ -286,7 +288,7 @@ public class Executor {
 		System.out.println("Class Of Expirienced Applicant");
 		System.out.println("========================");
 		
-		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(76, "F"); 
+		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender"); 
 		expiriencedApplicant1.printInfo();
 		expiriencedApplicant1.lookForJob();
 		System.out.println("========================");
@@ -300,8 +302,8 @@ public class Executor {
 		System.out.println("======");
 		boss2.printInfoAgain(21,"MM");   
 		System.out.println("======");
-		System.out.println(expiriencedApplicant2.showAgeAgain(22));
-		System.out.println(expiriencedApplicant2.showSexAgain("FF"));		
+		System.out.println(expiriencedApplicant2.showAgeAgain(12));
+		System.out.println(expiriencedApplicant2.showSexAgain("TransSexual"));		
 		System.out.println("======");
 		expiriencedApplicant2.work();
 		System.out.println("========================");
@@ -408,12 +410,12 @@ public class Executor {
 		System.out.println("======");		
 		mobileInternetUser1.printInfoAgain(12345,"ZubrCom",false);
 		System.out.println("======");
-		System.out.println(mobileInternetUser1.showNumberAgain(1234));            
-		System.out.println(mobileInternetUser1.showOperatorAgain("PolskaCom"));    
+		System.out.println(mobileInternetUser1.showNumberAgain(5234));            
+		System.out.println(mobileInternetUser1.showOperatorAgain("SerbskaCom"));    
 		System.out.println(mobileInternetUser1.showStatusAgain(true));            
 		System.out.println("========================");		
 	
-		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(1234567, "MedvedCom", true, 1000, 1500);
+		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(1234567, "MedvedCom", false, 1000, 1500);
 		System.out.println(mobileInternetUser2.getNumber());
 		System.out.println(mobileInternetUser2.getOperator());
 		System.out.println(mobileInternetUser2.getStatus());
@@ -446,12 +448,119 @@ public class Executor {
 		System.out.println(homeInternetUser1.showStatusAgain(true));            
 		System.out.println("========================");	
 		
-		HomeInternetUser homeInternetUser2 = new HomeInternetUser(1234567, "MedvedCom", true, 15000);
+		HomeInternetUser homeInternetUser2 = new HomeInternetUser(4567123, "BarsukCom", true, 15000);
 		System.out.println(homeInternetUser2.getNumber());
 		System.out.println(homeInternetUser2.getOperator());
 		System.out.println(homeInternetUser2.getStatus());
 		System.out.println(homeInternetUser2.getHomeBonus());		
 		System.out.println("========================");
+		
+		
+		
+		
+        System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Class (Storage) Of Colleague");
+		System.out.println("========================");
+		System.out.println(" ");
+		
+		Colleague colleague1 = new Colleague();
+		colleague1.setStaff(employee1);
+		System.out.println(colleague1.getStaff().showStatus());
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println("======");
+		colleague1.setStaff(badEmployee1);
+		System.out.println(colleague1.getStaff().showStatus());
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println("======");
+		colleague1.setStaff(boss1);
+		System.out.println(colleague1.getStaff().showStatus());
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println("======");
+		colleague1.setStaff(expiriencedApplicant1);
+		System.out.println(colleague1.getStaff().showStatus());
+		System.out.println(colleague1.getStaff().showAge());
+		System.out.println(colleague1.getStaff().showSex());
+		System.out.println("======");
+		System.out.println(" ");
+		
+		Colleague colleague2 = new Colleague();
+		colleague2.setStaff(employee2);
+		System.out.println(colleague2.getStaff().showStatus());
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println("======");
+		colleague2.setStaff(badEmployee2);
+		System.out.println(colleague2.getStaff().showStatus());
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println("======");
+		colleague2.setStaff(boss2);
+		System.out.println(colleague2.getStaff().showStatus());
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println("======");
+		colleague2.setStaff(expiriencedApplicant2);
+		System.out.println(colleague2.getStaff().showStatus());
+		System.out.println(colleague2.getStaff().showAge());
+		System.out.println(colleague2.getStaff().showSex());
+		System.out.println("========================");
+		System.out.println(" ");
+
+		
+		
+		
+		
+        System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Class (Storage) Of ActiveUser");
+		System.out.println("========================");
+		System.out.println(" ");
+		
+		ActiveUser activeUser1 = new ActiveUser();
+		activeUser1.setGoodUser(mobilePhoneUser1);
+		System.out.println(activeUser1.getGoodUser().getNumber());
+		System.out.println(activeUser1.getGoodUser().getOperator());
+		System.out.println(activeUser1.getGoodUser().getStatus());
+		System.out.println("======");
+		activeUser1.setGoodUser(mobileInternetUser1);
+		System.out.println(activeUser1.getGoodUser().getNumber());
+		System.out.println(activeUser1.getGoodUser().getOperator());
+		System.out.println(activeUser1.getGoodUser().getStatus());
+		System.out.println("======");
+		activeUser1.setGoodUser(homeInternetUser1);
+		System.out.println(activeUser1.getGoodUser().getNumber());
+		System.out.println(activeUser1.getGoodUser().getOperator());
+		System.out.println(activeUser1.getGoodUser().getStatus());
+		System.out.println("======");
+		System.out.println(" ");
+		
+		ActiveUser activeUser2 = new ActiveUser();
+		activeUser2.setGoodUser(mobilePhoneUser2);
+		System.out.println(activeUser2.getGoodUser().getNumber());
+		System.out.println(activeUser2.getGoodUser().getOperator());
+		System.out.println(activeUser2.getGoodUser().getStatus());
+		System.out.println("======");
+		activeUser2.setGoodUser(mobileInternetUser2);
+		System.out.println(activeUser2.getGoodUser().getNumber());
+		System.out.println(activeUser2.getGoodUser().getOperator());
+		System.out.println(activeUser2.getGoodUser().getStatus());
+		System.out.println("======");
+		activeUser2.setGoodUser(homeInternetUser2);
+		System.out.println(activeUser2.getGoodUser().getNumber());
+		System.out.println(activeUser2.getGoodUser().getOperator());
+		System.out.println(activeUser2.getGoodUser().getStatus());
+		System.out.println("========================");
+		System.out.println(" ");		
+		
+		
+		
+		
+		
 	}	
+	
 }
 

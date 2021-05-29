@@ -8,6 +8,8 @@ public interface Trainee {
 	
 	public String showSex();
 	
+	public String showStatus();
+	
 	public void printInfoAgain(int number, String sex);
 	
 	public int showAgeAgain(int number);

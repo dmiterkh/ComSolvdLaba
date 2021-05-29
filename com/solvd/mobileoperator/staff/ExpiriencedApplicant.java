@@ -38,6 +38,11 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 	}
 	
 	@Override
+	public String showStatus() {
+			return this.status;
+	}
+		
+	@Override
 	public void printInfoAgain(int age, String sex) {
 		System.out.println(age);
 		System.out.println(sex);
