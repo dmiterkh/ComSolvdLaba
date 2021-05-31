@@ -19,7 +19,7 @@ public class MobileInternetUser extends MobilePhoneUser {
 	public int getBytes() {
 		return this.bytes;
 	}
-	
+
 	@Override
 	public void printInfo() {
 		System.out.println("MobileInternetUser number: " + getNumber());
@@ -29,15 +29,36 @@ public class MobileInternetUser extends MobilePhoneUser {
 		System.out.println("MobileInternetUser bytes: " + getBytes());
 	}
 	
-	// OverLoading ???
+	// OverLoading	
 	@Override
-	public void printInfoAgain(int number, String operator, boolean isActive/*, int minutes, int bytes*/) {
-		System.out.println("Again MobileInternetUser number: " + number);
-		System.out.println("Again MobileInternetUser operator: " + operator);
-		System.out.println("Again MobileInternetUser isActive: " + isActive);
-//		System.out.println("Again MobileInternetUser minutes: " + minutes);		
-//		System.out.println("Again MobileInternetUser bytes: " + bytes);		
-
+	public void printInfo(int number, String operator, boolean isActive) {
+		this.number = number;
+		this.operator = operator;
+		this.isActive = isActive;
+		System.out.println("Again MobileUser number: " + this.number);
+		System.out.println("Again MobileUser operator: " + this.operator);
+		System.out.println("Again MobileUser isActive: " + this.isActive);
 	}
 	
+	// OverLoading
+	@Override
+	public int showNumber(int number) {
+		this.number = number;
+		return number;
+	}
+	
+	// OverLoading	
+	@Override
+	public String showOperator(String operator) {
+		this.operator = operator;
+		return operator;
+	}
+	
+	// OverLoading	
+	@Override
+	public boolean showStatus(boolean isActive) {
+		this.isActive = isActive;
+		return isActive;
+	}
+
 }

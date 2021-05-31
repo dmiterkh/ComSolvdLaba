@@ -42,29 +42,34 @@ public class MobilePhoneUser extends GoodUser {
 		return this.isActive;
 	}
 	
-	// OverLoading ???
+	// OverLoading	
 	@Override
-	public void printInfoAgain(int number, String operator, boolean isActive /*, int minutes*/) {
-		System.out.println("Again MobileUser number: " + number);
-		System.out.println("Again MobileUser operator: " + operator);
-		System.out.println("Again MobileUser isActive: " + isActive);
-//		System.out.println("Again MobileUser minutes: " + minutes);		
+	public void printInfo(int number, String operator, boolean isActive ) {
+		this.number = number;
+		this.operator = operator;
+		this.isActive = isActive;
+		System.out.println("Again MobileUser number: " + this.number);
+		System.out.println("Again MobileUser operator: " + this.operator);
+		System.out.println("Again MobileUser isActive: " + this.isActive);
 	}
 	
+	// OverLoading	
 	@Override
-	public int showNumberAgain(int number) {
+	public int showNumber(int number) {
 		this.number = number;
 		return this.number;
 	}
 	
+	// OverLoading	
 	@Override
-	public String showOperatorAgain(String operator) {
+	public String showOperator(String operator) {
 		this.operator = operator;
 		return this.operator;
 	}
 	
+	// OverLoading	
 	@Override
-	public boolean showStatusAgain(boolean isActive) {
+	public boolean showStatus(boolean isActive) {
 		this.isActive = isActive;
 		return this.isActive;
 	}

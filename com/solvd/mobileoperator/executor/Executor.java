@@ -379,11 +379,11 @@ public class Executor {
 		System.out.println(mobilePhoneUser1.showOperator());                  
 		System.out.println(mobilePhoneUser1.showStatus());                   
 		System.out.println("======");		
-		mobilePhoneUser1.printInfoAgain(12345,"BelkaCom",false);
+		mobilePhoneUser1.printInfo(12345,"BelkaCom",false);
 		System.out.println("======");
-		System.out.println(mobilePhoneUser1.showNumberAgain(1234));            
-		System.out.println(mobilePhoneUser1.showOperatorAgain("PolskaCom"));    
-		System.out.println(mobilePhoneUser1.showStatusAgain(true));            
+		System.out.println(mobilePhoneUser1.showNumber(1234));            
+		System.out.println(mobilePhoneUser1.showOperator("PolskaCom"));    
+		System.out.println(mobilePhoneUser1.showStatus(true));            
 		System.out.println("========================");
 	
 		MobilePhoneUser mobilePhoneUser2 = new MobilePhoneUser(1234567, "BelCom", true, 100);
@@ -408,11 +408,11 @@ public class Executor {
 		System.out.println(mobileInternetUser1.showOperator());                  
 		System.out.println(mobileInternetUser1.showStatus());                    
 		System.out.println("======");		
-		mobileInternetUser1.printInfoAgain(12345,"ZubrCom",false);
+		mobileInternetUser1.printInfo(12345,"ZubrCom",false);
 		System.out.println("======");
-		System.out.println(mobileInternetUser1.showNumberAgain(5234));            
-		System.out.println(mobileInternetUser1.showOperatorAgain("SerbskaCom"));    
-		System.out.println(mobileInternetUser1.showStatusAgain(true));            
+		System.out.println(mobileInternetUser1.showNumber(5234));            
+		System.out.println(mobileInternetUser1.showOperator("SerbskaCom"));    
+		System.out.println(mobileInternetUser1.showStatus(true));            
 		System.out.println("========================");		
 	
 		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(1234567, "MedvedCom", false, 1000, 1500);
@@ -434,18 +434,18 @@ public class Executor {
 		HomeInternetUser homeInternetUser1 = new HomeInternetUser(1234567, "BelarusCom", true, 10000);
 		homeInternetUser1.printInfo();
 		System.out.println("======");		
-		homeInternetUser1.printInfoNew();
+		homeInternetUser1.printInfo();
 		System.out.println("======");	
 		System.out.println(homeInternetUser1.showNumber());                    
 		System.out.println(homeInternetUser1.showOperator());                  
 		System.out.println(homeInternetUser1.showStatus());                    
 		System.out.println("======");		
-		homeInternetUser1.printInfoAgain(12345,"BobrCom",false);
+		homeInternetUser1.printInfo(12345,"BobrCom",false);
 		homeInternetUser1.showHomeBonus();
 		System.out.println("======");
-		System.out.println(homeInternetUser1.showNumberAgain(1234));            
-		System.out.println(homeInternetUser1.showOperatorAgain("PolskaCom"));    
-		System.out.println(homeInternetUser1.showStatusAgain(true));            
+		System.out.println(homeInternetUser1.showNumber(1234));            
+		System.out.println(homeInternetUser1.showOperator("PolskaCom"));    
+		System.out.println(homeInternetUser1.showStatus(true));            
 		System.out.println("========================");	
 		
 		HomeInternetUser homeInternetUser2 = new HomeInternetUser(4567123, "BarsukCom", true, 15000);
@@ -483,6 +483,7 @@ public class Executor {
 		System.out.println(colleague1.getStaff().showSalaryMaximum(26, 2000, "employee"));
 
 // OverLoading
+		System.out.println("======");
 		colleague1.getStaff().printInfo(36, "FF");
 		colleague1.getStaff().showStatus("status14");
 		System.out.println(colleague1.getStaff().showAge(42));
@@ -500,6 +501,7 @@ public class Executor {
 		System.out.println(colleague1.getStaff().showSalaryMaximum(36, 700, "bad employee"));		
 
 // OverLoading
+		System.out.println("======");
 		colleague1.getStaff().printInfo(46, "mm");
         colleague1.getStaff().showStatus("status14");
 		System.out.println(colleague1.getStaff().showAge(52));
@@ -517,6 +519,7 @@ public class Executor {
 		System.out.println(colleague1.getStaff().showSalaryMaximum(46, 3000, "boss" /*, "god power"*/));		
 
 // OverLoading		
+		System.out.println("======");
 		colleague1.getStaff().printInfo(56, "ff");
 		colleague1.getStaff().showStatus("status14");
 		System.out.println(colleague1.getStaff().showAge(62));
@@ -534,7 +537,8 @@ public class Executor {
 		colleague1.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		System.out.println(colleague1.getStaff().showSalaryMaximum(16, 1500, "expirienced applicant"));	
 
-// OverLoading		
+// OverLoading	
+		System.out.println("======");
 		colleague1.getStaff().printInfo(26, "TransGender");
 		colleague1.getStaff().showStatus("status14");
 		System.out.println(colleague1.getStaff().showAge(22));
@@ -572,7 +576,8 @@ public class Executor {
 		colleague2.getStaff().work();
 		colleague2.getStaff().setInfoAgain(39, "ff", 2600, "employee");
 
-// OverLoading		
+// OverLoading	
+		System.out.println("======");
 		colleague2.getStaff().printInfo(49, "ff");
 		colleague2.getStaff().showStatus("status1");
 		System.out.println(colleague1.getStaff().showAge(52));
@@ -589,6 +594,7 @@ public class Executor {
 		colleague2.getStaff().setInfoAgain(49, "ff", 1200, "bad employee");
 		
 // OverLoading
+		System.out.println("======");
 		colleague2.getStaff().printInfo(59, "mm");
 		colleague2.getStaff().showStatus("status2");
 		System.out.println(colleague1.getStaff().showAge(62));
@@ -604,7 +610,8 @@ public class Executor {
 		colleague2.getStaff().work();
 		colleague2.getStaff().setInfoAgain(59, "mm", 4000, "boss");
 
-// OverLoading		
+// OverLoading	
+		System.out.println("======");
 		colleague2.getStaff().printInfo(69, "ff");
 		colleague2.getStaff().showStatus("status3");
 		System.out.println(colleague1.getStaff().showAge(72));
@@ -620,7 +627,8 @@ public class Executor {
 		colleague2.getStaff().work();
 		colleague2.getStaff().setInfoAgain(19, "TransGender", 2500, "expirienced applicant");
 		
-// OverLoading		
+// OverLoading	
+		System.out.println("======");
 		colleague2.getStaff().printInfo(29, "TransGender");
 		colleague2.getStaff().showStatus("status4");
 		System.out.println(colleague1.getStaff().showAge(32));
@@ -649,13 +657,16 @@ public class Executor {
 		System.out.println(activeUser1.getGoodUser().showNumber());		
 		System.out.println(activeUser1.getGoodUser().showOperator());		
 		System.out.println(activeUser1.getGoodUser().showStatus());		
-		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
-		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
-		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
+		
+// OverLoading	
+		System.out.println("======");
+		activeUser1.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumber(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperator("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatus(false));
 		System.out.println("======");
 		
 		activeUser1.setGoodUser(mobileInternetUser1);
@@ -663,13 +674,16 @@ public class Executor {
 		System.out.println(activeUser1.getGoodUser().showNumber());		
 		System.out.println(activeUser1.getGoodUser().showOperator());		
 		System.out.println(activeUser1.getGoodUser().showStatus());		
-		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
-		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
-		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
+		
+// OverLoading	
+		System.out.println("======");
+		activeUser1.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumber(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperator("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatus(false));
 		System.out.println("======");
 		
 		activeUser1.setGoodUser(homeInternetUser1);
@@ -677,13 +691,16 @@ public class Executor {
 		System.out.println(activeUser1.getGoodUser().showNumber());		
 		System.out.println(activeUser1.getGoodUser().showOperator());		
 		System.out.println(activeUser1.getGoodUser().showStatus());		
-		activeUser1.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser1.getGoodUser().showNumberAgain(5678345));
-		System.out.println(activeUser1.getGoodUser().showOperatorAgain("DzerjinskCom"));
-		System.out.println(activeUser1.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser1.getGoodUser().getNumber());
 		System.out.println(activeUser1.getGoodUser().getOperator());
 		System.out.println(activeUser1.getGoodUser().getStatus());
+		
+// OverLoading		
+		System.out.println("======");
+		activeUser1.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser1.getGoodUser().showNumber(5678345));
+		System.out.println(activeUser1.getGoodUser().showOperator("DzerjinskCom"));
+		System.out.println(activeUser1.getGoodUser().showStatus(false));
 		System.out.println("========================");
 		System.out.println(" ");
 		
@@ -701,13 +718,16 @@ public class Executor {
 		System.out.println(activeUser2.getGoodUser().showNumber());		
 		System.out.println(activeUser2.getGoodUser().showOperator());		
 		System.out.println(activeUser2.getGoodUser().showStatus());		
-		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser2.getGoodUser().showNumberAgain(678345));
-		System.out.println(activeUser2.getGoodUser().showOperatorAgain("LogoiskCom"));
-		System.out.println(activeUser2.getGoodUser().showStatusAgain(true));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
+		
+// OverLoading	
+		System.out.println("======");
+		activeUser2.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumber(678345));
+		System.out.println(activeUser2.getGoodUser().showOperator("LogoiskCom"));
+		System.out.println(activeUser2.getGoodUser().showStatus(true));
 		System.out.println("======");
 		
 		activeUser2.setGoodUser(mobileInternetUser2);
@@ -715,13 +735,16 @@ public class Executor {
 		System.out.println(activeUser2.getGoodUser().showNumber());		
 		System.out.println(activeUser2.getGoodUser().showOperator());		
 		System.out.println(activeUser2.getGoodUser().showStatus());		
-		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser2.getGoodUser().showNumberAgain(5678345));
-		System.out.println(activeUser2.getGoodUser().showOperatorAgain("DzerjinskCom"));
-		System.out.println(activeUser2.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
+		
+// OverLoading	
+		System.out.println("======");
+		activeUser2.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumber(5678345));
+		System.out.println(activeUser2.getGoodUser().showOperator("DzerjinskCom"));
+		System.out.println(activeUser2.getGoodUser().showStatus(false));
 		System.out.println("======");
 		
 		activeUser2.setGoodUser(homeInternetUser2);
@@ -729,13 +752,17 @@ public class Executor {
 		System.out.println(activeUser2.getGoodUser().showNumber());		
 		System.out.println(activeUser2.getGoodUser().showOperator());		
 		System.out.println(activeUser2.getGoodUser().showStatus());		
-		activeUser2.getGoodUser().printInfoAgain(345678, "LogoiskCom", true);
-		System.out.println(activeUser2.getGoodUser().showNumberAgain(5668345));
-		System.out.println(activeUser2.getGoodUser().showOperatorAgain("LitvaCom"));
-		System.out.println(activeUser2.getGoodUser().showStatusAgain(false));
 		System.out.println(activeUser2.getGoodUser().getNumber());
 		System.out.println(activeUser2.getGoodUser().getOperator());
 		System.out.println(activeUser2.getGoodUser().getStatus());
+		
+// OverLoading
+		System.out.println("======");
+    	activeUser2.getGoodUser().printInfo(345678, "LogoiskCom", true);
+		System.out.println(activeUser2.getGoodUser().showNumber(5668345));
+		System.out.println(activeUser2.getGoodUser().showOperator("LitvaCom"));
+		System.out.println(activeUser2.getGoodUser().showStatus(false));
+	
 		System.out.println("========================");
 		System.out.println(" ");		
 		

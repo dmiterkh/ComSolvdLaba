@@ -19,21 +19,13 @@ public class HomeInternetUser extends HomePhoneUser {
 		return this.homeBonus;
 	}
 	
-	public void printInfoNew() {
+	public void printInfo() {
 		System.out.println("HomeInternetUser number: " +  this.number);
 		System.out.println("HomeInternetUser operator: " + this.operator);
 		System.out.println("HomeInternetUser isActive: " + this.isActive);
 		System.out.println("HomeInternetUser homeBonus: " + this.homeBonus);
 	}
 	
-	// OverLoading ???
-	@Override
-	public void printInfoAgain(int number, String operator, boolean isActive /*, int homeBonus */) {
-		System.out.println("Again HomeInternetUser number: " + number);
-		System.out.println("Again HomeInternetUser operator: " + operator);
-		System.out.println("Again HomeInternetUser isActive: " + isActive);
-//		System.out.println("Again HomeInternetUser homeBonus: " + homeBonus);
-	}
 	
 	@Override
 	public void showHomeBonus() {
@@ -54,21 +46,35 @@ public class HomeInternetUser extends HomePhoneUser {
 	public boolean showStatus() {
 		return this.isActive;
 	}
-	
+
+	// OverLoading	
 	@Override
-	public int showNumberAgain(int number) {
+	public void printInfo(int number, String operator, boolean isActive) {
+		this.number = number;
+		this.operator = operator;
+		this.isActive = isActive;
+		System.out.println("Again HomeInternetUser number: " + this.number);
+		System.out.println("Again HomeInternetUser operator: " + this.operator);
+		System.out.println("Again HomeInternetUser isActive: " + this.isActive);
+	}
+	
+	// OverLoading	
+	@Override
+	public int showNumber(int number) {
 		this.number = number;
 		return this.number;
 	}
 	
+	// OverLoading	
 	@Override
-	public String showOperatorAgain(String operator) {
+	public String showOperator(String operator) {
 		this.operator = operator;
 		return this.operator;
 	}
 	
+	// OverLoading	
 	@Override
-	public boolean showStatusAgain(boolean isActive) {
+	public boolean showStatus(boolean isActive) {
 		this.isActive = isActive;
 		return this.isActive;
 	}

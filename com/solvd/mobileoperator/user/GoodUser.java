@@ -24,13 +24,17 @@ public abstract class GoodUser {
 	
 	public abstract boolean showStatus();
 	
-	public abstract void printInfoAgain(int number, String operator, boolean isActive);
+	// OverLoading		
+	public abstract void printInfo(int number, String operator, boolean isActive);
+
+	// OverLoading		
+	public abstract int showNumber(int number);
 	
-	public abstract int showNumberAgain(int number);
+	// OverLoading		
+	public abstract String showOperator(String operator);
 	
-	public abstract String showOperatorAgain(String operator);
-	
-	public abstract boolean showStatusAgain(boolean isActive);
+	// OverLoading		
+	public abstract boolean showStatus(boolean isActive);
 	
 	public int getNumber() {
 		return this.number;
