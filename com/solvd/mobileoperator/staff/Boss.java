@@ -19,7 +19,6 @@ public class Boss extends Employee {
 		System.out.println("I can aquire a lot of new skills!");
 	}
 	
-	// Overloading ???
 	@Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);
@@ -66,7 +65,6 @@ public class Boss extends Employee {
 			return this.status;
 	}
 	
-	// Overloading ???
 	@Override
 	public void setInfoAgain(int age, String sex, int salary, String status /*, String power*/) {
 		this.salary = salary;
@@ -77,7 +75,6 @@ public class Boss extends Employee {
 */
 	}	
 	
-	// Overloading ???
 	@Override
 	public double showSalaryMaximum(int age, int salary, String status /*, String power*/) {
 		double salaryMaximum;

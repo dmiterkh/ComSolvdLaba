@@ -61,7 +61,6 @@ public class Employee implements Staff {
 			return this.status;
 	}
 	
-	// Overloading ???
 	@Override
 	public void setInfoAgain(int age, String sex, int salary, String status) {
 		this.salary = salary;
@@ -70,7 +69,6 @@ public class Employee implements Staff {
 		this.status = status;
 	}
 	
-	// Overloading ???
 	@Override
 	public double showSalaryMaximum(int age, int salary, String status) {
 		double salaryMaximum;

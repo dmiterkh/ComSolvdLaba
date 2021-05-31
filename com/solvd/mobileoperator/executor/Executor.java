@@ -552,6 +552,12 @@ public class Executor {
 		System.out.println("========================");
 
 // OverLoading
+//		colleague1.setStaff(employee1);
+//		colleague1.getStaff().printInfo(33, "female", 500, "employee");
+
+//		colleague1.setStaff(boss1);
+//		colleague1.getStaff().printInfo(53, "female", 1500, "boss", "god power");
+
 		employee1.printInfo(33, "female", 500, "employee");
 		boss1.printInfo(53, "female", 1500, "boss", "god power");
 		
