@@ -217,10 +217,10 @@ public class Executor {
 		System.out.println(employee2.showAge());
 		System.out.println(employee2.showSex());		
 		System.out.println("======");
-		employee2.printInfoAgain(21,"MM");
+		employee2.printInfo(21,"MM");
 		System.out.println("======");
-		System.out.println(employee2.showAgeAgain(22));
-		System.out.println(employee2.showSexAgain("FF"));
+		System.out.println(employee2.showAge(22));
+		System.out.println(employee2.showSex("FF"));
 		System.out.println("======");
 		employee2.work();
 		System.out.println("========================");
@@ -243,10 +243,10 @@ public class Executor {
 		System.out.println(badEmployee2.showAge());
 		System.out.println(badEmployee2.showSex());	
 		System.out.println("======");
-		badEmployee2.printInfoAgain(21,"MM");
+		badEmployee2.printInfo(21,"MM");
 		System.out.println("======");
-		System.out.println(badEmployee2.showAgeAgain(27));
-		System.out.println(badEmployee2.showSexAgain("FFMM"));
+		System.out.println(badEmployee2.showAge(27));
+		System.out.println(badEmployee2.showSex("FFMM"));
 		System.out.println("======");
 		badEmployee2.work();
 		badEmployee2.drink();        
@@ -270,10 +270,10 @@ public class Executor {
 		System.out.println(boss2.showAge());
 		System.out.println(boss2.showSex());	
 		System.out.println("======");
-		boss2.printInfoAgain(21,"MM");   
+		boss2.printInfo(21,"MM");   
 		System.out.println("======");
-		System.out.println(boss2.showAgeAgain(42));
-		System.out.println(boss2.showSexAgain("FN"));		
+		System.out.println(boss2.showAge(42));
+		System.out.println(boss2.showSex("FN"));		
 		System.out.println("======");
 		boss2.work();
 		boss2.hirePeople();
@@ -300,10 +300,10 @@ public class Executor {
 		System.out.println(expiriencedApplicant2.showAge());
 		System.out.println(expiriencedApplicant2.showSex());
 		System.out.println("======");
-		boss2.printInfoAgain(21,"MM");   
+		expiriencedApplicant2.printInfo(21,"MM");   
 		System.out.println("======");
-		System.out.println(expiriencedApplicant2.showAgeAgain(12));
-		System.out.println(expiriencedApplicant2.showSexAgain("TransSexual"));		
+		System.out.println(expiriencedApplicant2.showAge(12));
+		System.out.println(expiriencedApplicant2.showSex("TransSexual"));		
 		System.out.println("======");
 		expiriencedApplicant2.work();
 		System.out.println("========================");
@@ -474,75 +474,71 @@ public class Executor {
 
 		colleague1.setStaff(employee1);
 		colleague1.getStaff().printInfo();
-// OverLoading
-		employee1.printInfo(33, "female", 500, "employee");
-		
 		System.out.println(colleague1.getStaff().showAge());
 		System.out.println(colleague1.getStaff().showSex());
 		System.out.println(colleague1.getStaff().showStatus());
 		colleague1.getStaff().aquire();
 		colleague1.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(42));
-		System.out.println(colleague1.getStaff().showSexAgain("ff"));
 		colleague1.getStaff().setInfoAgain(26, "ff", 2000, "employee");
 		System.out.println(colleague1.getStaff().showSalaryMaximum(26, 2000, "employee"));
-		colleague1.getStaff().printInfoAgain(36, "FF");
-		colleague1.getStaff().showStatusAgain("status14");
+
+// OverLoading
+		colleague1.getStaff().printInfo(36, "FF");
+		colleague1.getStaff().showStatus("status14");
+		System.out.println(colleague1.getStaff().showAge(42));
+		System.out.println(colleague1.getStaff().showSex("ff"));
 		System.out.println("======");
 		
 		colleague1.setStaff(badEmployee1);
 		colleague1.getStaff().printInfo();
-// OverLoading		
-		badEmployee1.printInfo(43, "female", 300, "bad employee");
-		
 		System.out.println(colleague1.getStaff().showAge());
 		System.out.println(colleague1.getStaff().showSex());
 		System.out.println(colleague1.getStaff().showStatus());
 		colleague1.getStaff().aquire();
 		colleague1.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(52));
-		System.out.println(colleague1.getStaff().showSexAgain("mm"));
 		colleague1.getStaff().setInfoAgain(36, "MM", 700, "bad employee");
 		System.out.println(colleague1.getStaff().showSalaryMaximum(36, 700, "bad employee"));		
-		colleague1.getStaff().printInfoAgain(46, "mm");
-		colleague1.getStaff().showStatusAgain("status14");
+
+// OverLoading
+		colleague1.getStaff().printInfo(46, "mm");
+        colleague1.getStaff().showStatus("status14");
+		System.out.println(colleague1.getStaff().showAge(52));
+		System.out.println(colleague1.getStaff().showSex("mm"));
 		System.out.println("======");
 		
 		colleague1.setStaff(boss1);
 		colleague1.getStaff().printInfo();
-// OverLoading
-		boss1.printInfo(53, "female", 1500, "boss", "god power");
-		
 		System.out.println(colleague1.getStaff().showAge());
 		System.out.println(colleague1.getStaff().showSex());
 		System.out.println(colleague1.getStaff().showStatus());
 		colleague1.getStaff().aquire();
 		colleague1.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(62));
-		System.out.println(colleague1.getStaff().showSexAgain("mmff"));
-// ??? OverLoading		
 		colleague1.getStaff().setInfoAgain(46, "FF", 3000, "boss" /*, "god power"*/);
 		System.out.println(colleague1.getStaff().showSalaryMaximum(46, 3000, "boss" /*, "god power"*/));		
-		colleague1.getStaff().printInfoAgain(56, "ff");
-		colleague1.getStaff().showStatusAgain("status14");
+
+// OverLoading		
+		colleague1.getStaff().printInfo(56, "ff");
+		colleague1.getStaff().showStatus("status14");
+		System.out.println(colleague1.getStaff().showAge(62));
+		System.out.println(colleague1.getStaff().showSex("mmff"));
 		System.out.println("======");
 		
 		colleague1.setStaff(expiriencedApplicant1);
 		colleague1.getStaff().printInfo();
-// OverLoading			
-		
 		badEmployee1.printInfo(43, "female", 300, "bad employee");
 		System.out.println(colleague1.getStaff().showAge());
 		System.out.println(colleague1.getStaff().showSex());
 		System.out.println(colleague1.getStaff().showStatus());
 		colleague1.getStaff().aquire();
 		colleague1.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(22));
-		System.out.println(colleague1.getStaff().showSexAgain("TransSexual"));
 		colleague1.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		System.out.println(colleague1.getStaff().showSalaryMaximum(16, 1500, "expirienced applicant"));	
-		colleague1.getStaff().printInfoAgain(26, "TransGender");
-		colleague1.getStaff().showStatusAgain("status14");
+
+// OverLoading		
+		colleague1.getStaff().printInfo(26, "TransGender");
+		colleague1.getStaff().showStatus("status14");
+		System.out.println(colleague1.getStaff().showAge(22));
+		System.out.println(colleague1.getStaff().showSex("TransSexual"));
 		System.out.println("========================");
 		
 		System.out.println(" ");
@@ -550,6 +546,7 @@ public class Executor {
 		System.out.println(" ");
 		System.out.println("Set 1 OverLoading");
 		System.out.println("========================");
+
 // OverLoading
 		employee1.printInfo(33, "female", 500, "employee");
 		boss1.printInfo(53, "female", 1500, "boss", "god power");
@@ -573,11 +570,13 @@ public class Executor {
 		System.out.println(colleague2.getStaff().showStatus());
 		colleague2.getStaff().aquire();
 		colleague2.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(52));
-		System.out.println(colleague1.getStaff().showSexAgain("ff"));
 		colleague2.getStaff().setInfoAgain(39, "ff", 2600, "employee");
-		colleague2.getStaff().printInfoAgain(49, "ff");
-		colleague2.getStaff().showStatusAgain("status1");
+
+// OverLoading		
+		colleague2.getStaff().printInfo(49, "ff");
+		colleague2.getStaff().showStatus("status1");
+		System.out.println(colleague1.getStaff().showAge(52));
+		System.out.println(colleague1.getStaff().showSex("ff"));
 		System.out.println("======");
 
 		colleague2.setStaff(badEmployee2);
@@ -587,11 +586,13 @@ public class Executor {
 		System.out.println(colleague2.getStaff().showStatus());
 		colleague2.getStaff().aquire();
 		colleague2.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(62));
-		System.out.println(colleague1.getStaff().showSexAgain("mm"));
 		colleague2.getStaff().setInfoAgain(49, "ff", 1200, "bad employee");
-		colleague2.getStaff().printInfoAgain(59, "mm");
-		colleague2.getStaff().showStatusAgain("status2");
+		
+// OverLoading
+		colleague2.getStaff().printInfo(59, "mm");
+		colleague2.getStaff().showStatus("status2");
+		System.out.println(colleague1.getStaff().showAge(62));
+		System.out.println(colleague1.getStaff().showSex("mm"));
 		System.out.println("======");
 
 		colleague2.setStaff(boss2);
@@ -601,11 +602,13 @@ public class Executor {
 		System.out.println(colleague2.getStaff().showStatus());
 		colleague2.getStaff().aquire();
 		colleague2.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(72));
-		System.out.println(colleague1.getStaff().showSexAgain("mmff"));
 		colleague2.getStaff().setInfoAgain(59, "mm", 4000, "boss");
-		colleague2.getStaff().printInfoAgain(69, "ff");
-		colleague2.getStaff().showStatusAgain("status3");
+
+// OverLoading		
+		colleague2.getStaff().printInfo(69, "ff");
+		colleague2.getStaff().showStatus("status3");
+		System.out.println(colleague1.getStaff().showAge(72));
+		System.out.println(colleague1.getStaff().showSex("mmff"));
 		System.out.println("======");
 
 		colleague2.setStaff(expiriencedApplicant2);
@@ -615,11 +618,13 @@ public class Executor {
 		System.out.println(colleague2.getStaff().showStatus());
 		colleague2.getStaff().aquire();
 		colleague2.getStaff().work();
-		System.out.println(colleague1.getStaff().showAgeAgain(32));
-		System.out.println(colleague1.getStaff().showSexAgain("TransSexual"));
 		colleague2.getStaff().setInfoAgain(19, "TransGender", 2500, "expirienced applicant");
-		colleague2.getStaff().printInfoAgain(29, "TransGender");
-		colleague2.getStaff().showStatusAgain("status4");
+		
+// OverLoading		
+		colleague2.getStaff().printInfo(29, "TransGender");
+		colleague2.getStaff().showStatus("status4");
+		System.out.println(colleague1.getStaff().showAge(32));
+		System.out.println(colleague1.getStaff().showSex("TransSexual"));
 		System.out.println("========================");
 		
 		

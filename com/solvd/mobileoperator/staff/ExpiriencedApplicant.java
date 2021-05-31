@@ -100,28 +100,26 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		return salaryMaximum;
 	}
 	
-	// Overloading 
-	@Override
-	public void printInfoAgain(int age, String sex) {
+	//OverLoading
+	public void printInfo(int age, String sex) {
 		System.out.println(age);
 		System.out.println(sex);
 	}
 	
-	// Overloading
-	@Override
-	public void showStatusAgain(String status) {
+	//OverLoading
+	public void showStatus(String status) {
 		this.status = status;
 		System.out.println(status);
 	}
 	
-	@Override
-	public int showAgeAgain(int age) {
+	//OverLoading
+	public int showAge(int age) {
 		this.age = age; 
 		return this.age;
 	}
 	
-	@Override
-	public String showSexAgain(String sex) {
+	//OverLoading
+	public String showSex(String sex) {
 		this.sex = sex; 
 		return this.sex;
 	}
