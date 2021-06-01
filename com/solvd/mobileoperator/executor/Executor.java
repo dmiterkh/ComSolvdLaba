@@ -561,6 +561,14 @@ public class Executor {
 		employee1.printInfo(33, "female", 500, "employee");
 		boss1.printInfo(53, "female", 1500, "boss", "god power");
 		
+		Office office7 = new Office();
+		office7.setInfo("Pritickogo", "Head", 1);
+		
+		MarketPlace marketPlace7 = new MarketPlace();
+		marketPlace7.setInfo("Pritickogo", "Head", 1, false);
+		
+
+		
 		System.out.println("========================");
 		
 		
