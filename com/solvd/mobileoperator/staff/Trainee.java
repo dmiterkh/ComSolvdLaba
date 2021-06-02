@@ -30,5 +30,7 @@ public interface Trainee {
 	
 	@Override
 	public String toString();
+	
+	public void setSex(String sex);
 		
 }

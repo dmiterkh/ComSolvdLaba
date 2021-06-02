@@ -139,4 +139,9 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 			   this.lookForJob();
 	}
 	
+	@Override
+	public void setSex(String sex) {
+		this.sex = sex;	
+	}
+	
 }

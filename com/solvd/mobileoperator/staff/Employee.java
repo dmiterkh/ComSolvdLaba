@@ -130,4 +130,10 @@ public class Employee implements Staff {
 			   this.aquire() + "\n" + 
 			   this.work();
 	}
+	
+	@Override
+	public void setSex(String sex) {
+		this.sex = sex;	
+	}
+	
 }

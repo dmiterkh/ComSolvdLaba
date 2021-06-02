@@ -140,4 +140,9 @@ public class BadEmployee implements Staff , BadTrainee {
 
 	}
 	
+	@Override
+	public void setSex(String sex) {
+		this.sex = sex;	
+	}
+	
 }

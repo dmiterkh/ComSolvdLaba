@@ -3,6 +3,7 @@ package com.solvd.mobileoperator.user;
 public class HomeInternetUser extends HomePhoneUser {
 
 	private int homeBonus;
+	private String user = "Home Internet User";
 	
 	public HomeInternetUser() {
 
@@ -48,7 +49,6 @@ public class HomeInternetUser extends HomePhoneUser {
 	}
 
 	// OverLoading	
-	@Override
 	public void printInfo(int number, String operator, boolean isActive) {
 		System.out.println("Again HomeInternetUser number: " + number);
 		System.out.println("Again HomeInternetUser operator: " + operator);
@@ -71,11 +71,20 @@ public class HomeInternetUser extends HomePhoneUser {
 	}
 	
 	public String toString() {
-		return 	"I am a Home Internet User" + "\n" + 
+		return 	"I am a " +  this.user + "\n" + 
 				"My number is " +  this.number + "\n" + 
 				"My operator is " + this.operator + "\n" + 
 				"My status of activity is " + this.isActive + "\n" + 
 				"My home Bonus is " + this.homeBonus;
 	}
 	
+	@Override
+	public void setOperator(String operator) {
+		this.operator = operator;
+	}
+	
+	@Override
+	public String showUser() {
+		return this.user;
+	}
 }

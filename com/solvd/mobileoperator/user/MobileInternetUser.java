@@ -3,6 +3,7 @@ package com.solvd.mobileoperator.user;
 public class MobileInternetUser extends MobilePhoneUser {
 
 	private int bytes;
+	private String user = "Mobile Internet User";
 	
 	public MobileInternetUser() {
 
@@ -52,11 +53,21 @@ public class MobileInternetUser extends MobilePhoneUser {
 	}
 	
 	public String toString() {
-		return 	"I am a Mobile Internet User" + "\n" +
+		return 	"I am a " +  this.user + "\n" +
 				"My number is " +  this.number + "\n" + 
 				"My operator is " + this.operator + "\n" + 
 				"My status of activity is " + this.isActive + "\n" + 
 				"My number of minutes is " + this.minutes + "\n" + 
 				"My number of bytes is " + this.bytes;
+	}
+	
+	@Override
+	public void setOperator(String operator) {
+		this.operator = operator;
+	}
+	
+	@Override
+	public String showUser() {
+		return this.user;
 	}
 }

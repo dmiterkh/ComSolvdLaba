@@ -50,6 +50,10 @@ public abstract class GoodUser {
 	
 	@Override
 	public String toString() {return "Name";}
-
+	
+	public abstract void setOperator(String operator);
+	
+	public abstract String showUser();
+	
 }
 
