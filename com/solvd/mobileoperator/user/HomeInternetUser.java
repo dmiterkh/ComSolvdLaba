@@ -50,33 +50,32 @@ public class HomeInternetUser extends HomePhoneUser {
 	// OverLoading	
 	@Override
 	public void printInfo(int number, String operator, boolean isActive) {
-		this.number = number;
-		this.operator = operator;
-		this.isActive = isActive;
-		System.out.println("Again HomeInternetUser number: " + this.number);
-		System.out.println("Again HomeInternetUser operator: " + this.operator);
-		System.out.println("Again HomeInternetUser isActive: " + this.isActive);
+		System.out.println("Again HomeInternetUser number: " + number);
+		System.out.println("Again HomeInternetUser operator: " + operator);
+		System.out.println("Again HomeInternetUser isActive: " + isActive);
 	}
 	
 	// OverLoading	
-	@Override
 	public int showNumber(int number) {
-		this.number = number;
-		return this.number;
+		return number;
 	}
 	
 	// OverLoading	
-	@Override
 	public String showOperator(String operator) {
-		this.operator = operator;
-		return this.operator;
+		return operator;
 	}
 	
 	// OverLoading	
-	@Override
 	public boolean showStatus(boolean isActive) {
-		this.isActive = isActive;
-		return this.isActive;
+		return isActive;
+	}
+	
+	public String toString() {
+		return 	"I am a Home Internet User" + "\n" + 
+				"My number is " +  this.number + "\n" + 
+				"My operator is " + this.operator + "\n" + 
+				"My status of activity is " + this.isActive + "\n" + 
+				"My home Bonus is " + this.homeBonus;
 	}
 	
 }

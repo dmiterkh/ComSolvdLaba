@@ -2,7 +2,7 @@ package com.solvd.mobileoperator.staff;
 
 public interface Trainee {
 
-	public void aquire();	
+	public String aquire();	
 	
 	public void printInfo();
 	
@@ -20,12 +20,15 @@ public interface Trainee {
 	public void printInfo(int age, String sex);
 	
 	//OverLoading
-	public void showStatus(String status);
-	
-	//OverLoading
 	public int showAge(int age);
 	
 	//OverLoading	
 	public String showSex(String sex);
+	
+	//OverLoading
+	public String showStatus(String status);
+	
+	@Override
+	public String toString();
 		
 }

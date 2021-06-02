@@ -47,6 +47,9 @@ public abstract class GoodUser {
 	public boolean getStatus() {
 		return this.isActive;
 	}
+	
+	@Override
+	public String toString() {return "Name";}
 
 }
 

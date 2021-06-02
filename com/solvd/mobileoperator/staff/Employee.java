@@ -17,12 +17,6 @@ public class Employee implements Staff {
 	} 
 	
 	@Override
-	public void aquire() {
-		System.out.println("I can aquire new skills!");
-	}
-	
-	
-	@Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);
 		System.out.println("I am_  " + this.age + "  _years old");
@@ -32,7 +26,7 @@ public class Employee implements Staff {
 		System.out.println("I can aquire new skills!");
 	}	
 	
-	// Overload ???
+	// Overloading
 	public void printInfo(int age, String sex, int salary, String status) {
 		this.age = age;
 		this.sex = sex;
@@ -58,7 +52,7 @@ public class Employee implements Staff {
 	
 	@Override
 	public String showStatus() {
-			return this.status;
+		return this.status;
 	}
 	
 	@Override
@@ -98,32 +92,42 @@ public class Employee implements Staff {
 	
 	// Overloading
 	public void printInfo(int age, String sex) {
-		System.out.println(salary);
 		System.out.println(age);
 		System.out.println(sex);
 	}
 	
-	// Overloading
-	public void showStatus(String status) {
-		this.status = status;
-		System.out.println(status);
-	}
-	
 	//OverLoading
-	public int showAge(int age) {
-		this.age = age; 
-		return this.age;
+	public int showAge(int age) { 
+		return age;
 	}
 	
 	//OverLoading
 	public String showSex(String sex) {
-		this.sex = sex; 
-		return this.sex;
+		return sex;
+	}
+	
+	// Overloading
+	public String showStatus(String status) {
+		return status;
 	}
 	
 	@Override
-	public void work() {
-		System.out.println("I can work 8 hours every day!");
+	public String aquire() {
+		return "I can aquire new skills!";
+	}
+	
+	@Override
+	public String work() {
+		return "I can work 8 hours every day!";
 	}
 
+	@Override
+	public String toString() {
+		return "I am a(an)_ "  + this.status + "\n" + 
+			   "I am_  " + this.age + "  _years old" + "\n" + 
+			   "My sex is_ " + this.sex + "\n" + 
+			   "My salary is_ " + this.salary + "\n" + 
+			   this.aquire() + "\n" + 
+			   this.work();
+	}
 }

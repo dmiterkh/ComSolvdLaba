@@ -15,14 +15,8 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		this.age = age;
 		this.sex = sex;
 	} 
-	
-	@Override
-	public void aquire() {
-		System.out.println("I can aquire new skills!");
-	}
 
-	// Overloading ???
-	@Override
+	// Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);
 		System.out.println("I am_  " + this.age + "  _years old");
@@ -32,7 +26,7 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		System.out.println("I can aquire new skills!");
 	}
 	
-	// Overload ???
+	// Overloading
 	public void printInfo(int age, String sex, int salary, String status) {
 		this.age = age;
 		this.sex = sex;
@@ -63,7 +57,6 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 			return this.status;
 	}
 	
-	// Overloading ???
 	@Override
 	public void setInfoAgain(int age, String sex, int salary, String status) {
 		this.salary = salary;
@@ -72,7 +65,6 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		this.status = status;
 	}	
 	
-	// Overloading ???
 	@Override
 	public double showSalaryMaximum(int age, int salary, String status) {
 		double salaryMaximum;
@@ -107,31 +99,44 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 	}
 	
 	//OverLoading
-	public void showStatus(String status) {
-		this.status = status;
-		System.out.println(status);
-	}
-	
-	//OverLoading
 	public int showAge(int age) {
-		this.age = age; 
-		return this.age;
+		return age;
 	}
 	
 	//OverLoading
 	public String showSex(String sex) {
-		this.sex = sex; 
-		return this.sex;
+		return sex;
+	}
+	
+	//OverLoading
+	public String showStatus(String status) {;
+		return status;
+	} 
+	
+	@Override
+	public String aquire() {
+		return "I can aquire new skills!";
 	}
 	
 	@Override
-	public void work() {
-		System.out.println("I can work 8 hours every day!");
+	public String work() {
+		return"I can work 8 hours every day!";
 	}
 	
 	@Override
-	public void lookForJob() {
-		System.out.println("I'm looking for job!");
+	public String lookForJob() {
+		return"I'm looking for job!";
+	}
+	
+	@Override
+	public String toString() {
+		return "I am a(an)_ "  + this.status + "\n" + 
+			   "I am_  " + this.age + "  _years old" + "\n" + 
+			   "My sex is_ " + this.sex + "\n" + 
+			   "My salary is_ " + this.salary + "\n" + 
+			   this.aquire() + "\n" + 
+			   this.work() + "\n" +
+			   this.lookForJob();
 	}
 	
 }

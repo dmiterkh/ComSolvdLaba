@@ -15,8 +15,8 @@ public class Boss extends Employee {
 	} 
 	
 	@Override
-	public void aquire() {
-		System.out.println("I can aquire a lot of new skills!");
+	public String aquire() {
+		return "I can aquire a lot of new skills!";
 	}
 	
 	@Override
@@ -32,7 +32,7 @@ public class Boss extends Employee {
 		System.out.println("I can fire out people!");
 	}
 	
-	// Overload ???
+	// Overloading
 	public void printInfo(int age, String sex, int salary, String status, String power) {
 		this.age = age;
 		this.sex = sex;
@@ -112,44 +112,52 @@ public class Boss extends Employee {
 	
 	//OverLoading
 	public void printInfo(int age, String sex) {
-		System.out.println(salary);
 		System.out.println(age);
 		System.out.println(sex);
-		System.out.println(power);
-	}
-		
-	//OverLoading
-	public void showStatus(String status) {
-		this.status = status;
-		System.out.println(status);
+
 	}
 	
 	//OverLoading
 	public int showAge(int age) {
-		this.age = age; 
-		return this.age;
+		return age;
 	}
 		
 	//OverLoading
 	public String showSex(String sex) {
-		this.sex = sex; 
-		return this.sex;
+		return sex;
 	}
-		
+			
+	//OverLoading
+	public String showStatus(String status) {
+		return status;
+	}
+	
 	@Override
-	public void work() {
-		System.out.println("I can work 16 hours every day!");
+	public String work() {
+		return "I can work 16 hours every day!";
 		
 	}
 	
 	//new method
-	public void hirePeople() {
-		System.out.println("I can hire people!");
+	public String hirePeople() {
+		return "I can hire people!";
 	}
 	
 	//new method
-	public void firePeople() {
-		System.out.println("I can fire out people!");
+	public String firePeople() {
+		return "I can fire out people!";
+	}
+	
+	@Override
+	public String toString() {
+		return "I am a(an)_ "  + this.status + "\n" + 
+			   "I am_  " + this.age + "  _years old" + "\n" + 
+			   "My sex is_ " + this.sex + "\n" + 
+			   "My salary is_ " + this.salary + "\n" + 
+			   this.aquire() + "\n" + 
+			   this.work() + "\n" + 
+			   this.hirePeople() + "\n" + 
+			   this.firePeople();
 	}
 	
 }

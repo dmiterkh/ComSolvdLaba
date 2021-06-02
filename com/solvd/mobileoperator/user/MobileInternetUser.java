@@ -30,35 +30,33 @@ public class MobileInternetUser extends MobilePhoneUser {
 	}
 	
 	// OverLoading	
-	@Override
 	public void printInfo(int number, String operator, boolean isActive) {
-		this.number = number;
-		this.operator = operator;
-		this.isActive = isActive;
-		System.out.println("Again MobileUser number: " + this.number);
-		System.out.println("Again MobileUser operator: " + this.operator);
-		System.out.println("Again MobileUser isActive: " + this.isActive);
+		System.out.println("Again MobileUser number: " + number);
+		System.out.println("Again MobileUser operator: " + operator);
+		System.out.println("Again MobileUser isActive: " + isActive);
 	}
 	
 	// OverLoading
-	@Override
 	public int showNumber(int number) {
-		this.number = number;
 		return number;
 	}
 	
 	// OverLoading	
-	@Override
 	public String showOperator(String operator) {
-		this.operator = operator;
 		return operator;
 	}
 	
 	// OverLoading	
-	@Override
 	public boolean showStatus(boolean isActive) {
-		this.isActive = isActive;
 		return isActive;
 	}
-
+	
+	public String toString() {
+		return 	"I am a Mobile Internet User" + "\n" +
+				"My number is " +  this.number + "\n" + 
+				"My operator is " + this.operator + "\n" + 
+				"My status of activity is " + this.isActive + "\n" + 
+				"My number of minutes is " + this.minutes + "\n" + 
+				"My number of bytes is " + this.bytes;
+	}
 }
