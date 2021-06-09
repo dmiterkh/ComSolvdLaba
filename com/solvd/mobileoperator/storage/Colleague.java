@@ -9,8 +9,8 @@ public class Colleague {
 	public void setStaff(Staff staff) {
 		this.staff = staff;		
 	}	
-	
+		
 	public Staff getStaff() {
-			return this.staff;		
+		return this.staff;		
 	}
 }

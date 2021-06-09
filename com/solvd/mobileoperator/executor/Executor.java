@@ -1,31 +1,24 @@
 package com.solvd.mobileoperator.executor;
 
-import com.solvd.mobileoperator.point.InternetMarket; // Set, Get 
-import com.solvd.mobileoperator.point.Market;         // Extension:   Class Market extends Class InternetMarket;
-import com.solvd.mobileoperator.point.Office;         // Set, Get
-import com.solvd.mobileoperator.point.MarketPlace;    // Extension:   Class MarketPlace extends Class Office;	
+import com.solvd.mobileoperator.point.InternetMarket;         // Set, Get, Extension:  
+import com.solvd.mobileoperator.point.Market;         
+import com.solvd.mobileoperator.point.Office;         
+import com.solvd.mobileoperator.point.MarketPlace;    	
+    		 
+import com.solvd.mobileoperator.staff.Employee;     		  // Initial Interface Trainee, Extension, Implementation: 
+import com.solvd.mobileoperator.staff.Boss;         		 
+import com.solvd.mobileoperator.staff.BadEmployee;           
+import com.solvd.mobileoperator.staff.ExpiriencedApplicant;   // Class ExpiriencedApplicant extends Abstract Class Unemployed
+															  // and implements Interface Staff
 
-//import com.solvd.mobileoperator.staff.Trainee;    		 // Initial Interface   Interface Trainee
-//import com.solvd.mobileoperator.staff.Staff;      		 // Extension:          Interface Staff extends Interface Trainee;
-import com.solvd.mobileoperator.staff.Employee;     		 // Implementation:     Class Employee implements Interface Staff, 
-import com.solvd.mobileoperator.staff.Boss;         		 // Extension:          Class Boss extends Class Employee;
-//import com.solvd.mobileoperator.staff.BadTrainee;          // Initial Interface   Interface BadTrainee
-import com.solvd.mobileoperator.staff.BadEmployee;           // Multi Implement:    Class Employee implements Interfaces Staff and BadTrainee
-//import com.solvd.mobileoperator.staff.Unemployed;          // Abstraction:        Abstract Class Unemployed;
-import com.solvd.mobileoperator.staff.ExpiriencedApplicant;  // Combination:        Class ExpiriencedApplicant extends Abstract Class Unemployed
-															 //					    and implements Interface Staff
+import com.solvd.mobileoperator.user.NoMoneyUser;             // Initial Abstract Class BadUser; 
+import com.solvd.mobileoperator.user.NoConnectionUser;   
+import com.solvd.mobileoperator.user.MobilePhoneUser;         // Initial Abstract Class GoodUser; 
+import com.solvd.mobileoperator.user.MobileInternetUser; 
+import com.solvd.mobileoperator.user.HomeInternetUser;    
 
-//import com.solvd.mobileoperator.user.BadUser;          // Abstraction:   Abstract Class BadUser; (Super)
-import com.solvd.mobileoperator.user.NoMoneyUser;        // Extension:     Class NoMoneyUser extends Abstract Class BadUser; (Super)
-import com.solvd.mobileoperator.user.NoConnectionUser;   // Extension:     Class NoConnectionUser extends Class NoMoneyUser; (Super)
-//import com.solvd.mobileoperator.user.GoodUser;         // Abstraction:   Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.MobilePhoneUser;    // Extension:     Class MobilePhoneUser extends Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.MobileInternetUser; // Extension:     Class MobileInternetUser extends Class MobilePhoneUser;
-//import com.solvd.mobileoperator.user.HomePhoneUser;         // Abstraction:   Abstract Class HomeUser extends Abstract Class GoodUser;
-import com.solvd.mobileoperator.user.HomeInternetUser;   // Abstraction:   Class HomeInternetUser extends Abstract Class HomeUser, 
-
-import com.solvd.mobileoperator.storage.Colleague;       // Polymorphizm: Interface Staff 
-import com.solvd.mobileoperator.storage.ActiveUser;      // Polymorphizm: Abstract Class GoodUser
+import com.solvd.mobileoperator.storage.Colleague;            // Polymorphizm: Interface Staff 
+import com.solvd.mobileoperator.storage.ActiveUser;           // Polymorphizm: Abstract Class GoodUser
 
 import java.util.Scanner;
 
@@ -442,61 +435,71 @@ public class Executor {
 		System.out.println("========================Scanner_1========================");
 		Scanner in = new Scanner(System.in);
 		String index = "";
-		
-		Colleague colleague3 = new Colleague();
-		
+				
 		Employee employee1 = new Employee(25, "F"); 
-		colleague3.setStaff(employee1);
-		colleague3.getStaff().setInfoAgain(26, "ff", 2000, "employee");
 		Employee employee2 = new Employee(20, "M"); 
 		Employee employee3 = new Employee(27, "F"); 
 		
 		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		colleague3.setStaff(badEmployee1);
-		colleague3.getStaff().setInfoAgain(36, "MM", 700, "bad employee");
 		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
 		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
 		
 		Boss boss1 = new Boss(76, "F"); 
-		colleague3.setStaff(boss1);
-		colleague3.getStaff().setInfoAgain(46, "FF", 3000, "boss");
 		Boss boss2 = new Boss(77, "M"); 		
 		Boss boss3 = new Boss(75, "F"); 
 		
 		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender"); 
-		colleague3.setStaff(expiriencedApplicant1);
-		colleague3.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
 		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
+				
+		Colleague colleague3 = new Colleague();
+				
+		int employeeIndex = 0;
+		int badEmployeeIndex = 0;
+		int bossIndex = 0;
+		int expiriencedApplicantIndex = 0;
 
+		do {	
+			System.out.println("Enter the number of Employees from 1 to 3");
+			employeeIndex = in.nextInt();
+		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3))	;
+		in.nextLine();
 		
-
-		System.out.println("Enter the number of Employees from 1 to 3");
-		String employeeIndex = in.nextLine();
-		System.out.println("Enter the number of Bad Employees from 1 to 3");
-		String badEmployeeIndex = in.nextLine();
-		System.out.println("Enter the number of Bosses from 1 to 3");
-		String bossIndex = in.nextLine();
-		System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
-		String expiriencedApplicantIndex = in.nextLine();
+		do {	
+			System.out.println("Enter the number of Bad Employees from 1 to 3");
+			badEmployeeIndex = in.nextInt();
+		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3))	;	
+		in.nextLine();		
 		
+		do {	
+			System.out.println("Enter the number of Bosses from 1 to 3");
+			bossIndex = in.nextInt();
+		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3))	;		
+		in.nextLine();					
+		
+		do {	
+			System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
+			expiriencedApplicantIndex = in.nextInt();
+		} while((expiriencedApplicantIndex != 1)&&(expiriencedApplicantIndex != 2)&&(expiriencedApplicantIndex != 3))	;					
+		in.nextLine();	
+	
 		System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (employeeIndex){
-			case "1":
+			case 1:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case "2":
+			case 2:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(employee2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case "3":
+			case 3:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -518,20 +521,20 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Bad Employees? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (badEmployeeIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(badEmployee2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -552,20 +555,20 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Bosses? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (bossIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(boss2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -586,20 +589,20 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Expirienced Applicants? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (expiriencedApplicantIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(expiriencedApplicant2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -625,16 +628,16 @@ public class Executor {
 		int indexSex = 1; 
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (employeeIndex){
-			case "1":
+			case 1:
 				colleague3.setStaff(employee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "2":
+			case 2:
 				colleague3.setStaff(employee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -648,7 +651,7 @@ public class Executor {
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "3":
+			case 3:
 				colleague3.setStaff(employee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -683,16 +686,16 @@ public class Executor {
 		System.out.println("Would you like to set sex to all of the Bad Employees? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
-			switch (employeeIndex){
-			case "1":
+		if ("y".equals(index)) {
+			switch (badEmployeeIndex){
+			case 1:
 				colleague3.setStaff(badEmployee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "2":
+			case 2:
 				colleague3.setStaff(badEmployee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -706,7 +709,7 @@ public class Executor {
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "3":
+			case 3:
 				colleague3.setStaff(badEmployee1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -741,16 +744,16 @@ public class Executor {
 		System.out.println("Would you like to set sex to all of the Bosses? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
-			switch (employeeIndex){
-			case "1":
+		if ("y".equals(index)) {
+			switch (bossIndex){
+			case 1:
 				colleague3.setStaff(boss1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "2":
+			case 2:
 				colleague3.setStaff(boss1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -764,7 +767,7 @@ public class Executor {
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "3":
+			case 3:
 				colleague3.setStaff(boss1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -800,16 +803,16 @@ public class Executor {
 		System.out.println("Would you like to set sex to all of the Expirienced Applicants? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (employeeIndex){
-			case "1":
+			case 1:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "2":
+			case 2:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -823,7 +826,7 @@ public class Executor {
 				sexIndex = in.nextLine();
 				colleague3.getStaff().setSex(sexIndex);
 				break;
-			case "3":
+			case 3:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println("Sex of " + colleague3.getStaff().showStatus() + " " + indexSex + " is " + colleague3.getStaff().showSex());
 				System.out.println("Set sex to " + colleague3.getStaff().showStatus() + " " + indexSex +" (f/m/trans)");
@@ -858,20 +861,20 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (employeeIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(employee2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(employee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -886,18 +889,18 @@ public class Executor {
 			}
 			System.out.println("========================");
 			switch (badEmployeeIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(badEmployee2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(badEmployee1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -912,18 +915,18 @@ public class Executor {
 			}
 			System.out.println("========================");
 			switch (bossIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(boss2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(boss1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -938,18 +941,18 @@ public class Executor {
 			}		
 			System.out.println("========================");
 			switch (expiriencedApplicantIndex){
-			case ("1"):
+			case 1:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("2"):
+			case 2:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
 				colleague3.setStaff(expiriencedApplicant2);
 				System.out.println(colleague3.getStaff().toString());
 				break;
-			case ("3"):
+			case 3:
 				colleague3.setStaff(expiriencedApplicant1);
 				System.out.println(colleague3.getStaff().toString());
 				System.out.println("=======");
@@ -995,7 +998,7 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
 			case "1":
 				activeUser3.setGoodUser(mobilePhoneUser1);
@@ -1030,7 +1033,7 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Mobile Internet Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (mobileInternetUserIndex){
 			case "1":
 				activeUser3.setGoodUser(mobileInternetUser1);
@@ -1064,7 +1067,7 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Home Internet Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (homeInternetUserIndex){
 			case "1":
 				activeUser3.setGoodUser(homeInternetUser1);
@@ -1100,7 +1103,7 @@ public class Executor {
 		int indexOperator = 1;
 		String newOperator = "";
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
 			case "1":
 				activeUser3.setGoodUser(mobilePhoneUser1);
@@ -1157,7 +1160,7 @@ public class Executor {
 		System.out.println("Would you like to set operator to all of the Mobile Internet Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (mobileInternetUserIndex){
 			case "1":
 				activeUser3.setGoodUser(mobileInternetUser1);
@@ -1212,7 +1215,7 @@ public class Executor {
 		System.out.println("Would you like to set operator to all of the Home Internet Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (homeInternetUserIndex){
 			case "1":
 				activeUser3.setGoodUser(homeInternetUser1);
@@ -1267,7 +1270,7 @@ public class Executor {
 		System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
 		index = in.nextLine();
 		
-		if (index.equals("y")) {
+		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
 			case "1":
 				activeUser3.setGoodUser(mobilePhoneUser1);

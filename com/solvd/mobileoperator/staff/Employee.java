@@ -76,14 +76,14 @@ public class Employee implements Staff {
 			coefficient += 0.1;
 		}
 		
-		if (status == "expirienced applicant") {
-			coefficient += 0.2;
-		} else if (status == "employee") {
-			coefficient += 0.3;
-		} else if (status == "boss") {
-			coefficient += 0.4;
-		} else if (status == "bad employee") {
-			coefficient += 0.1;
+		if ("expirienced applicant".equals(status)) {
+			coefficient+=0.2;
+		} else if ("employee".equals(status)) {
+			coefficient+=0.3;
+		} else if ("boss".equals(status)) {
+			coefficient+=0.4;
+		} else if ("bad employee".equals(status)) {
+			coefficient+=0.1;
 		}
 		
 		salaryMaximum = coefficient*salary;
