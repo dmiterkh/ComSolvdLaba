@@ -435,24 +435,34 @@ public class Executor {
 		System.out.println("========================Scanner_1========================");
 		Scanner in = new Scanner(System.in);
 		String index = "";
-				
+			
+		Colleague colleague3 = new Colleague();
+		
 		Employee employee1 = new Employee(25, "F"); 
+		colleague3.setStaff(employee1);
+		colleague3.getStaff().setInfoAgain(26, "ff", 2000, "employee");
 		Employee employee2 = new Employee(20, "M"); 
 		Employee employee3 = new Employee(27, "F"); 
 		
 		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+		colleague3.setStaff(badEmployee1);
+		colleague3.getStaff().setInfoAgain(36, "MM", 700, "bad employee");
 		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
 		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
 		
 		Boss boss1 = new Boss(76, "F"); 
+		colleague3.setStaff(boss1);
+		colleague3.getStaff().setInfoAgain(46, "FF", 3000, "boss");
 		Boss boss2 = new Boss(77, "M"); 		
 		Boss boss3 = new Boss(75, "F"); 
 		
 		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender"); 
+		colleague3.setStaff(expiriencedApplicant1);
+		colleague3.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
 		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
 				
-		Colleague colleague3 = new Colleague();
+
 				
 		int employeeIndex = 0;
 		int badEmployeeIndex = 0;
@@ -462,30 +472,33 @@ public class Executor {
 		do {	
 			System.out.println("Enter the number of Employees from 1 to 3");
 			employeeIndex = in.nextInt();
+//			String newIndex = in.nextLine();
+//			Array indexArray = new Array<>();
+//			indexArray = newIndex.split(' ');	
+//          employeeIndex = indexArray[0];
 		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3))	;
-		in.nextLine();
 		
 		do {	
 			System.out.println("Enter the number of Bad Employees from 1 to 3");
 			badEmployeeIndex = in.nextInt();
 		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3))	;	
-		in.nextLine();		
 		
 		do {	
 			System.out.println("Enter the number of Bosses from 1 to 3");
 			bossIndex = in.nextInt();
 		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3))	;		
-		in.nextLine();					
-		
+	
 		do {	
 			System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
 			expiriencedApplicantIndex = in.nextInt();
 		} while((expiriencedApplicantIndex != 1)&&(expiriencedApplicantIndex != 2)&&(expiriencedApplicantIndex != 3))	;					
-		in.nextLine();	
-	
+		in.nextLine();
+		
+		do {
 		System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
 		index = in.nextLine();
-		
+	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+	    
 		if ("y".equals(index)) {
 			switch (employeeIndex){
 			case 1:
@@ -517,9 +530,11 @@ public class Executor {
 		}
 		
 		System.out.println("========================");
-		
+
+		do {
 		System.out.println("Would you like to get all of the information about all of the Bad Employees? (y/n)");
 		index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
 			switch (badEmployeeIndex){
@@ -551,9 +566,11 @@ public class Executor {
 			System.out.println("OK, move forward!");
 		}
 		System.out.println("========================");
-		
+				
+		do {
 		System.out.println("Would you like to get all of the information about all of the Bosses? (y/n)");
 		index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
 			switch (bossIndex){
@@ -586,8 +603,10 @@ public class Executor {
 		}
 		System.out.println("========================");
 
+		do {
 		System.out.println("Would you like to get all of the information about all of the Expirienced Applicants? (y/n)");
 		index = in.nextLine();
+        } while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
 			switch (expiriencedApplicantIndex){
@@ -622,11 +641,14 @@ public class Executor {
 		
 		
 		
-		
-		System.out.println("Would you like to set sex to all of the Employees? (y/n)");
 		String sexIndex = "";
 		int indexSex = 1; 
+
+		do {
+		System.out.println("Would you like to set sex to all of the Employees? (y/n)");
 		index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
+		 
 		
 		if ("y".equals(index)) {
 			switch (employeeIndex){
@@ -683,9 +705,11 @@ public class Executor {
 		
 		
 		
+		do {
 		System.out.println("Would you like to set sex to all of the Bad Employees? (y/n)");
 		index = in.nextLine();
-		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
+		 
 		if ("y".equals(index)) {
 			switch (badEmployeeIndex){
 			case 1:
@@ -741,9 +765,11 @@ public class Executor {
 		
 		
 		
+		do {
 		System.out.println("Would you like to set sex to all of the Bosses? (y/n)");
 		index = in.nextLine();
-		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
+		 		
 		if ("y".equals(index)) {
 			switch (bossIndex){
 			case 1:
@@ -799,10 +825,11 @@ public class Executor {
 		
 		
 		
-		
+		do {
 		System.out.println("Would you like to set sex to all of the Expirienced Applicants? (y/n)");
 		index = in.nextLine();
-		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
+		 		
 		if ("y".equals(index)) {
 			switch (employeeIndex){
 			case 1:
@@ -857,10 +884,11 @@ public class Executor {
 		
 		
 		
-		
+		do {
 		System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
 		index = in.nextLine();
-		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
+		 
 		if ("y".equals(index)) {
 			switch (employeeIndex){
 			case 1:
@@ -987,31 +1015,46 @@ public class Executor {
 		HomeInternetUser homeInternetUser2 = new HomeInternetUser(4567893, "BarsukCom", true, 15000);
 		HomeInternetUser homeInternetUser3 = new HomeInternetUser(5678934, "BobrCom", true, 25000);
 		
-		System.out.println("Enter the number of Mobile Phone Users from 1 to 3");
-		String mobilePhoneUserIndex = in.nextLine();
-		System.out.println("Enter the number of Mobile Internet Users from 1 to 3");
-		String mobileInternetUserIndex = in.nextLine();
-		System.out.println("Enter the number of Home Internet Users from 1 to 3");
-		String homeInternetUserIndex = in.nextLine();
+		
+		int mobilePhoneUserIndex = 0;
+		int mobileInternetUserIndex = 0;
+		int homeInternetUserIndex = 0;
 
+
+		do {	
+			System.out.println("Enter the number of Mobile Phone Users from 1 to 3");
+			mobilePhoneUserIndex = in.nextInt();
+		} while((mobilePhoneUserIndex != 1)&&(mobilePhoneUserIndex != 2)&&(mobilePhoneUserIndex != 3));
+		
+		do {	
+			System.out.println("Enter the number of Mobile Internet Users from 1 to 3");
+			mobileInternetUserIndex = in.nextInt();
+			
+		} while((mobileInternetUserIndex != 1)&&(mobileInternetUserIndex != 2)&&(mobileInternetUserIndex != 3));	
+		
+		do {	
+			System.out.println("Enter the number of Home Internet Users from 1 to 3");
+			homeInternetUserIndex = in.nextInt();
+		} while((homeInternetUserIndex != 1)&&(homeInternetUserIndex != 2)&&(homeInternetUserIndex != 3));		
+		in.nextLine();
 		
 		System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
 		index = in.nextLine();
 		
 		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(mobilePhoneUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
@@ -1035,18 +1078,18 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (mobileInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(mobileInternetUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
@@ -1069,18 +1112,18 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (homeInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(homeInternetUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
@@ -1105,14 +1148,14 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1126,7 +1169,7 @@ public class Executor {
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1162,14 +1205,14 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (mobileInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1183,7 +1226,7 @@ public class Executor {
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1217,14 +1260,14 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (homeInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1238,7 +1281,7 @@ public class Executor {
 				newOperator = in.nextLine();
 				activeUser3.getGoodUser().setOperator(newOperator);
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println("Operator of "+ activeUser3.getGoodUser().showUser() + " " + indexOperator + " is " + activeUser3.getGoodUser().showOperator());
 				System.out.println("Set operator to "+ activeUser3.getGoodUser().showUser() + " "  + indexOperator + " (enter new name of operator)");
@@ -1272,18 +1315,18 @@ public class Executor {
 		
 		if ("y".equals(index)) {
 			switch (mobilePhoneUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(mobilePhoneUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobilePhoneUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
@@ -1298,18 +1341,18 @@ public class Executor {
 			}
 			System.out.println("========================");
 			switch (mobileInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(mobileInternetUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(mobileInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
@@ -1324,18 +1367,18 @@ public class Executor {
 			}
 			System.out.println("========================");	
 			switch (homeInternetUserIndex){
-			case "1":
+			case 1:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "2":
+			case 2:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
 				activeUser3.setGoodUser(homeInternetUser2);
 				System.out.println(activeUser3.getGoodUser().toString());
 				break;
-			case "3":
+			case 3:
 				activeUser3.setGoodUser(homeInternetUser1);
 				System.out.println(activeUser3.getGoodUser().toString());
 				System.out.println("=======");
