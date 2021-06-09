@@ -28,9 +28,6 @@ public interface Trainee {
 	//OverLoading
 	public String showStatus(String status);
 	
-	@Override
-	public String toString();
-	
 	public void setSex(String sex);
 		
 }

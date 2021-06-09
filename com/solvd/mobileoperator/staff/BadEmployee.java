@@ -78,13 +78,13 @@ public class BadEmployee implements Staff , BadTrainee {
 			coefficient+=0.1;
 		}
 		
-		if (status == "expirienced applicant") {
+		if ("expirienced applicant".equals(status)) {
 			coefficient+=0.2;
-		} else if (status == "employee") {
+		} else if ("employee".equals(status)) {
 			coefficient+=0.3;
-		} else if (status == "boss") {
+		} else if ("boss".equals(status)) {
 			coefficient+=0.4;
-		} else if (status == "bad employee") {
+		} else if ("bad employee".equals(status)) {
 			coefficient+=0.1;
 		}
 		

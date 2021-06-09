@@ -48,9 +48,6 @@ public abstract class GoodUser {
 		return this.isActive;
 	}
 	
-	@Override
-	public String toString() {return "Name";}
-	
 	public abstract void setOperator(String operator);
 	
 	public abstract String showUser();

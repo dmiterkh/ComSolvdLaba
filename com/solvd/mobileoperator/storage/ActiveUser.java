@@ -11,6 +11,6 @@ public class ActiveUser {
 	}	
 		
 	public GoodUser getGoodUser() {
-			return this.goodUser;		
+		return this.goodUser;		
 	}
 }

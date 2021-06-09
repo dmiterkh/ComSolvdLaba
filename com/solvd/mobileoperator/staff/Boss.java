@@ -88,21 +88,21 @@ public class Boss extends Employee {
 			coefficient+=0.1;
 		}
 		
-		if (status == "expirienced applicant") {
+		if ("expirienced applicant".equals(status)) {
 			coefficient+=0.2;
-		} else if (status == "employee") {
+		} else if ("employee".equals(status)) {
 			coefficient+=0.3;
-		} else if (status == "boss") {
+		} else if ("boss".equals(status)) {
 			coefficient+=0.4;
-		} else if (status == "bad employee") {
+		} else if ("bad employee".equals(status)) {
 			coefficient+=0.1;
 		}
 		
-		if (this.power == "weak power") {
+		if ("weak power".equals(this.power)) {
 			coefficient+=0.1;
-		} else if (this.power == "medium power") {
+		} else if ("medium power".equals(this.power)) {
 			coefficient+=0.2;
-		} else if (this.power == "god power") {
+		} else if ("god power".equals(this.power)) {
 			coefficient+=0.5;
 		} 
 		
