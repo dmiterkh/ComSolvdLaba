@@ -16,18 +16,19 @@ public interface Trainee {
 	
 	public double showSalaryMaximum(int age, int salary, String status);
 	
-	//OverLoading
+//OverLoading
 	public void printInfo(int age, String sex);
 	
-	//OverLoading
+//OverLoading
 	public int showAge(int age);
 	
-	//OverLoading	
+//OverLoading	
 	public String showSex(String sex);
 	
-	//OverLoading
+//OverLoading
 	public String showStatus(String status);
 	
 	public void setSex(String sex);
+
 		
 }
