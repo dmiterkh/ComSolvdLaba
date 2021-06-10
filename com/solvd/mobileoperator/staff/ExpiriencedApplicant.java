@@ -15,6 +15,11 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		this.age = age;
 		this.sex = sex;
 	} 
+	
+	@Override
+	public String aquire() {
+		return "I can aquire new skills!";
+	}
 
 	// Override
 	public void printInfo() {
@@ -26,19 +31,6 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		System.out.println("I can aquire new skills!");
 	}
 	
-	// Overloading
-	public void printInfo(int age, String sex, int salary, String status) {
-		this.age = age;
-		this.sex = sex;
-		this.salary = salary;
-		this.status = status;
-		System.out.println("I am a(an)_ "  + this.status);
-		System.out.println("I am_  " + this.age + "  _years old");
-		System.out.println("My sex is_ " + this.sex);		
-		System.out.println("My salary is_ " + this.salary);		
-		System.out.println("I can work 8 hours every day!");
-		System.out.println("I can aquire new skills!");
-	}
 	
 	@Override
 	public int showAge() {
@@ -92,6 +84,20 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		return salaryMaximum;
 	}
 	
+	// Overloading
+	public void printInfo(int age, String sex, int salary, String status) {
+		this.age = age;
+		this.sex = sex;
+		this.salary = salary;
+		this.status = status;
+		System.out.println("I am a(an)_ "  + this.status);
+		System.out.println("I am_  " + this.age + "  _years old");
+		System.out.println("My sex is_ " + this.sex);		
+		System.out.println("My salary is_ " + this.salary);		
+		System.out.println("I can work 8 hours every day!");
+		System.out.println("I can aquire new skills!");
+	}
+		
 	//OverLoading
 	public void printInfo(int age, String sex) {
 		System.out.println(age);
@@ -112,10 +118,10 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 	public String showStatus(String status) {;
 		return status;
 	} 
-	
+		
 	@Override
-	public String aquire() {
-		return "I can aquire new skills!";
+	public void setSex(String sex) {
+		this.sex = sex;	
 	}
 	
 	@Override
@@ -137,11 +143,5 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 			   this.aquire() + "\n" + 
 			   this.work() + "\n" +
 			   this.lookForJob();
-	}
-	
-	@Override
-	public void setSex(String sex) {
-		this.sex = sex;	
-	}
-	
+	}	
 }

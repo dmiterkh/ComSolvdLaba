@@ -14,9 +14,13 @@ public class BadEmployee implements Staff , BadTrainee {
 	public BadEmployee(int age, String sex) {
 			this.age = age;
 			this.sex = sex;
-	} 
+	}
 	
-	// Overloading ???
+	@Override
+	public String aquire() {
+		return "I cannot aquire new skills!";
+	}
+	
 	@Override
 	public void printInfo() {
 		System.out.println("I am a(an)_ "  + this.status);
@@ -26,20 +30,6 @@ public class BadEmployee implements Staff , BadTrainee {
 		System.out.println("I cannot work 8 hours every day!");
 		System.out.println("I cannot aquire new skills!");
 		System.out.println("I can drink coffee or whiskey 8 hours every day at working place!");
-	}
-	
-	// Overloading
-	public void printInfo(int age, String sex, int salary, String status) {
-		this.age = age;
-		this.sex = sex;
-		this.salary = salary;
-		this.status = status;
-		System.out.println("I am a(an)_ "  + this.status);
-		System.out.println("I am_  " + this.age + "  _years old");
-		System.out.println("My sex is_ " + this.sex);		
-		System.out.println("My salary is_ " + this.salary);		
-		System.out.println("I can work 8 hours every day!");
-		System.out.println("I can aquire new skills!");
 	}
 	
 	@Override
@@ -92,6 +82,16 @@ public class BadEmployee implements Staff , BadTrainee {
 		return salaryMaximum;
 	}
 	
+	// Overloading
+	public void printInfo(int age, String sex, int salary, String status) {
+		System.out.println("I am a(an)_ "  + status);
+		System.out.println("I am_  " + age + "  _years old");
+		System.out.println("My sex is_ " + sex);		
+		System.out.println("My salary is_ " + salary);		
+		System.out.println("I can work 8 hours every day!");
+		System.out.println("I can aquire new skills!");
+	}	
+	
 	//OverLoading
 	public void printInfo(int age, String sex) {
 		System.out.println(age);
@@ -114,15 +114,15 @@ public class BadEmployee implements Staff , BadTrainee {
 	}
 	
 	@Override
-	public String aquire() {
-		return "I cannot aquire new skills!";
+	public void setSex(String sex) {
+		this.sex = sex;	
 	}
 	
 	@Override
 	public String work() {
 		return  "I cannot work 8 hours every day!";
 	}
-	
+
 	@Override
 	public String drink() {
 		return "I can drink coffee or whiskey 8 hours every day at working place!" ;
@@ -138,11 +138,6 @@ public class BadEmployee implements Staff , BadTrainee {
 			   this.work() + "\n" + 
 			   this.drink();
 
-	}
-	
-	@Override
-	public void setSex(String sex) {
-		this.sex = sex;	
 	}
 	
 }
