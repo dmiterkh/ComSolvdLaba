@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 public class ColleagueLi {
 
-	public List<Staff> listOfStaff;
+	private List<Staff> listOfStaff;
 	
 	public ColleagueLi () {
 		listOfStaff = new LinkedList<>();		

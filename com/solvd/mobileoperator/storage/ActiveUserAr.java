@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ActiveUserAr {
 
-	public List<GoodUser> listOfGoodUser;
+	private List<GoodUser> listOfGoodUser;
 	
 	public ActiveUserAr () {
 		listOfGoodUser = new ArrayList<>();		

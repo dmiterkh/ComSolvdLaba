@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ColleagueAr {
 
-	public List<Staff> listOfStaff;
+	private List<Staff> listOfStaff;
 	
 	public ColleagueAr () {
 		listOfStaff = new ArrayList<>();		
