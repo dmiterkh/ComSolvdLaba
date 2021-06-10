@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 public class ActiveUserLi {
 
-	public List<GoodUser> listOfGoodUser;
+	private List<GoodUser> listOfGoodUser;
 	
 	public ActiveUserLi () {
 		listOfGoodUser = new LinkedList<>();		

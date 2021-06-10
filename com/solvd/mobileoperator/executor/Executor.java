@@ -36,13 +36,6 @@ public class Executor {
 
 	public static void main(String[] args) {
 		
-		
-		
-		
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println(" ");
 		System.out.println("================================Scanner_1================================");
 		Scanner in = new Scanner(System.in);
 		String index = "";
@@ -87,7 +80,7 @@ public class Executor {
 			System.out.println("Enter the number of Bad Employees from 1 to 3");
 			badEmployeeIndex = in.nextInt();
 //			String newIndex = in.nextLine();
-//			badEmployeeIndex = Integer.parseInt(in.nextLine());
+//			badEmployeeIndex = Integer.parseInt(newIndex);
 		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
 		
 		do {	
