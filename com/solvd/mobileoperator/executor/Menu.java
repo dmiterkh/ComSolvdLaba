@@ -444,7 +444,7 @@ public class Menu {
 		if ("y".equals(index)) {
 			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
 				for(int i = 0; i < employeeIndex; i++) {
-	         		System.out.println("Sex of " + colleagueAr1.getListOfStaff().get(i).showStatus() + " " + indexSex + " is " + colleagueAr1.getListOfStaff().get(i).showSex());
+					System.out.println("Sex of " + colleagueAr1.getListOfStaff().get(i).showStatus() + " " + indexSex + " is " + colleagueAr1.getListOfStaff().get(i).showSex());
 					System.out.println("Set sex to " + colleagueAr1.getListOfStaff().get(i).showStatus() + " " + indexSex + " (f/m/trans)");
 					sexIndex = in.nextLine();
 					colleagueAr1.getListOfStaff().get(i).setSex(sexIndex);
@@ -809,25 +809,25 @@ public class Menu {
 			break;				
 		}
 		
-	    do {
-	    	System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
-	    	index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
-	    		
-	    if ("y".equals(index)) {
-	    	if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {
-	    		for(int i = 0; i < mobilePhoneUserIndex; i++) {
-	    			System.out.println(activeUserLi1.getListOfGoodUser().get(i).toString());
-	    			System.out.println("======");
-	    		}
-	    	} else {
-	    		System.out.println("The required Storage is Null or Empty");	
-	    	}	
-	    } else {
-	    	System.out.println("OK, move forward!");
-	    }
+		do {
+			System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));		
+	
+		if ("y".equals(index)) {
+			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {
+				for(int i = 0; i < mobilePhoneUserIndex; i++) {
+					System.out.println(activeUserLi1.getListOfGoodUser().get(i).toString());
+					System.out.println("======");
+				}
+			} else {
+				System.out.println("The required Storage is Null or Empty");	
+			}	
+		} else {
+			System.out.println("OK, move forward!");
+		}
                 
-    	System.out.println("========================");
+		System.out.println("========================");
 		
 		newOperator = "";
 		indexOperator = 1;
