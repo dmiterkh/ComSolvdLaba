@@ -4,13 +4,11 @@ import com.solvd.mobileoperator.point.InternetMarket;         // Set, Get, Exten
 import com.solvd.mobileoperator.point.Market;         
 import com.solvd.mobileoperator.point.Office;         
 import com.solvd.mobileoperator.point.MarketPlace;    	
-    
 
-import com.solvd.mobileoperator.staff.Employee;     		  // Initial Interface Trainee, Extension, Implementation: 
+import com.solvd.mobileoperator.staff.Employee;               // Initial Interface Trainee, Extension, Implementation: 
 import com.solvd.mobileoperator.staff.Boss;         		 
 import com.solvd.mobileoperator.staff.BadEmployee;           
-import com.solvd.mobileoperator.staff.ExpiriencedApplicant;   // Class ExpiriencedApplicant extends Abstract Class Unemployed
-															  // and implements Interface Staff
+import com.solvd.mobileoperator.staff.ExpiriencedApplicant;   // Class ExpiriencedApplicant extends Abstract Class Unemployed and implements Interface Staff
 
 import com.solvd.mobileoperator.user.NoMoneyUser;             // Initial Abstract Class BadUser; 
 import com.solvd.mobileoperator.user.NoConnectionUser;   
@@ -96,8 +94,8 @@ public class Menu {
 //1			bossIndex = in.nextInt();
 //2			
 //2			String newIndex = in.nextLine();
-//2			String[] indexArray = new String[1];
-//2		    indexArray = newIndex.split(" ");
+//2    		String[] indexArray = new String[1];
+//2    	    indexArray = newIndex.split(" ");
 //2			bossIndex = Integer.parseInt(indexArray[0]);
 //3			
 			String newIndex = in.nextLine();
@@ -133,11 +131,11 @@ public class Menu {
 		System.out.println("Enter Any list of numbers");	
 		
 		String intLine = in.nextLine();
-	    String[] intLineSplit = intLine.split(" ");
+		String[] intLineSplit = intLine.split(" ");
 		int[] arr = new int[intLineSplit.length];
 		for(int i = 0; i < intLineSplit.length; i++) {
 			arr[i] = Integer.parseInt(intLineSplit[i]);
-//??		System.out.println(Arrays.toString(arr[i]));
+//?			System.out.println(Arrays.toString(arr[i]));
 		}		
 		System.out.println(Arrays.toString(arr));
 				
@@ -155,7 +153,7 @@ public class Menu {
 		
 		System.out.println("Enter Any list of numbers 2");
 		
- 	    stringIndex = in.nextLine();
+		stringIndex = in.nextLine();
  		stringIndexSplit = stringIndex.split(" ");
 //		ArrayList<String> stringArray = new ArrayList<String>(); 		
 		for(int i = 0; i < stringIndexSplit.length; i++) {
@@ -398,13 +396,13 @@ public class Menu {
 		
 		
 		
-	    do {
-	    	System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
-	    	index = in.nextLine();
+		do {
+			System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
+			index = in.nextLine();
 	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
       
-        if ("y".equals(index)) {
-        	if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
+		if ("y".equals(index)) {
+			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
 				for(int i = 0; i < employeeIndex; i++) {
 					System.out.println(colleagueAr1.getListOfStaff().get(i).toString());
 					System.out.println("======");
@@ -439,9 +437,9 @@ public class Menu {
 		int indexSex = 1;
 		
 		do {
-	    	System.out.println("Would you like to set sex to all of the Employees? (y/n)");
-	    	index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
+			index = in.nextLine();		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 				
 		if ("y".equals(index)) {
 			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
@@ -461,9 +459,9 @@ public class Menu {
 		System.out.println("========================");
 		
 		do {
-		System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
-		index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
 			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
@@ -557,7 +555,7 @@ public class Menu {
 	
 		do {
 			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
-    		index = in.nextLine();
+			index = in.nextLine();
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 			
 		if ("y".equals(index)) {
@@ -611,7 +609,7 @@ public class Menu {
 		MobilePhoneUser mobilePhoneUser1 = new MobilePhoneUser(1234567, "BelCom", true, 100);
 		MobilePhoneUser mobilePhoneUser2 = new MobilePhoneUser(2345671, "PolskaCom", true, 200);
 		MobilePhoneUser mobilePhoneUser3 = new MobilePhoneUser(3456712, "LitvaCom", true, 300);		
-	    MobileInternetUser mobileInternetUser1 = new MobileInternetUser(2345678, "BelarusCom", true, 1200, 2500);
+		MobileInternetUser mobileInternetUser1 = new MobileInternetUser(2345678, "BelarusCom", true, 1200, 2500);
 		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(3456782, "MedvedCom", false, 1000, 1500);
 		MobileInternetUser mobileInternetUser3 = new MobileInternetUser(4567823, "BelkaCom", false, 1700, 3500);	
 		HomeInternetUser homeInternetUser1 = new HomeInternetUser(3456789, "ZubrCom", true, 10000);
@@ -694,15 +692,15 @@ public class Menu {
 	    	index = in.nextLine();
 	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
       
-        if ("y".equals(index)) {
-        	if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-        		for(int i = 0; i < mobilePhoneUserIndex; i++) {
-        			System.out.println(activeUserAr1.getListOfGoodUser().get(i).toString());
-        			System.out.println("======");
-        		}
-			} else {
+	    if ("y".equals(index)) {
+	    	if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
+	    		for(int i = 0; i < mobilePhoneUserIndex; i++) {
+	    			System.out.println(activeUserAr1.getListOfGoodUser().get(i).toString());
+	    			System.out.println("======");
+	    		}
+	    	} else {
 				System.out.println("The required Storage is Null or Empty");	
-			}	
+	    	}	
  		} else {
 			System.out.println("OK, move forward!");
 		}
@@ -718,7 +716,7 @@ public class Menu {
 	    } while((!("y".equals(index)))&&(!("n".equals(index))));
 				
 		if ("y".equals(index)) {
-        	if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
+			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
         		for(int i = 0; i < mobilePhoneUserIndex; i++) {
         			System.out.println("Operator of " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " is " + activeUserAr1.getListOfGoodUser().get(i).showOperator());
         			System.out.println("Set sex to " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " (enter new name of operator)");
@@ -740,7 +738,7 @@ public class Menu {
 	    } while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
-        	if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
+			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
 				for(GoodUser goodUser : activeUserAr1.getListOfGoodUser()) {
 					System.out.println(goodUser.toString());
 					System.out.println("======");
