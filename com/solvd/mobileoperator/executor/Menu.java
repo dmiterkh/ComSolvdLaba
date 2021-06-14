@@ -94,12 +94,12 @@ public class Menu {
 //1			bossIndex = in.nextInt();
 //2			
 //2			String newIndex = in.nextLine();
-//2    		String[] indexArray = new String[1];
-//2    	    indexArray = newIndex.split(" ");
+//2			String[] indexArray = new String[1];
+//2			indexArray = newIndex.split(" ");
 //2			bossIndex = Integer.parseInt(indexArray[0]);
 //3			
 			String newIndex = in.nextLine();
-		    String[] indexArray = newIndex.split(" ");
+			String[] indexArray = newIndex.split(" ");
 			bossIndex = Integer.parseInt(indexArray[0]);
 		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3));		
 				
@@ -112,8 +112,8 @@ public class Menu {
 //2			ArrayList<String> indexArray = newIndex.split(" ");
 //2			expiriencedApplicantIndex = Integer.parseInt(indexArray.get(0));
 //3		
-            String newIndex = in.nextLine();
-            String[] newIndexSplit = newIndex.split(" ");
+			String newIndex = in.nextLine();
+			String[] newIndexSplit = newIndex.split(" ");
 			ArrayList<String> stringArray = new ArrayList<String>();
 			stringArray.add(0, newIndexSplit[0]);
 			expiriencedApplicantIndex = Integer.parseInt(stringArray.get(0));		
