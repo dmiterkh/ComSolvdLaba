@@ -147,7 +147,7 @@ public class Menu {
 		ArrayList<String> stringArray = new ArrayList<String>();
 		for(int i = 0; i < stringIndexSplit.length; i++) {
 			stringArray.add(i, stringIndexSplit[i]);
-			}
+		}
 		System.out.println(stringArray.toString());
 				
 		
@@ -158,7 +158,7 @@ public class Menu {
 //		ArrayList<String> stringArray = new ArrayList<String>(); 		
 		for(int i = 0; i < stringIndexSplit.length; i++) {
 			stringArray.set(i, stringIndexSplit[i]);
-			}
+		}
 		System.out.println(stringArray.toString());
 
 		
@@ -169,7 +169,7 @@ public class Menu {
 		ArrayList<Integer> intArray = new ArrayList<Integer>();
 		for(int i = 0; i < intIndexSplit.length; i++) {
 			intArray.add(i, Integer.parseInt(intIndexSplit[i]));
-			}		
+		}		
 		System.out.println(intArray.toString());
 		
 		
@@ -179,8 +179,8 @@ public class Menu {
 		System.out.println(expiriencedApplicantIndex);
 		
 		do {
-		System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
-		index = in.nextLine();
+			System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
+			index = in.nextLine();
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		 
 		if ("y".equals(index)) {
@@ -717,12 +717,12 @@ public class Menu {
 				
 		if ("y".equals(index)) {
 			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-        		for(int i = 0; i < mobilePhoneUserIndex; i++) {
-        			System.out.println("Operator of " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " is " + activeUserAr1.getListOfGoodUser().get(i).showOperator());
-        			System.out.println("Set sex to " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " (enter new name of operator)");
-        			newOperator = in.nextLine();
-        			activeUserAr1.getListOfGoodUser().get(i).setOperator(newOperator);
-        		}
+				for(int i = 0; i < mobilePhoneUserIndex; i++) {
+					System.out.println("Operator of " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " is " + activeUserAr1.getListOfGoodUser().get(i).showOperator());
+					System.out.println("Set sex to " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " (enter new name of operator)");
+					newOperator = in.nextLine();
+					activeUserAr1.getListOfGoodUser().get(i).setOperator(newOperator);
+				}
 			} else {
 				System.out.println("The required Storage is Null or Empty");	
 			}	
