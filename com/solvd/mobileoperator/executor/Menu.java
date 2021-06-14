@@ -399,7 +399,7 @@ public class Menu {
 		do {
 			System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
 			index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
+		} while((!("y".equals(index)))&&(!("n".equals(index))));		
       
 		if ("y".equals(index)) {
 			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
@@ -687,21 +687,21 @@ public class Menu {
 			break;								
 		}
 		
-	    do {
-	    	System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
-	    	index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
+		do {
+			System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));		
       
-	    if ("y".equals(index)) {
-	    	if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-	    		for(int i = 0; i < mobilePhoneUserIndex; i++) {
-	    			System.out.println(activeUserAr1.getListOfGoodUser().get(i).toString());
-	    			System.out.println("======");
-	    		}
-	    	} else {
+		if ("y".equals(index)) {
+			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
+				for(int i = 0; i < mobilePhoneUserIndex; i++) {
+					System.out.println(activeUserAr1.getListOfGoodUser().get(i).toString());
+					System.out.println("======");
+				}
+			} else {
 				System.out.println("The required Storage is Null or Empty");	
-	    	}	
- 		} else {
+			}	
+		} else {
 			System.out.println("OK, move forward!");
 		}
 		
@@ -711,9 +711,9 @@ public class Menu {
 		int indexOperator = 1;
 		
 		do {
-	    	System.out.println("Would you like to set operator to all of the Mobile Phone Users? (y/n)");
-	    	index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to set operator to all of the Mobile Phone Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 				
 		if ("y".equals(index)) {
 			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
@@ -733,9 +733,9 @@ public class Menu {
 		System.out.println("========================");
 		
 		do {
-		System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
-		index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
 			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
@@ -813,19 +813,19 @@ public class Menu {
 	    	System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
 	    	index = in.nextLine();
 	    } while((!("y".equals(index)))&&(!("n".equals(index))));		
-      
-        if ("y".equals(index)) {
-        	if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {
-        		for(int i = 0; i < mobilePhoneUserIndex; i++) {
-        			System.out.println(activeUserLi1.getListOfGoodUser().get(i).toString());
-        			System.out.println("======");
-        		}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}	
- 		} else {
-			System.out.println("OK, move forward!");
-		}
+	    		
+	    if ("y".equals(index)) {
+	    	if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {
+	    		for(int i = 0; i < mobilePhoneUserIndex; i++) {
+	    			System.out.println(activeUserLi1.getListOfGoodUser().get(i).toString());
+	    			System.out.println("======");
+	    		}
+	    	} else {
+	    		System.out.println("The required Storage is Null or Empty");	
+	    	}	
+	    } else {
+	    	System.out.println("OK, move forward!");
+	    }
                 
     	System.out.println("========================");
 		
@@ -833,18 +833,18 @@ public class Menu {
 		indexOperator = 1;
 		
 		do {
-	    	System.out.println("Would you like to set operator to all of the Active Users? (y/n)");
-	    	index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to set operator to all of the Active Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 				
 		if ("y".equals(index)) {
-        	if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
-         		for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
-         			System.out.println("Operator of " + goodUser.showUser() + " " + indexOperator + " is " + goodUser.showOperator());
-         			System.out.println("Set sex to " + goodUser.showUser() + " " + indexOperator + " (enter new name of operator)");
+			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
+				for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
+					System.out.println("Operator of " + goodUser.showUser() + " " + indexOperator + " is " + goodUser.showOperator());
+					System.out.println("Set sex to " + goodUser.showUser() + " " + indexOperator + " (enter new name of operator)");
 					newOperator = in.nextLine();
 					goodUser.setOperator(newOperator);
-         		}
+				}
 			} else {
 				System.out.println("The required Storage is Null or Empty");	
 			}
@@ -855,12 +855,12 @@ public class Menu {
 		System.out.println("========================");
 		
 		do {
-		System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
-		index = in.nextLine();
-	    } while((!("y".equals(index)))&&(!("n".equals(index))));
+			System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
+			index = in.nextLine();
+		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
-        	if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
+			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
 				for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
 					System.out.println(goodUser.toString());
 					System.out.println("======");
