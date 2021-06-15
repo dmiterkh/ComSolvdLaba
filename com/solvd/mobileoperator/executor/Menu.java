@@ -19,6 +19,9 @@ import com.solvd.mobileoperator.user.HomeInternetUser;
 import com.solvd.mobileoperator.storage.Colleague;            // Polymorphizm: Interface Staff 
 import com.solvd.mobileoperator.storage.ColleagueAr;
 import com.solvd.mobileoperator.storage.ColleagueLi;
+import com.solvd.mobileoperator.storage.ColleagueHS;
+import com.solvd.mobileoperator.storage.ColleagueHM;
+
 import com.solvd.mobileoperator.storage.ActiveUser;           // Polymorphizm: Abstract Class GoodUser
 import com.solvd.mobileoperator.storage.ActiveUserAr;
 import com.solvd.mobileoperator.storage.ActiveUserLi;
@@ -30,6 +33,10 @@ import java.util.LinkedList;
 import com.solvd.mobileoperator.staff.Staff; 
 import com.solvd.mobileoperator.user.GoodUser; 
 import java.util.Arrays;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Menu {
 	
@@ -39,9 +46,6 @@ public class Menu {
 
 	public void showMenu() {
 		
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("================================Scanner_1================================");
 		
 		Scanner in = new Scanner(System.in);
 		String index = "";
@@ -71,15 +75,26 @@ public class Menu {
 		colleague3.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
 		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
-				
-		int employeeIndex = 0;
-		do {	
+		
+		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("================================Scanner_1_Usual_Storage================================");
+		
+		int employeeIndex = 1;
+		int badEmployeeIndex = 1;
+		int bossIndex = 1;
+		int expiriencedApplicantIndex = 1;
+		
+
+
+		
+/*		do {	
 			System.out.println("Enter the number of Employees from 1 to 3");
 			employeeIndex = in.nextInt();
 		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
 		in.nextLine();
 		
-		int badEmployeeIndex = 0;
 		do {	
 			System.out.println("Enter the number of Bad Employees from 1 to 3");
 //1			badEmployeeIndex = in.nextInt();
@@ -88,7 +103,7 @@ public class Menu {
 			badEmployeeIndex = Integer.parseInt(newIndex);
 		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
 		
-		int bossIndex = 0;
+
 		do {	
 			System.out.println("Enter the number of Bosses from 1 to 3");
 //1			bossIndex = in.nextInt();
@@ -103,7 +118,6 @@ public class Menu {
 			bossIndex = Integer.parseInt(indexArray[0]);
 		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3));		
 				
-		int expiriencedApplicantIndex = 0;
 		do {	
 			System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
 //1			expiriencedApplicantIndex = in.nextInt();
@@ -293,37 +307,42 @@ public class Menu {
 		}		
 	
 		System.out.println("========================");
-		System.out.println("THAT'S IT for Scaner 1");
+		System.out.println("THAT'S IT for Scanner_1_Usual_Storage");
 		System.out.println("========================");
 		
 		
-		
+	*/	
 
+		employeeIndex = 1;
+		badEmployeeIndex = 1;
+		bossIndex = 1;
+		expiriencedApplicantIndex = 1;
+		
 		System.out.println(" ");
 		System.out.println(" ");
-		System.out.println("================================Scanner_3================================");	
+		System.out.println("================================Scanner_2_ArrayList_Colleague================================");	
 		ColleagueAr colleagueAr1 = new ColleagueAr();
 		
 		do {	
 			System.out.println("Enter the number of Employees from 1 to 3");
-			employeeIndex = in.nextInt();
+//!!!			employeeIndex = in.nextInt();
 		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
 		
 		do {	
 			System.out.println("Enter the number of Bad Employees from 1 to 3");
-			badEmployeeIndex = in.nextInt();
+//!!!			badEmployeeIndex = in.nextInt();
 		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
 		
 		do {	
 			System.out.println("Enter the number of Bosses from 1 to 3");
-			bossIndex = in.nextInt();
+//!!!			bossIndex = in.nextInt();
 		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3));		
 	
 		do {	
 			System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
-			expiriencedApplicantIndex = in.nextInt();
+//!!!			expiriencedApplicantIndex = in.nextInt();
 		} while((expiriencedApplicantIndex != 1)&&(expiriencedApplicantIndex != 2)&&(expiriencedApplicantIndex != 3));					
-		in.nextLine();
+//!!!		in.nextLine();
 		
 		switch (employeeIndex){
 		case 1:
@@ -389,16 +408,11 @@ public class Menu {
 		default:
 			break;				
 		}
-		colleagueAr1.getListOfStaff().remove(3);
-		colleagueAr1.getListOfStaff().remove(2);
-		colleagueAr1.getListOfStaff().remove(1);
-		colleagueAr1.getListOfStaff().remove(0);
-		
-		
 		
 		do {
 			System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
-			index = in.nextLine();
+//!!!			index = in.nextLine();
+			index = "n";
 		} while((!("y".equals(index)))&&(!("n".equals(index))));		
       
 		if ("y".equals(index)) {
@@ -438,7 +452,8 @@ public class Menu {
 		
 		do {
 			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
-			index = in.nextLine();		
+//!!!		index = in.nextLine();		
+			index = "n";
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 				
 		if ("y".equals(index)) {
@@ -448,7 +463,7 @@ public class Menu {
 					System.out.println("Set sex to " + colleagueAr1.getListOfStaff().get(i).showStatus() + " " + indexSex + " (f/m/trans)");
 					sexIndex = in.nextLine();
 					colleagueAr1.getListOfStaff().get(i).setSex(sexIndex);
-	         	}
+				}
 			} else {
 				System.out.println("The required Storage is Null or Empty");	
 			}
@@ -457,10 +472,11 @@ public class Menu {
 		}
 		
 		System.out.println("========================");
-		
+	
 		do {
 			System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
-			index = in.nextLine();
+//!!!			index = in.nextLine();
+			index = "y";
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
@@ -477,16 +493,243 @@ public class Menu {
 		}
 				
 		System.out.println("========================");
-		System.out.println("THAT'S IT for Scanner 3");
 		System.out.println("========================");
+
+		for(Staff staff : colleagueAr1.getListOfStaff()) {
+			System.out.println(staff.toString());
+			System.out.println("======");
+		}
+		System.out.println(colleagueAr1.getListOfStaff().size());	
+		
+//		System.out.println(colleagueAr1.getListOfStaff().isEmpty());
+//		colleagueAr1.getListOfStaff().add(expiriencedApplicant3);
+//		colleagueAr1.getListOfStaff().add(0, expiriencedApplicant3);
+//		colleagueAr1.getListOfStaff().set(colleagueAr1.getListOfStaff().size()-6, expiriencedApplicant3);
+//		System.out.println(colleagueAr1.getListOfStaff().toString());
+//		System.out.println(colleagueAr1.getListOfStaff().get(2));
+//		System.out.println(colleagueAr1.getListOfStaff().getClass());
+//		System.out.println(colleagueAr1.getListOfStaff().equals(colleagueLi1));
+//		System.out.println(colleagueAr1.getListOfStaff().contains(expiriencedApplicant3));
+//		System.out.println(colleagueAr1.getListOfStaff().indexOf(expiriencedApplicant1));
+//		System.out.println(colleagueAr1.getListOfStaff().lastIndexOf(expiriencedApplicant3));
+//		System.out.println(colleagueAr1.getListOfStaff().remove(expiriencedApplicant3));
+//		System.out.println(colleagueAr1.getListOfStaff().subList(1, 2));	
+//		colleagueAr1.getListOfStaff().clear();
+		
 	
 
+	
+		System.out.println("========================");
+		System.out.println("========================");
+		
+//		System.out.println(colleagueAr1.getListOfStaff().remove(0));
+		
+//		for(Staff staff : colleagueAr1.getListOfStaff()) {
+//			System.out.println(staff.toString());
+//			System.out.println("======");
+//		}
+//		System.out.println(colleagueAr1.getListOfStaff().size());	
+	
+
+		System.out.println("========================");
+		System.out.println("========================");		
+//		System.out.println(colleagueAr1.getListOfStaff().hashCode());		
+//?		System.out.println(colleagueAr1.getListOfStaff().iterator());
+//?		System.out.println(colleagueAr1.getListOfStaff().listIterator());
+//?		System.out.println(colleagueAr1.getListOfStaff().parallelStream());
+//		System.out.println(colleagueAr1.getListOfStaff().spliterator());
+//		System.out.println(colleagueAr1.getListOfStaff().stream());
+//		colleagueAr1.getListOfStaff().notify();
+//		colleagueAr1.getListOfStaff().notifyAll();
+//		colleagueAr1.getListOfStaff().wait();
+//		colleagueAr1.getListOfStaff().wait(indexSex);
+//		colleagueAr1.getListOfStaff().wait(expiriencedApplicantIndex, indexSex);
+		
+		
+		
+//		System.out.println("========================");
+//		System.out.println("THAT'S IT for Scanner_2_ArrayList_Colleague");
+//		System.out.println("========================");		
+//		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("================================Scanner_3_LinkedList_Colleague================================");	
+//		ColleagueLi colleagueLi1 = new ColleagueLi();
+//	
+//		do {	
+//			System.out.println("Enter the number of Employees from 1 to 3");
+//			employeeIndex = in.nextInt();
+//		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
+//	
+//		do {	
+//			System.out.println("Enter the number of Bad Employees from 1 to 3");
+//			badEmployeeIndex = in.nextInt();
+//		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
+//		in.nextLine();
+//		
+//		switch (employeeIndex){
+//		case 1:
+//			colleagueLi1.setListOfStaff(employee1);
+//			break;
+//		case 2:
+//			colleagueLi1.setListOfStaff(employee1);
+//			colleagueLi1.setListOfStaff(employee2);
+//			break;
+//		case 3:
+//			colleagueLi1.setListOfStaff(employee1);
+//			colleagueLi1.setListOfStaff(employee2);
+//			colleagueLi1.setListOfStaff(employee3);
+//			break;	
+//		default:
+//			break;				
+//		}
+//		switch (badEmployeeIndex){
+//		case 1:
+//			colleagueLi1.setListOfStaff(badEmployee1);
+//			break;
+//		case 2:
+//			colleagueLi1.setListOfStaff(badEmployee1);
+//			colleagueLi1.setListOfStaff(badEmployee2);
+//			break;
+//		case 3:
+//			colleagueLi1.setListOfStaff(badEmployee1);
+//			colleagueLi1.setListOfStaff(badEmployee2);
+//			colleagueLi1.setListOfStaff(badEmployee3);
+//			break;	
+//		default:
+//			break;				
+//		}
+//	
+//		do {
+//			System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
+//			index = in.nextLine();
+//		} while((!("y".equals(index)))&&(!("n".equals(index))));		
+//  
+//		if ("y".equals(index)) {
+//			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
+//				for(int i = 0; i < employeeIndex; i++) {
+//					System.out.println(colleagueLi1.getListOfStaff().get(i).toString());
+//					System.out.println("======");
+//				}
+//			} else {
+//				System.out.println("The required Storage is Null or Empty");	
+//			}
+//		} else {
+//			System.out.println("OK, move forward!");
+//		}
+//    
+//		sexIndex = "";
+//		indexSex = 1;
+//	
+//		do {
+//			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
+//			index = in.nextLine();
+//		} while((!("y".equals(index)))&&(!("n".equals(index))));
+//			
+//		if ("y".equals(index)) {
+//			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
+//				for(int i = 0; i < employeeIndex; i++) {
+//					System.out.println("Sex of " + colleagueLi1.getListOfStaff().get(i).showStatus() + " " + indexSex + " is " + colleagueLi1.getListOfStaff().get(i).showSex());
+//					System.out.println("Set sex to " + colleagueLi1.getListOfStaff().get(i).showStatus() + " " + indexSex + " (f/m/trans)");
+//					sexIndex = in.nextLine();
+//					colleagueLi1.getListOfStaff().get(i).setSex(sexIndex);
+//				}
+//			} else {
+//				System.out.println("The required Storage is Null or Empty");	
+//			}			
+//		} else {
+//			System.out.println("OK, move forward!");
+//		}
+//	
+//		System.out.println("========================");
+//    
+//		do {
+//			System.out.println("Would you like to get all of the information about all of the Colleagues? (y/n)");
+//			index = in.nextLine();
+//		} while((!("y".equals(index)))&&(!("n".equals(index))));
+//		
+//		if ("y".equals(index)) {
+//			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
+//				for(Staff staff : colleagueLi1.getListOfStaff()) {
+//					System.out.println(staff.toString());
+//					System.out.println("======");
+//				}	
+//			} else {
+//				System.out.println("The required Storage is Null or Empty");	
+//			}
+//		} else {
+//			System.out.println("OK, move forward!");
+//		}
+//
+//
+//
+//		for(Staff staff : colleagueAr1.getListOfStaff()) {
+//			System.out.println(staff.toString());
+//			System.out.println("======");
+//		}
+//		System.out.println(colleagueAr1.getListOfStaff().size());	
+//		
+//		System.out.println("========================");
+//		System.out.println("========================");
+//		
+//		for(Staff staff : colleagueLi1.getListOfStaff()) {
+//			System.out.println(staff.toString());
+//			System.out.println("======");
+//		}
+//		System.out.println(colleagueLi1.getListOfStaff().size());	
+//
+//		System.out.println("========================");
+//		System.out.println("========================");
+
+//		colleagueAr1.getListOfStaff().addAll(1, colleagueLi1.getListOfStaff());
+//		colleagueAr1.getListOfStaff().addAll(colleagueLi1.getListOfStaff());
+//		System.out.println(colleagueAr1.getListOfStaff().containsAll(colleagueLi1.getListOfStaff()));
+//		System.out.println(colleagueAr1.getListOfStaff().removeAll(colleagueLi1.getListOfStaff()));
+//		System.out.println(colleagueAr1.getListOfStaff().retainAll(colleagueLi1.getListOfStaff()));
+					
+//		String[] myArray = {};
+//	    myArray = colleagueAr1.getListOfStaff().toArray(new String[colleagueAr1.getListOfStaff().size()]);
+//	    System.out.println(myArray);
+//		System.out.println(colleagueAr1.getListOfStaff().toArray(null));
+//		System.out.println(colleagueAr1.getListOfStaff().toArray(null));
+//		System.out.println(colleagueAr1.getListOfStaff().forEach(colleagueLi1.getListOfStaff()));		
+//		System.out.println(colleagueAr1.getListOfStaff().sort(colleagueLi1.getListOfStaff()));		
+//		colleagueAr1.getListOfStaff().replaceAll(null);	
+	
+//		for(Staff staff : colleagueAr1.getListOfStaff()) {
+//			System.out.println(staff.toString());
+//			System.out.println("======");
+//		}
+//		System.out.println(colleagueAr1.getListOfStaff().size());
+
+
+//		if ("y".equals(index)) {
+//			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
+//				for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
+//					System.out.println("Operator of " + goodUser.showUser() + " " + indexOperator + " is " + goodUser.showOperator());
+//					System.out.println("Set sex to " + goodUser.showUser() + " " + indexOperator + " (enter new name of operator)");
+//					newOperator = in.nextLine();
+//					goodUser.setOperator(newOperator);
+//				}
+//			} else {
+//				System.out.println("The required Storage is Null or Empty");	
+//			}
+//		} else {
+//			System.out.println("OK, move forward!");
+//		}
+		
+		System.out.println("========================");
+		System.out.println("THAT'S IT for Scanner_3_LinkedList_Colleague");
+		System.out.println("========================");
+		
+		
 		
 		
 		System.out.println(" ");
 		System.out.println(" ");
-		System.out.println("================================Scanner_4================================");	
-		ColleagueLi colleagueLi1 = new ColleagueLi();
+		System.out.println("================================Scanner_4_HashSet_Colleague================================");	
+		
+		ColleagueHS colleagueHS1 = new ColleagueHS();
 	
 		do {	
 			System.out.println("Enter the number of Employees from 1 to 3");
@@ -501,32 +744,32 @@ public class Menu {
 		
 		switch (employeeIndex){
 		case 1:
-			colleagueLi1.setListOfStaff(employee1);
+			colleagueHS1.setSetOfStaff(employee1);
 			break;
 		case 2:
-			colleagueLi1.setListOfStaff(employee1);
-			colleagueLi1.setListOfStaff(employee2);
+			colleagueHS1.setSetOfStaff(employee1);
+			colleagueHS1.setSetOfStaff(employee2);
 			break;
 		case 3:
-			colleagueLi1.setListOfStaff(employee1);
-			colleagueLi1.setListOfStaff(employee2);
-			colleagueLi1.setListOfStaff(employee3);
+			colleagueHS1.setSetOfStaff(employee1);
+			colleagueHS1.setSetOfStaff(employee2);
+			colleagueHS1.setSetOfStaff(employee3);
 			break;	
 		default:
 			break;				
 		}
 		switch (badEmployeeIndex){
 		case 1:
-			colleagueLi1.setListOfStaff(badEmployee1);
+			colleagueHS1.setSetOfStaff(badEmployee1);
 			break;
 		case 2:
-			colleagueLi1.setListOfStaff(badEmployee1);
-			colleagueLi1.setListOfStaff(badEmployee2);
+			colleagueHS1.setSetOfStaff(badEmployee1);
+			colleagueHS1.setSetOfStaff(badEmployee2);
 			break;
 		case 3:
-			colleagueLi1.setListOfStaff(badEmployee1);
-			colleagueLi1.setListOfStaff(badEmployee2);
-			colleagueLi1.setListOfStaff(badEmployee3);
+			colleagueHS1.setSetOfStaff(badEmployee1);
+			colleagueHS1.setSetOfStaff(badEmployee2);
+			colleagueHS1.setSetOfStaff(badEmployee3);
 			break;	
 		default:
 			break;				
@@ -538,9 +781,15 @@ public class Menu {
 		} while((!("y".equals(index)))&&(!("n".equals(index))));		
   
 		if ("y".equals(index)) {
-			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
+//			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
+//				for(int i = 0; i < employeeIndex; i++) {
+//					System.out.println(colleagueAr1.getListOfStaff().get(i).toString());
+//					System.out.println("======");
+//				}
+
+			if ((colleagueHS1 != null)&&(!colleagueHS1.getSetOfStaff().isEmpty())) {
 				for(int i = 0; i < employeeIndex; i++) {
-					System.out.println(colleagueLi1.getListOfStaff().get(i).toString());
+					System.out.println(colleagueHS1.getSetOfStaff().toString());
 					System.out.println("======");
 				}
 			} else {
@@ -559,16 +808,16 @@ public class Menu {
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 			
 		if ("y".equals(index)) {
-			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
-				for(int i = 0; i < employeeIndex; i++) {
-					System.out.println("Sex of " + colleagueLi1.getListOfStaff().get(i).showStatus() + " " + indexSex + " is " + colleagueLi1.getListOfStaff().get(i).showSex());
-					System.out.println("Set sex to " + colleagueLi1.getListOfStaff().get(i).showStatus() + " " + indexSex + " (f/m/trans)");
-					sexIndex = in.nextLine();
-					colleagueLi1.getListOfStaff().get(i).setSex(sexIndex);
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}			
+//			if ((colleagueHS1 != null)&&(!colleagueHS1.getSetOfStaff().isEmpty())) {
+//				for(int i = 0; i < employeeIndex; i++) {
+//					System.out.println("Sex of " + colleagueHS1.getSetOfStaff().get(i).showStatus() + " " + indexSex + " is " + colleagueHS1.getSetOfStaff().get(i).showSex());
+//					System.out.println("Set sex to " + colleagueHS1.getSetOfStaff().get(i).showStatus() + " " + indexSex + " (f/m/trans)");
+//					sexIndex = in.nextLine();
+//					colleagueHS1.getSetOfStaff().get(i).setSex(sexIndex);
+//				}
+//			} else {
+//				System.out.println("The required Storage is Null or Empty");	
+//			}			
 		} else {
 			System.out.println("OK, move forward!");
 		}
@@ -581,8 +830,8 @@ public class Menu {
 		} while((!("y".equals(index)))&&(!("n".equals(index))));
 		
 		if ("y".equals(index)) {
-			if ((colleagueLi1 != null)&&(!colleagueLi1.getListOfStaff().isEmpty())) {
-				for(Staff staff : colleagueLi1.getListOfStaff()) {
+			if ((colleagueHS1 != null)&&(!colleagueHS1.getSetOfStaff().isEmpty())) {
+				for(Staff staff : colleagueHS1.getSetOfStaff()) {
 					System.out.println(staff.toString());
 					System.out.println("======");
 				}	
@@ -591,292 +840,65 @@ public class Menu {
 			}
 		} else {
 			System.out.println("OK, move forward!");
-		}
+		}	
 		
 		System.out.println("========================");
-		System.out.println("THAT'S IT for Scanner 4");
+		System.out.println("THAT'S IT for 4_HashSet_Colleague");
 		System.out.println("========================");
-		
-		
-		
 		
 		System.out.println(" ");
 		System.out.println(" ");
-		System.out.println("================================Scanner_5================================");
+		System.out.println("================================Scanner_5_HashMap_Colleague================================");	
 		
-		index = "";
-			
-		MobilePhoneUser mobilePhoneUser1 = new MobilePhoneUser(1234567, "BelCom", true, 100);
-		MobilePhoneUser mobilePhoneUser2 = new MobilePhoneUser(2345671, "PolskaCom", true, 200);
-		MobilePhoneUser mobilePhoneUser3 = new MobilePhoneUser(3456712, "LitvaCom", true, 300);		
-		MobileInternetUser mobileInternetUser1 = new MobileInternetUser(2345678, "BelarusCom", true, 1200, 2500);
-		MobileInternetUser mobileInternetUser2 = new MobileInternetUser(3456782, "MedvedCom", false, 1000, 1500);
-		MobileInternetUser mobileInternetUser3 = new MobileInternetUser(4567823, "BelkaCom", false, 1700, 3500);	
-		HomeInternetUser homeInternetUser1 = new HomeInternetUser(3456789, "ZubrCom", true, 10000);
-		HomeInternetUser homeInternetUser2 = new HomeInternetUser(4567893, "BarsukCom", true, 15000);
-		HomeInternetUser homeInternetUser3 = new HomeInternetUser(5678934, "BobrCom", true, 25000); 
-						
-		int mobilePhoneUserIndex = 0;
-		int mobileInternetUserIndex = 0;
-		int homeInternetUserIndex = 0;
-		
-		ActiveUserAr activeUserAr1 = new ActiveUserAr();
-
-		do {	
-			System.out.println("Enter the number of Mobile Phone Users from 1 to 3");
-			mobilePhoneUserIndex = in.nextInt();
-		} while((mobilePhoneUserIndex != 1)&&(mobilePhoneUserIndex != 2)&&(mobilePhoneUserIndex != 3));
-		
-		do {	
-			System.out.println("Enter the number of Mobile Internet Users from 1 to 3");
-			mobileInternetUserIndex = in.nextInt();
-		} while((mobileInternetUserIndex != 1)&&(mobileInternetUserIndex != 2)&&(mobileInternetUserIndex != 3));	
-		
-		do {	
-			System.out.println("Enter the number of Home Internet Users from 1 to 3");
-			homeInternetUserIndex = in.nextInt();
-		} while((homeInternetUserIndex != 1)&&(homeInternetUserIndex != 2)&&(homeInternetUserIndex != 3));		
-		in.nextLine();
-				
-		switch (mobilePhoneUserIndex){
-		case 1:
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser1);
-			break;
-		case 2:
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser1);
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser2);
-			break;
-		case 3:
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser1);
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser2);
-			activeUserAr1.setListOfGoodUser(mobilePhoneUser3);
-			break;	
-		default:
-			break;				
-		}
-		switch (mobileInternetUserIndex){
-		case 1:
-			activeUserAr1.setListOfGoodUser(mobileInternetUser1);
-			break;
-		case 2:
-			activeUserAr1.setListOfGoodUser(mobileInternetUser1);
-			activeUserAr1.setListOfGoodUser(mobileInternetUser2);
-			break;
-		case 3:
-			activeUserAr1.setListOfGoodUser(mobileInternetUser1);
-			activeUserAr1.setListOfGoodUser(mobileInternetUser2);
-			activeUserAr1.setListOfGoodUser(mobileInternetUser3);
-			break;	
-		default:
-			break;				
-		}
-		switch (homeInternetUserIndex){
-		case 1:
-			activeUserAr1.setListOfGoodUser(homeInternetUser1);
-			break;
-		case 2:
-			activeUserAr1.setListOfGoodUser(homeInternetUser1);
-			activeUserAr1.setListOfGoodUser(homeInternetUser2);
-			break;
-		case 3:
-			activeUserAr1.setListOfGoodUser(homeInternetUser1);
-			activeUserAr1.setListOfGoodUser(homeInternetUser2);
-			activeUserAr1.setListOfGoodUser(homeInternetUser3);
-			break;	
-		default:
-			break;								
-		}
-		
-		do {
-			System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));		
-      
-		if ("y".equals(index)) {
-			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-				for(int i = 0; i < mobilePhoneUserIndex; i++) {
-					System.out.println(activeUserAr1.getListOfGoodUser().get(i).toString());
-					System.out.println("======");
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}	
-		} else {
-			System.out.println("OK, move forward!");
-		}
-		
-		System.out.println("========================");
-		
-		String newOperator = "";
-		int indexOperator = 1;
-		
-		do {
-			System.out.println("Would you like to set operator to all of the Mobile Phone Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));
-				
-		if ("y".equals(index)) {
-			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-				for(int i = 0; i < mobilePhoneUserIndex; i++) {
-					System.out.println("Operator of " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " is " + activeUserAr1.getListOfGoodUser().get(i).showOperator());
-					System.out.println("Set sex to " + activeUserAr1.getListOfGoodUser().get(i).showUser() + " " + indexOperator + " (enter new name of operator)");
-					newOperator = in.nextLine();
-					activeUserAr1.getListOfGoodUser().get(i).setOperator(newOperator);
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}	
-		} else {
-			System.out.println("OK, move forward!");
-		}
-		
-		System.out.println("========================");
-		
-		do {
-			System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));
-		
-		if ("y".equals(index)) {
-			if ((activeUserAr1 != null)&&(!activeUserAr1.getListOfGoodUser().isEmpty())) {
-				for(GoodUser goodUser : activeUserAr1.getListOfGoodUser()) {
-					System.out.println(goodUser.toString());
-					System.out.println("======");
-				}	
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}
-		} else {
-			System.out.println("OK, move forward!");
-		}
-				
-		System.out.println("========================");
-		System.out.println("THAT'S IT for Scanner 5");
-		System.out.println("========================");
-
-		
-		
-
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("================================Scanner_6================================");
-
-		index = "";
-		
-		ActiveUserLi activeUserLi1 = new ActiveUserLi();
-
-		do {	
-			System.out.println("Enter the number of Mobile Phone Users from 1 to 3");
-			mobilePhoneUserIndex = in.nextInt();
-		} while((mobilePhoneUserIndex != 1)&&(mobilePhoneUserIndex != 2)&&(mobilePhoneUserIndex != 3));
-		
-		do {	
-			System.out.println("Enter the number of Mobile Internet Users from 1 to 3");
-			mobileInternetUserIndex = in.nextInt();
-		} while((mobileInternetUserIndex != 1)&&(mobileInternetUserIndex != 2)&&(mobileInternetUserIndex != 3));	
-		in.nextLine();
+		ColleagueHM colleagueHM1 = new ColleagueHM();
 	
-		switch (mobilePhoneUserIndex){
-		case 1:
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser1);
-			break;
-		case 2:
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser1);
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser2);
-			break;
-		case 3:
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser1);
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser2);
-			activeUserLi1.setListOfGoodUser(mobilePhoneUser3);
-			break;	
-		default:
-			break;				
-		}
-		switch (mobileInternetUserIndex){
-		case 1:
-			activeUserLi1.setListOfGoodUser(mobileInternetUser1);
-			break;
-		case 2:
-			activeUserLi1.setListOfGoodUser(mobileInternetUser1);
-			activeUserLi1.setListOfGoodUser(mobileInternetUser2);
-			break;
-		case 3:
-			activeUserLi1.setListOfGoodUser(mobileInternetUser1);
-			activeUserLi1.setListOfGoodUser(mobileInternetUser2);
-			activeUserLi1.setListOfGoodUser(mobileInternetUser3);
-			break;	
-		default:
-			break;				
-		}
-		
-		do {
-			System.out.println("Would you like to get all of the information about all of the Mobile Phone Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));		
+		do {	
+			System.out.println("Enter the number of Employees from 1 to 3");
+			employeeIndex = in.nextInt();
+		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
 	
-		if ("y".equals(index)) {
-			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {
-				for(int i = 0; i < mobilePhoneUserIndex; i++) {
-					System.out.println(activeUserLi1.getListOfGoodUser().get(i).toString());
-					System.out.println("======");
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}	
-		} else {
-			System.out.println("OK, move forward!");
+		do {	
+			System.out.println("Enter the number of Bad Employees from 1 to 3");
+			badEmployeeIndex = in.nextInt();
+		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
+		in.nextLine();
+		
+		switch (employeeIndex){
+		case 1:
+			colleagueHM1.setMapOfStaff(employee1, employee1.showAge());
+			break;
+		case 2:
+			colleagueHM1.setMapOfStaff(employee1, employee1.showAge());
+			colleagueHM1.setMapOfStaff(employee2, employee2.showAge());
+			break;
+		case 3:
+			colleagueHM1.setMapOfStaff(employee1, employee1.showAge());
+			colleagueHM1.setMapOfStaff(employee2, employee2.showAge());
+			colleagueHM1.setMapOfStaff(employee3, employee3.showAge());
+			break;	
+		default:
+			break;				
 		}
-                
-		System.out.println("========================");
-		
-		newOperator = "";
-		indexOperator = 1;
-		
-		do {
-			System.out.println("Would you like to set operator to all of the Active Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));
-				
-		if ("y".equals(index)) {
-			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
-				for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
-					System.out.println("Operator of " + goodUser.showUser() + " " + indexOperator + " is " + goodUser.showOperator());
-					System.out.println("Set sex to " + goodUser.showUser() + " " + indexOperator + " (enter new name of operator)");
-					newOperator = in.nextLine();
-					goodUser.setOperator(newOperator);
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}
-		} else {
-			System.out.println("OK, move forward!");
+		switch (badEmployeeIndex){
+		case 1:
+			colleagueHM1.setMapOfStaff(badEmployee1, badEmployee1.showAge());
+			break;
+		case 2:
+			colleagueHM1.setMapOfStaff(badEmployee1, badEmployee1.showAge());
+			colleagueHM1.setMapOfStaff(badEmployee2, badEmployee2.showAge());
+			break;
+		case 3:
+			colleagueHM1.setMapOfStaff(badEmployee1, badEmployee1.showAge());
+			colleagueHM1.setMapOfStaff(badEmployee2, badEmployee2.showAge());
+			colleagueHM1.setMapOfStaff(badEmployee3, badEmployee3.showAge());
+			break;	
+		default:
+			break;				
 		}
-		
-		System.out.println("========================");
-		
-		do {
-			System.out.println("Would you like to get all of the information about all of the Active Users? (y/n)");
-			index = in.nextLine();
-		} while((!("y".equals(index)))&&(!("n".equals(index))));
-		
-		if ("y".equals(index)) {
-			if ((activeUserLi1 != null)&&(!activeUserLi1.getListOfGoodUser().isEmpty())) {	
-				for(GoodUser goodUser : activeUserLi1.getListOfGoodUser()) {
-					System.out.println(goodUser.toString());
-					System.out.println("======");
-				}	
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-			}
-		} else {
-			System.out.println("OK, move forward!");
-		}
-				
-		System.out.println("========================");
-		System.out.println("THAT'S IT for Scanner 6");
-		System.out.println("========================");
+		System.out.println(colleagueHM1.getMapOfStaff().toString());
+		System.out.println(colleagueHM1.getMapOfStaff().get(employee1));
 		
 		
 	}
-	
 }
+		
