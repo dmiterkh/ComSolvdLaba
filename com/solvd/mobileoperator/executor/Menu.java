@@ -43,53 +43,40 @@ public class Menu {
 	public Menu() {
 
 	}	 
-
-	public void showMenu() {
 		
-		
+	public void showMenu() {		
+			
 		Scanner in = new Scanner(System.in);
 		String index = "";
-			
+	
 		Colleague colleague3 = new Colleague();
 		
 		Employee employee1 = new Employee(25, "F"); 
-		colleague3.setStaff(employee1);
-		colleague3.getStaff().setInfoAgain(26, "ff", 2000, "employee");
 		Employee employee2 = new Employee(20, "M"); 
 		Employee employee3 = new Employee(27, "F"); 
 		
 		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		colleague3.setStaff(badEmployee1);
-		colleague3.getStaff().setInfoAgain(36, "MM", 700, "bad employee");
 		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
 		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
 		
 		Boss boss1 = new Boss(76, "F"); 
-		colleague3.setStaff(boss1);
-		colleague3.getStaff().setInfoAgain(46, "FF", 3000, "boss");
 		Boss boss2 = new Boss(77, "M"); 		
 		Boss boss3 = new Boss(75, "F"); 
 		
 		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender"); 
-		colleague3.setStaff(expiriencedApplicant1);
-		colleague3.getStaff().setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
 		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
 		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
 		
+		int employeeIndex = 0;
+		int badEmployeeIndex = 0;
+		int bossIndex = 0;
+		int expiriencedApplicantIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("================================Scanner_1_Usual_Storage================================");
-		
-		int employeeIndex = 1;
-		int badEmployeeIndex = 1;
-		int bossIndex = 1;
-		int expiriencedApplicantIndex = 1;
-		
 
-
-		
-/*		do {	
+		do {	
 			System.out.println("Enter the number of Employees from 1 to 3");
 			employeeIndex = in.nextInt();
 		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
@@ -122,10 +109,6 @@ public class Menu {
 			System.out.println("Enter the number of Expirienced Applicants from 1 to 3");
 //1			expiriencedApplicantIndex = in.nextInt();
 //2			
-//2			String newIndex = in.nextLine();
-//2			ArrayList<String> indexArray = newIndex.split(" ");
-//2			expiriencedApplicantIndex = Integer.parseInt(indexArray.get(0));
-//3		
 			String newIndex = in.nextLine();
 			String[] newIndexSplit = newIndex.split(" ");
 			ArrayList<String> stringArray = new ArrayList<String>();
@@ -149,7 +132,7 @@ public class Menu {
 		int[] arr = new int[intLineSplit.length];
 		for(int i = 0; i < intLineSplit.length; i++) {
 			arr[i] = Integer.parseInt(intLineSplit[i]);
-//?			System.out.println(Arrays.toString(arr[i]));
+		System.out.println(arr[i]);
 		}		
 		System.out.println(Arrays.toString(arr));
 				
@@ -311,7 +294,7 @@ public class Menu {
 		System.out.println("========================");
 		
 		
-	*/	
+
 
 		employeeIndex = 1;
 		badEmployeeIndex = 1;
