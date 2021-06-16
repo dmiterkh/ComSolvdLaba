@@ -1,5 +1,9 @@
 package com.solvd.mobileoperator.staff;
 
+import java.lang.Object;
+//import com.google.common.base.Objects.hashCode;
+//import java.util.Objects.hash;
+
 public class Employee implements Staff {
 
 	protected int salary;
@@ -132,4 +136,40 @@ public class Employee implements Staff {
 			   this.work();
 	}
 	
+    @Override
+    public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (obj == null || obj.getClass() != this.getClass()) {
+    		return false;
+    	}
+		Employee employee = (Employee) obj; 
+		return	((salary == employee.salary)&&(age == employee.age)&&(sex == employee.sex)&&(status == employee.status));
+    }
+    
+//    @Override
+//    public int hashCode() {
+//        int h = hash;
+//        if (h == 0 && value.length > 0) {
+//			char val[] = value;
+//		
+//			for (int i = 0; i < value.length; i++) {
+//				h = 31 * h + val[i];
+//			}	
+//            hash = h; 
+//        }
+//        return h;
+//    }
+    
+    @Override
+    public int hashCode() {
+        int result = 29;     
+        result = 31 * result + salary;
+        result = 31 * result + age;
+        result = 31 * result + (sex == null ? 0 : sex.hashCode());
+        result = 31 * result + (status == null ? 0 : status.hashCode());               
+        return result;
+    }
+    
 }

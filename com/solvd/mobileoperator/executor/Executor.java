@@ -9,10 +9,10 @@ public class Executor {
 		
 		Menu menu = new Menu();
 		menu.showArrayListOperations();
-		menu.showLinkedListOperations();	
-		menu.showHashSetOperations();	
-		menu.showHashMapOperations();
-		menu.showColletionOperations();
+//		menu.showLinkedListOperations();	
+//		menu.showHashSetOperations();	
+//		menu.showHashMapOperations();
+//		menu.showColletionOperations();
 		
  }
 }
