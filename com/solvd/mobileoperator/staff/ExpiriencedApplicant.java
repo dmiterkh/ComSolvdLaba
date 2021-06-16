@@ -144,4 +144,26 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 			   this.work() + "\n" +
 			   this.lookForJob();
 	}	
+	
+    @Override
+    public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (obj == null || obj.getClass() != this.getClass()) {
+    		return false;
+    	}
+    	ExpiriencedApplicant expiriencedApplicant = (ExpiriencedApplicant) obj; 
+		return	((salary == expiriencedApplicant.salary)&&(age == expiriencedApplicant.age)&&(sex == expiriencedApplicant.sex)&&(status == expiriencedApplicant.status));
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = 29;     
+        result = 31 * result + salary;
+        result = 31 * result + age;
+        result = 31 * result + (sex == null ? 0 : sex.hashCode());
+        result = 31 * result + (status == null ? 0 : status.hashCode());               
+        return result;
+    }
 }

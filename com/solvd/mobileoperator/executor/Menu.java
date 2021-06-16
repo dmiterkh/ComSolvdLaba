@@ -37,6 +37,8 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 public class Menu {
 	
@@ -44,33 +46,33 @@ public class Menu {
 
 	}	 
 	
-	public void initData() {
-		
-		Scanner in = new Scanner(System.in);
-		String index = "";
-		
-		Employee employee1 = new Employee(25, "F"); 
-		employee1.setInfoAgain(26, "ff", 2000, "employee");
-		Employee employee2 = new Employee(20, "M"); 
-		Employee employee3 = new Employee(27, "F"); 
-		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-		Boss boss1 = new Boss(76, "F"); 
-		boss1.setInfoAgain(46, "FF", 3000, "boss");
-		Boss boss2 = new Boss(77, "M"); 		
-		Boss boss3 = new Boss(75, "F"); 
-		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender");
-		expiriencedApplicant1.setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
-		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
-		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
-		
-		int employeeIndex = 0;
-		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
-	}
+//	public void initData() {
+//		
+//		Scanner in = new Scanner(System.in);
+//		String index = "";
+//		
+//		Employee employee1 = new Employee(25, "F"); 
+//		employee1.setInfoAgain(26, "ff", 2000, "employee");
+//		Employee employee2 = new Employee(20, "M"); 
+//		Employee employee3 = new Employee(27, "F"); 
+//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
+//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
+//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+//		Boss boss1 = new Boss(76, "F"); 
+//		boss1.setInfoAgain(46, "FF", 3000, "boss");
+//		Boss boss2 = new Boss(77, "M"); 		
+//		Boss boss3 = new Boss(75, "F"); 
+//		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender");
+//		expiriencedApplicant1.setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
+//		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
+//		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
+//		
+//		int employeeIndex = 0;
+//		int badEmployeeIndex = 0;
+//		int bossIndex = 0;
+//		int expiriencedApplicantIndex = 0;	
+//	}
 		
 	
 	
@@ -261,28 +263,28 @@ public class Menu {
 		System.out.println("THAT'S IT for Scanner_1_ArrayList_Colleague");
 		System.out.println("====================================");	
 		
-	}	
-		
-	
-	
-	public void showLinkedListOperations() {		
-		
-		Scanner in = new Scanner(System.in);
-		String index = "";
-		
-		Employee employee1 = new Employee(25, "F"); 
-		employee1.setInfoAgain(26, "ff", 2000, "employee");
-		Employee employee2 = new Employee(20, "M"); 
-		Employee employee3 = new Employee(27, "F"); 
-		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-		
-		int employeeIndex = 0;
-		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
+//	}
+//		
+//	
+//	
+//	public void showArrayListOperations() {				
+//		
+//		Scanner in = new Scanner(System.in);
+//		String index = "";
+//		
+//		Employee employee1 = new Employee(25, "F"); 
+//		employee1.setInfoAgain(26, "ff", 2000, "employee");
+//		Employee employee2 = new Employee(20, "M"); 
+//		Employee employee3 = new Employee(27, "F"); 
+//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
+//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
+//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+//		
+//		int employeeIndex = 0;
+//		int badEmployeeIndex = 0;
+//		int bossIndex = 0;
+//		int expiriencedApplicantIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -351,8 +353,8 @@ public class Menu {
 			System.out.println("OK, move forward!");
 		}
     
-		String sexIndex = "";
-		int indexSex = 1;
+		sexIndex = "";
+		indexSex = 1;
 	
 		do {
 			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
@@ -421,29 +423,30 @@ public class Menu {
 		System.out.println("====================================");
 		System.out.println("THAT'S IT for Scanner_2_LinkedList_Colleague");
 		System.out.println("====================================");
-		
-	}	
-		
-	
-	
-	public void showHashSetOperations() {	
-		
-		Scanner in = new Scanner(System.in);
-		String index = "";
-		
-		Employee employee1 = new Employee(25, "F"); 
-		employee1.setInfoAgain(26, "ff", 2000, "employee");
-		Employee employee2 = new Employee(20, "M"); 
-		Employee employee3 = new Employee(27, "F"); 
-		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-		
-		int employeeIndex = 0;
-		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
+		colleagueLi1.getListOfStaff().hashCode();
+
+//	}	
+//		
+//	
+//	
+//	public void showHashSetOperations() {	
+//		
+//		Scanner in = new Scanner(System.in);
+//		String index = "";
+//		
+//		Employee employee1 = new Employee(25, "F"); 
+//		employee1.setInfoAgain(26, "ff", 2000, "employee");
+//		Employee employee2 = new Employee(20, "M"); 
+//		Employee employee3 = new Employee(27, "F"); 
+//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
+//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
+//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+//		
+//		int employeeIndex = 0;
+//		int badEmployeeIndex = 0;
+//		int bossIndex = 0;
+//		int expiriencedApplicantIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -516,8 +519,8 @@ public class Menu {
 			System.out.println("OK, move forward!");
 		}
     
-		String sexIndex = "";
-		int indexSex = 1;
+		sexIndex = "";
+		indexSex = 1;
 	
 		do {
 			System.out.println("Would you like to set sex to all of the Employees? (y/n)");
@@ -562,29 +565,30 @@ public class Menu {
 		System.out.println("====================================");
 		System.out.println("THAT'S IT for 3_HashSet_Colleague");
 		System.out.println("====================================");
+		colleagueHS1.getSetOfStaff().equals(colleagueHS1);
 		
-	}	
-		
-	
-	
-	public void showHashMapOperations() {
-		
-		Scanner in = new Scanner(System.in);
-		String index = "";
-		
-		Employee employee1 = new Employee(25, "F"); 
-		employee1.setInfoAgain(26, "ff", 2000, "employee");
-		Employee employee2 = new Employee(20, "M"); 
-		Employee employee3 = new Employee(27, "F"); 
-		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-		
-		int employeeIndex = 0;
-		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
+//	}	
+//		
+//	
+//	
+//	public void showHashMapOperations() {
+//		
+//		Scanner in = new Scanner(System.in);
+//		String index = "";
+//		
+//		Employee employee1 = new Employee(25, "F"); 
+//		employee1.setInfoAgain(26, "ff", 2000, "employee");
+//		Employee employee2 = new Employee(20, "M"); 
+//		Employee employee3 = new Employee(27, "F"); 
+//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
+//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
+//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+//		
+//		int employeeIndex = 0;
+//		int badEmployeeIndex = 0;
+//		int bossIndex = 0;
+//		int expiriencedApplicantIndex = 0;	
 				
 		System.out.println(" ");
 		System.out.println(" ");
@@ -639,33 +643,33 @@ public class Menu {
 		System.out.println(colleagueHM1.getMapOfStaff().get(employee1));
 		
 		
-	}
-		
-	
-	
-	public void showColletionOperations() {	
-		
-		Scanner in = new Scanner(System.in);
-		String index = "";
-		
-		Employee employee1 = new Employee(25, "F"); 
-		employee1.setInfoAgain(26, "ff", 2000, "employee");
-		Employee employee2 = new Employee(20, "M"); 
-		Employee employee3 = new Employee(27, "F"); 
-		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-		
-		int employeeIndex = 0;
-		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
-		
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("================================Scanner_3_HashSet_Colleague================================");	
-		
+//	}
+//		
+//	
+//	
+//	public void showColletionOperations() {	
+//		
+//		Scanner in = new Scanner(System.in);
+//		String index = "";
+//		
+//		Employee employee1 = new Employee(25, "F"); 
+//		employee1.setInfoAgain(26, "ff", 2000, "employee");
+//		Employee employee2 = new Employee(20, "M"); 
+//		Employee employee3 = new Employee(27, "F"); 
+//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
+//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
+//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
+//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+//		
+//		int employeeIndex = 0;
+//		int badEmployeeIndex = 0;
+//		int bossIndex = 0;
+//		int expiriencedApplicantIndex = 0;	
+//		
+//		System.out.println(" ");
+//		System.out.println(" ");
+//		System.out.println("================================Scanner_3_HashSet_Colleague================================");	
+//		
 	}
 		
 }

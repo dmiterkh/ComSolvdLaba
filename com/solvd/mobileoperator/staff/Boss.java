@@ -156,4 +156,26 @@ public class Boss extends Employee {
 			   this.firePeople();
 	}
 	
+    @Override
+    public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (obj == null || obj.getClass() != this.getClass()) {
+    		return false;
+    	}
+		Boss boss = (Boss) obj; 
+		return	((salary == boss.salary)&&(age == boss.age)&&(sex == boss.sex)&&(status == boss.status)&&(power == boss.power));
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = 29;     
+        result = 31 * result + salary;
+        result = 31 * result + age;
+        result = 31 * result + (sex == null ? 0 : sex.hashCode());
+        result = 31 * result + (status == null ? 0 : status.hashCode());               
+        result = 31 * result + (power == null ? 0 : power.hashCode());
+        return result;
+    }
 }

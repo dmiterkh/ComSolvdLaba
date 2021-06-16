@@ -140,4 +140,25 @@ public class BadEmployee implements Staff , BadTrainee {
 
 	}
 	
+    @Override
+    public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (obj == null || obj.getClass() != this.getClass()) {
+    		return false;
+    	}
+		BadEmployee badEmployee = (BadEmployee) obj; 
+		return	((salary == badEmployee.salary)&&(age == badEmployee.age)&&(sex == badEmployee.sex)&&(status == badEmployee.status));
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = 29;     
+        result = 31 * result + salary;
+        result = 31 * result + age;
+        result = 31 * result + (sex == null ? 0 : sex.hashCode());
+        result = 31 * result + (status == null ? 0 : status.hashCode());               
+        return result;
+    }	
 }
