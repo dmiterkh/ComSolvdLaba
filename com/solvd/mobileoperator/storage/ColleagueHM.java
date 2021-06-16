@@ -7,17 +7,17 @@ import java.util.HashMap;
 
 public class ColleagueHM {
 
-	Map<Staff, Integer>  mapOfStaff;
+	Map<Integer, Staff>  mapOfStaff;
 	
 	public ColleagueHM () {
-		mapOfStaff = new HashMap<Staff, Integer>();	
+		mapOfStaff = new HashMap<Integer, Staff>();	
 	}
 
-	public void setMapOfStaff(Staff staff, int number) {
-		mapOfStaff.put(staff, number);		
+	public void setMapOfStaff(int number, Staff staff) {
+		mapOfStaff.put(number, staff);		
 	}	
 		
-	public Map<Staff, Integer> getMapOfStaff() {
+	public Map<Integer, Staff> getMapOfStaff() {
 		return mapOfStaff;		
 	}
 }
