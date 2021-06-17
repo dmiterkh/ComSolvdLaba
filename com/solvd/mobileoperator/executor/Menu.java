@@ -911,7 +911,7 @@ public class Menu {
 		Collections.sort(colleagueColl1.getListOfStaff(), sexCompare);		
 		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
 //?		Collections.sort(colleagueColl1.getSetOfStaff(), statusCompare);
-//?		Collections.sort(colleagueColl1.getMapOfStaff(), statusCompare);		
+		
 		
 		System.out.println("========================");
 		Iterator mapIterator = colleagueColl1.getMapOfStaff().entrySet().iterator();
@@ -920,14 +920,14 @@ public class Menu {
 			System.out.println("======");
 		}
 
-//		colleagueColl1.getSortedMapOfStaff().putAll(colleagueColl1.getMapOfStaff()); 
-//		
-//		System.out.println("========================");
-//		mapIterator = colleagueColl1.getSortedMapOfStaff().entrySet().iterator();
-//		while (mapIterator.hasNext()) {
-//			System.out.println(mapIterator.next());
-//			System.out.println("======");
-//		}
+		colleagueColl1.getSortedMapOfStaff().putAll(colleagueColl1.getMapOfStaff()); 
+		
+		System.out.println("========================");
+		mapIterator = colleagueColl1.getSortedMapOfStaff().entrySet().iterator();
+		while (mapIterator.hasNext()) {
+			System.out.println(mapIterator.next());
+			System.out.println("======");
+		}
 		
 		colleagueColl1.printInfoSize1(colleagueColl1.getListOfStaff());
 		colleagueColl1.printInfoSize1(colleagueColl1.getListOfEmployees());
@@ -936,11 +936,6 @@ public class Menu {
 		System.out.println("========================");
 		colleagueColl1.printInfoSize2(colleagueColl1.getListOfEmployees());
 		colleagueColl1.printInfoSize2(colleagueColl1.getSetOfBosses());
-		
-		System.out.println("======Sorting_of_Map_with_Comparable========");
-		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());
-		Collections.sort(colleagueColl1.getMapOfStaff());
-		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
 		
 	}
 		
