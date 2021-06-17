@@ -82,7 +82,12 @@ public class Employee implements Staff {
 		}
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading
@@ -170,6 +175,11 @@ public class Employee implements Staff {
         result = 31 * result + (sex == null ? 0 : sex.hashCode());
         result = 31 * result + (status == null ? 0 : status.hashCode());               
         return result;
+    }
+    
+    @Override
+    public int compareTo(Staff staff) {              
+        return status.compareTo(staff.showStatus());
     }
     
 }

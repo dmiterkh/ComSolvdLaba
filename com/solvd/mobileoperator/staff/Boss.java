@@ -90,7 +90,12 @@ public class Boss extends Employee {
 		} 
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading
@@ -177,5 +182,10 @@ public class Boss extends Employee {
         result = 31 * result + (status == null ? 0 : status.hashCode());               
         result = 31 * result + (power == null ? 0 : power.hashCode());
         return result;
+    }
+    
+    @Override
+    public int compareTo(Staff staff) {              
+        return status.compareTo(staff.showStatus());
     }
 }

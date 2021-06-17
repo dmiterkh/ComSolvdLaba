@@ -79,7 +79,12 @@ public class BadEmployee implements Staff , BadTrainee {
 		}
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading
@@ -161,4 +166,9 @@ public class BadEmployee implements Staff , BadTrainee {
         result = 31 * result + (status == null ? 0 : status.hashCode());               
         return result;
     }	
+    
+    @Override
+    public int compareTo(Staff staff) {              
+        return status.compareTo(staff.showStatus());
+    }
 }

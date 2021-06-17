@@ -21,10 +21,16 @@ import com.solvd.mobileoperator.storage.ColleagueAr;
 import com.solvd.mobileoperator.storage.ColleagueLi;
 import com.solvd.mobileoperator.storage.ColleagueHS;
 import com.solvd.mobileoperator.storage.ColleagueHM;
+import com.solvd.mobileoperator.storage.ColleagueColl;
 
 import com.solvd.mobileoperator.storage.ActiveUser;           // Polymorphizm: Abstract Class GoodUser
 import com.solvd.mobileoperator.storage.ActiveUserAr;
 import com.solvd.mobileoperator.storage.ActiveUserLi;
+
+import com.solvd.mobileoperator.comparator.StatusCompare;            // Polymorphizm: Interface Staff 
+import com.solvd.mobileoperator.comparator.SexCompare;
+import com.solvd.mobileoperator.comparator.AgeCompare;
+import com.solvd.mobileoperator.comparator.SalaryCompare;
 
 import java.util.Scanner;
 import java.util.List;
@@ -39,6 +45,9 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Menu {
 	
@@ -282,9 +291,7 @@ public class Menu {
 //		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
 //		
 //		int employeeIndex = 0;
-//		int badEmployeeIndex = 0;
-//		int bossIndex = 0;
-//		int expiriencedApplicantIndex = 0;	
+//		int badEmployeeIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -445,8 +452,6 @@ public class Menu {
 		
 		int employeeIndex = 0;
 		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -740,6 +745,14 @@ public class Menu {
 		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
 		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
 		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
+		Boss boss1 = new Boss(76, "F"); 
+		boss1.setInfoAgain(46, "FF", 3000, "boss");
+		Boss boss2 = new Boss(77, "M"); 		
+		Boss boss3 = new Boss(75, "F"); 
+		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender");
+		expiriencedApplicant1.setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
+		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
+		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
 		
 		int employeeIndex = 0;
 		int badEmployeeIndex = 0;
@@ -748,7 +761,181 @@ public class Menu {
 		
 		System.out.println(" ");
 		System.out.println(" ");
-		System.out.println("================================Scanner_5_Collection_Colleague================================");	
+		System.out.println("================================Scanner_5_Collection_Colleague================================");
+		
+		
+		ColleagueColl colleagueColl1 = new ColleagueColl();
+		
+		do {	
+			System.out.println("Enter the number of Employees from 1 to 3");
+			employeeIndex = in.nextInt();
+		} while((employeeIndex != 1)&&(employeeIndex != 2)&&(employeeIndex != 3));
+	
+		do {	
+			System.out.println("Enter the number of Bad Employees from 1 to 3");
+			badEmployeeIndex = in.nextInt();
+		} while((badEmployeeIndex != 1)&&(badEmployeeIndex != 2)&&(badEmployeeIndex != 3));	
+
+		do {	
+			System.out.println("Enter the number of Employees from 1 to 3");
+			bossIndex = in.nextInt();
+		} while((bossIndex != 1)&&(bossIndex != 2)&&(bossIndex != 3));
+		
+		do {	
+			System.out.println("Enter the number of Employees from 1 to 3");
+			expiriencedApplicantIndex = in.nextInt();
+		} while((expiriencedApplicantIndex != 1)&&(expiriencedApplicantIndex != 2)&&(expiriencedApplicantIndex != 3));
+		in.nextLine();
+		
+		switch (employeeIndex){
+		case 1:
+			colleagueColl1.setListOfEmployees(employee1);
+			break;
+		case 2:
+			colleagueColl1.setListOfEmployees(employee1);
+			colleagueColl1.setListOfEmployees(employee2);
+			break;
+		case 3:
+			colleagueColl1.setListOfEmployees(employee1);
+			colleagueColl1.setListOfEmployees(employee2);
+			colleagueColl1.setListOfEmployees(employee3);
+			break;	
+		default:
+			break;				
+		}
+		switch (badEmployeeIndex){
+		case 1:
+			colleagueColl1.setListOfBadEmployees(badEmployee1);
+			break;
+		case 2:
+			colleagueColl1.setListOfBadEmployees(badEmployee1);
+			colleagueColl1.setListOfBadEmployees(badEmployee2);
+			break;
+		case 3:
+			colleagueColl1.setListOfBadEmployees(badEmployee1);
+			colleagueColl1.setListOfBadEmployees(badEmployee2);
+			colleagueColl1.setListOfBadEmployees(badEmployee3);
+			break;	
+		default:
+			break;				
+		}
+		switch (bossIndex){
+		case 1:
+			colleagueColl1.setSetOfBosses(boss1);
+			break;
+		case 2:
+			colleagueColl1.setSetOfBosses(boss1);
+			colleagueColl1.setSetOfBosses(boss2);
+			break;
+		case 3:
+			colleagueColl1.setSetOfBosses(boss1);
+			colleagueColl1.setSetOfBosses(boss2);
+			colleagueColl1.setSetOfBosses(boss3);
+			break;	
+		default:
+			break;				
+		}
+		
+		switch (expiriencedApplicantIndex){
+		case 1:
+			colleagueColl1.setMapOfStaff(1, boss1);
+			break;
+		case 2:
+			colleagueColl1.setMapOfStaff(1, boss1);
+			colleagueColl1.setMapOfStaff(2, boss2);
+			break;
+		case 3:
+			colleagueColl1.setMapOfStaff(1, boss1);
+			colleagueColl1.setMapOfStaff(2, boss2);
+			colleagueColl1.setMapOfStaff(3, boss3);
+			break;	
+		default:
+			break;				
+		}
+		
+		
+		colleagueColl1.setListOfStaff(employee1);
+		colleagueColl1.setListOfStaff(boss1);
+		colleagueColl1.setListOfStaff(badEmployee1);
+		
+		colleagueColl1.setSetOfStaff(employee1);
+		colleagueColl1.setSetOfStaff(boss1);
+		colleagueColl1.setSetOfStaff(badEmployee1);
+		
+		colleagueColl1.setMapOfStaff(31, employee1);
+		colleagueColl1.setMapOfStaff(32, employee2);
+		colleagueColl1.setMapOfStaff(33, employee3);
+		colleagueColl1.setMapOfStaff(21, boss1);
+		colleagueColl1.setMapOfStaff(22, boss2);
+		colleagueColl1.setMapOfStaff(23, boss3);
+		colleagueColl1.setMapOfStaff(11, badEmployee1);
+		colleagueColl1.setMapOfStaff(12, badEmployee2);		
+		colleagueColl1.setMapOfStaff(13, badEmployee3);
+
+		
+		System.out.println("========List_1,List_2,Set,List==========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfBadEmployees());
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfBosses());
+		
+		System.out.println("======Sorting_of_List_with_Comparable=======");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		Collections.sort(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		
+		
+		System.out.println("======Sorting_of_Set_with_Comparable========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());
+		Collections.sort(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		
+		System.out.println("==========Sorting_of_Set_with_Treeset==========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());	
+		colleagueColl1.getSortedSetOfStaff().addAll(colleagueColl1.getSetOfStaff()); 
+		colleagueColl1.printInfoStorage(colleagueColl1.getSortedSetOfStaff());	
+
+		
+		System.out.println("======Sorting_of_List_with_Comparator=======");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		StatusCompare statusCompare = new StatusCompare();
+		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare);
+		
+		SexCompare sexCompare = new SexCompare();
+//?		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare, sexCompare);
+
+//?		AgeCompare ageCompare = new AgeCompare();
+//?		SalaryCompare salaryCompare = new SalaryCompare();
+		System.out.println("========================");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		System.out.println("========================");
+		Collections.sort(colleagueColl1.getListOfStaff(), sexCompare);		
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+//?		Collections.sort(colleagueColl1.getSetOfStaff(), statusCompare);
+		
+		
+		System.out.println("========================");
+		Iterator mapIterator = colleagueColl1.getMapOfStaff().entrySet().iterator();
+		while (mapIterator.hasNext()) {
+			System.out.println(mapIterator.next());
+			System.out.println("======");
+		}
+
+		colleagueColl1.getSortedMapOfStaff().putAll(colleagueColl1.getMapOfStaff()); 
+		
+		System.out.println("========================");
+		mapIterator = colleagueColl1.getSortedMapOfStaff().entrySet().iterator();
+		while (mapIterator.hasNext()) {
+			System.out.println(mapIterator.next());
+			System.out.println("======");
+		}
+		
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfBadEmployees());
+		colleagueColl1.printInfoSize1(colleagueColl1.getSetOfBosses());
+		System.out.println("========================");
+		colleagueColl1.printInfoSize2(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoSize2(colleagueColl1.getSetOfBosses());
 		
 	}
 		
