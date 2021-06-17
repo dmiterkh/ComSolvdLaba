@@ -898,11 +898,13 @@ public class Menu {
 		System.out.println("======Sorting_of_List_with_Comparator=======");
 		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
 		StatusCompare statusCompare = new StatusCompare();
+		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare);
+		
 		SexCompare sexCompare = new SexCompare();
+//?		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare, sexCompare);
+
 //?		AgeCompare ageCompare = new AgeCompare();
 //?		SalaryCompare salaryCompare = new SalaryCompare();
-		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare);
-//?		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare, sexCompare);
 		System.out.println("========================");
 		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
 		System.out.println("========================");

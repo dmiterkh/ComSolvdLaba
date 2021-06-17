@@ -91,10 +91,7 @@ public class ColleagueColl {
 		System.out.println(map.get(number));
 	}
 	
-	
-	
-	
-	
+		
 	public void setListOfEmployees(Employee employee) {
 		listOfEmployees.add(employee);		
 	}	
