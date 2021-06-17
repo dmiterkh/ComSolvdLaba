@@ -81,7 +81,12 @@ public class ExpiriencedApplicant extends Unemployed implements Staff {
 		}
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading

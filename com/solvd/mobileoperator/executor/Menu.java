@@ -27,6 +27,11 @@ import com.solvd.mobileoperator.storage.ActiveUser;           // Polymorphizm: A
 import com.solvd.mobileoperator.storage.ActiveUserAr;
 import com.solvd.mobileoperator.storage.ActiveUserLi;
 
+import com.solvd.mobileoperator.comparator.StatusCompare;            // Polymorphizm: Interface Staff 
+import com.solvd.mobileoperator.comparator.SexCompare;
+import com.solvd.mobileoperator.comparator.AgeCompare;
+import com.solvd.mobileoperator.comparator.SalaryCompare;
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
@@ -42,6 +47,7 @@ import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Menu {
 	
@@ -285,9 +291,7 @@ public class Menu {
 //		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
 //		
 //		int employeeIndex = 0;
-//		int badEmployeeIndex = 0;
-//		int bossIndex = 0;
-//		int expiriencedApplicantIndex = 0;	
+//		int badEmployeeIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -448,8 +452,6 @@ public class Menu {
 		
 		int employeeIndex = 0;
 		int badEmployeeIndex = 0;
-		int bossIndex = 0;
-		int expiriencedApplicantIndex = 0;	
 		
 		System.out.println(" ");
 		System.out.println(" ");
@@ -851,6 +853,7 @@ public class Menu {
 			break;				
 		}
 		
+		
 		colleagueColl1.setListOfStaff(employee1);
 		colleagueColl1.setListOfStaff(boss1);
 		colleagueColl1.setListOfStaff(badEmployee1);
@@ -858,27 +861,79 @@ public class Menu {
 		colleagueColl1.setSetOfStaff(employee1);
 		colleagueColl1.setSetOfStaff(boss1);
 		colleagueColl1.setSetOfStaff(badEmployee1);
+		
+		colleagueColl1.setMapOfStaff(31, employee1);
+		colleagueColl1.setMapOfStaff(32, employee2);
+		colleagueColl1.setMapOfStaff(33, employee3);
+		colleagueColl1.setMapOfStaff(21, boss1);
+		colleagueColl1.setMapOfStaff(22, boss2);
+		colleagueColl1.setMapOfStaff(23, boss3);
+		colleagueColl1.setMapOfStaff(11, badEmployee1);
+		colleagueColl1.setMapOfStaff(12, badEmployee2);		
+		colleagueColl1.setMapOfStaff(13, badEmployee3);
 
-//		System.out.println("========List_1,List_2,Set,List==========");
-//		colleagueColl1.printInfoStorage(colleagueColl1.getListOfEmployees());
-//		colleagueColl1.printInfoStorage(colleagueColl1.getListOfBadEmployees());
-//		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfBosses());
-//		
-//		System.out.println("========List_3==========");
-//		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
-//		Collections.sort(colleagueColl1.getListOfStaff());
-//		System.out.println("==========Sorting_of_List_3==========");
-//		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
-//		
-//		System.out.println("========Set==========");
-//		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());
-//		Collections.sort(colleagueColl1.getListOfStaff());
-//		System.out.println("==========Sorting_of_Set==========");
-//		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
-//		
-//		colleagueColl1.printInfoStorage(colleagueColl1.getMapOfStaff(), 3);
-//		System.out.println("========================");
+		
+		System.out.println("========List_1,List_2,Set,List==========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfBadEmployees());
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfBosses());
+		
+		System.out.println("======Sorting_of_List_with_Comparable=======");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		Collections.sort(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		
+		
+		System.out.println("======Sorting_of_Set_with_Comparable========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());
+		Collections.sort(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		
+		System.out.println("==========Sorting_of_Set_with_Treeset==========");
+		colleagueColl1.printInfoStorage(colleagueColl1.getSetOfStaff());	
+		colleagueColl1.getSortedSetOfStaff().addAll(colleagueColl1.getSetOfStaff()); 
+		colleagueColl1.printInfoStorage(colleagueColl1.getSortedSetOfStaff());	
 
+		
+		System.out.println("======Sorting_of_List_with_Comparator=======");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		StatusCompare statusCompare = new StatusCompare();
+		SexCompare sexCompare = new SexCompare();
+//?		AgeCompare ageCompare = new AgeCompare();
+//?		SalaryCompare salaryCompare = new SalaryCompare();
+		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare);
+//?		Collections.sort(colleagueColl1.getListOfStaff(), statusCompare, sexCompare);
+		System.out.println("========================");
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+		System.out.println("========================");
+		Collections.sort(colleagueColl1.getListOfStaff(), sexCompare);		
+		colleagueColl1.printInfoStorage(colleagueColl1.getListOfStaff());
+//?		Collections.sort(colleagueColl1.getSetOfStaff(), statusCompare);
+		
+		
+		System.out.println("========================");
+		Iterator mapIterator = colleagueColl1.getMapOfStaff().entrySet().iterator();
+		while (mapIterator.hasNext()) {
+			System.out.println(mapIterator.next());
+			System.out.println("======");
+		}
+
+		colleagueColl1.getSortedMapOfStaff().putAll(colleagueColl1.getMapOfStaff()); 
+		
+		System.out.println("========================");
+		mapIterator = colleagueColl1.getSortedMapOfStaff().entrySet().iterator();
+		while (mapIterator.hasNext()) {
+			System.out.println(mapIterator.next());
+			System.out.println("======");
+		}
+		
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfStaff());
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoSize1(colleagueColl1.getListOfBadEmployees());
+		colleagueColl1.printInfoSize1(colleagueColl1.getSetOfBosses());
+		System.out.println("========================");
+		colleagueColl1.printInfoSize2(colleagueColl1.getListOfEmployees());
+		colleagueColl1.printInfoSize2(colleagueColl1.getSetOfBosses());
 		
 	}
 		

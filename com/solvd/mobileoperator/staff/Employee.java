@@ -82,7 +82,12 @@ public class Employee implements Staff {
 		}
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading

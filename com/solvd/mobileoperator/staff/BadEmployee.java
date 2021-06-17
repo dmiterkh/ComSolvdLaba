@@ -79,7 +79,12 @@ public class BadEmployee implements Staff , BadTrainee {
 		}
 		
 		salaryMaximum = coefficient*salary;
+		this.salary = (int) salaryMaximum;
 		return salaryMaximum;
+	}
+	
+	public int showSalary() {
+		return this.salary;
 	}
 	
 	// Overloading
