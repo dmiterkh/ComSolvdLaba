@@ -161,4 +161,9 @@ public class BadEmployee implements Staff , BadTrainee {
         result = 31 * result + (status == null ? 0 : status.hashCode());               
         return result;
     }	
+    
+    @Override
+    public int compareTo(Staff staff) {              
+        return status.compareTo(staff.showStatus());
+    }
 }

@@ -172,4 +172,9 @@ public class Employee implements Staff {
         return result;
     }
     
+    @Override
+    public int compareTo(Staff staff) {              
+        return status.compareTo(staff.showStatus());
+    }
+    
 }
