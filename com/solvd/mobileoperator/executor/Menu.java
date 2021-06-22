@@ -49,40 +49,15 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
+import com.solvd.mobileoperator.exception.ListCheck;
+import com.solvd.mobileoperator.exception.ListIsEmptyException;
+import com.solvd.mobileoperator.exception.ListIsNullException;
+
 public class Menu {
 	
 	public Menu() {
 
 	}	 
-	
-//	public void initData() {
-//		
-//		Scanner in = new Scanner(System.in);
-//		String index = "";
-//		
-//		Employee employee1 = new Employee(25, "F"); 
-//		employee1.setInfoAgain(26, "ff", 2000, "employee");
-//		Employee employee2 = new Employee(20, "M"); 
-//		Employee employee3 = new Employee(27, "F"); 
-//		BadEmployee badEmployee1 = new BadEmployee(35, "F"); 
-//		badEmployee1.setInfoAgain(36, "MM", 700, "bad employee");
-//		BadEmployee badEmployee2 = new BadEmployee(45, "M"); 	
-//		BadEmployee badEmployee3 = new BadEmployee(51, "M"); 	
-//		Boss boss1 = new Boss(76, "F"); 
-//		boss1.setInfoAgain(46, "FF", 3000, "boss");
-//		Boss boss2 = new Boss(77, "M"); 		
-//		Boss boss3 = new Boss(75, "F"); 
-//		ExpiriencedApplicant expiriencedApplicant1 = new ExpiriencedApplicant(56, "TransGender");
-//		expiriencedApplicant1.setInfoAgain(16, "TransGender", 1500, "expirienced applicant");
-//		ExpiriencedApplicant expiriencedApplicant2 = new ExpiriencedApplicant(77, "M");
-//		ExpiriencedApplicant expiriencedApplicant3 = new ExpiriencedApplicant(44, "M");
-//		
-//		int employeeIndex = 0;
-//		int badEmployeeIndex = 0;
-//		int bossIndex = 0;
-//		int expiriencedApplicantIndex = 0;	
-//	}
-		
 	
 	
 	public void showArrayListOperations() {		
@@ -202,20 +177,32 @@ public class Menu {
 			break;				
 		}
 		
+		ColleagueAr colleagueAr2 = new ColleagueAr();
+		
 		do {
 			System.out.println("Would you like to get all of the information about all of the Employees? (y/n)");
 			index = in.nextLine();
 		} while((!("y".equals(index)))&&(!("n".equals(index))));		
       
 		if ("y".equals(index)) {
-			if ((colleagueAr1 != null)&&(!colleagueAr1.getListOfStaff().isEmpty())) {
-				for(int i = 0; i < employeeIndex; i++) {
-					System.out.println(colleagueAr1.getListOfStaff().get(i).toString());
-					System.out.println("======");
-				}
-			} else {
-				System.out.println("The required Storage is Null or Empty");	
-        	}
+//			ListCheck listCheck = new ListCheck();
+//			
+//			try {
+//				listCheck.nullCheck(colleagueAr2);
+//			} catch () {
+//				listCheck.emptyCheck(colleagueAr2);					
+//			} finally {
+//				for(int i = 0; i < employeeIndex; i++) {
+//					System.out.println(colleagueAr2.getListOfStaff().get(i).toString());
+//					System.out.println("======");
+//				}
+//			}	
+			
+			for(int i = 0; i < employeeIndex; i++) {
+				System.out.println(colleagueAr2.getListOfStaff().get(i).toString());
+				System.out.println("======");
+			}
+			
  		} else {
 			System.out.println("OK, move forward!");
 		}

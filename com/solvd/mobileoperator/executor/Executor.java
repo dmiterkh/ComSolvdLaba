@@ -8,11 +8,11 @@ public class Executor {
 	public static void main(String[] args) {
 		
 		Menu menu = new Menu();
-//		menu.showArrayListOperations();
+		menu.showArrayListOperations();
 //		menu.showLinkedListOperations();	
 //		menu.showHashSetOperations();	
 //		menu.showHashMapOperations();
-		menu.showColletionOperations();
+//		menu.showColletionOperations();
 		
  }
 }
