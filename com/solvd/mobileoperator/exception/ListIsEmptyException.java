@@ -8,4 +8,7 @@ public class ListIsEmptyException extends Exception{
 		super(message);
 	}
 	
+    public ListIsEmptyException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

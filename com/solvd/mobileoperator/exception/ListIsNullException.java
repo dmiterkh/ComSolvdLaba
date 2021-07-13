@@ -8,4 +8,7 @@ public class ListIsNullException extends Exception{
 		super(message);
 	}
 	
+    public ListIsNullException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

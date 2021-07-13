@@ -1,6 +1,6 @@
 package com.solvd.mobileoperator.executor;
 
-import com.solvd.mobileoperator.executor.Menu;  
+import com.solvd.mobileoperator.menu.Menu;  
 
 
 public class Executor {
@@ -8,10 +8,8 @@ public class Executor {
 	public static void main(String[] args) {
 		
 		Menu menu = new Menu();
+//		menu.showTestCode();
 		menu.showArrayListOperations();
-//		menu.showLinkedListOperations();	
-//		menu.showHashSetOperations();	
-//		menu.showHashMapOperations();
 //		menu.showColletionOperations();
 		
  }
